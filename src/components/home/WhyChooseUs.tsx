@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import AnimatedSection from '@/components/ui/AnimatedSection';
 
 export default function HowWeWork() {
   const steps = [
@@ -32,7 +33,7 @@ export default function HowWeWork() {
 
       <div className="relative max-w-7xl mx-auto">
         {/* Header Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center mb-16 md:mb-20">
+        <AnimatedSection className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center mb-16 md:mb-20">
           {/* Left Content */}
           <div className="space-y-4 md:space-y-6">
             <div className="inline-block">
@@ -40,7 +41,7 @@ export default function HowWeWork() {
                 How We Work
               </span>
             </div>
-            
+
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-tight">
               Here For Your{" "}
               <span className="text-[#64CCC5] relative inline-block">
@@ -60,7 +61,7 @@ export default function HowWeWork() {
               We offer compassionate care, combining physical and emotional
               support to help you thrive in every aspect.
             </p>
-            
+
             <Link
               to="/contact"
               className="group relative inline-flex items-center gap-3 bg-[#408E91] hover:bg-[#64CCC5] transition-all duration-300 text-white px-8 py-4 rounded-full font-semibold shadow-2xl hover:shadow-[#64CCC5]/50 text-sm md:text-base overflow-hidden"
@@ -82,7 +83,7 @@ export default function HowWeWork() {
               <span className="absolute inset-0 bg-gradient-to-r from-[#64CCC5] to-[#408E91] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
             </Link>
           </div>
-        </div>
+        </AnimatedSection>
 
         {/* Divider with Gradient */}
         <div className="relative w-full h-px bg-gradient-to-r from-transparent via-white/30 to-transparent mb-16 md:mb-20">
@@ -92,12 +93,10 @@ export default function HowWeWork() {
         {/* Steps Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {steps.map((step, index) => (
-            <div
+            <AnimatedSection
               key={index}
+              delay={index * 0.1}
               className="group relative p-8 md:p-10 rounded-3xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-lg border border-white/10 hover:border-[#64CCC5]/50 shadow-xl hover:shadow-2xl hover:shadow-[#64CCC5]/20 transition-all duration-500 hover:-translate-y-2"
-              style={{
-                animationDelay: `${index * 150}ms`,
-              }}
             >
               {/* Number Background */}
               <div className="absolute top-4 right-4 text-8xl md:text-9xl font-black text-white/5 leading-none select-none group-hover:text-[#64CCC5]/10 transition-colors duration-500">
@@ -127,7 +126,7 @@ export default function HowWeWork() {
 
               {/* Corner Decoration */}
               <div className="absolute -top-1 -right-1 w-8 h-8 border-t-2 border-r-2 border-[#64CCC5]/0 group-hover:border-[#64CCC5]/50 rounded-tr-3xl transition-all duration-500"></div>
-            </div>
+            </AnimatedSection>
           ))}
         </div>
 

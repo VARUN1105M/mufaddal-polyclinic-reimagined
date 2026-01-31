@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Heart, Users, Brain } from 'lucide-react';
+import AnimatedSection from '@/components/ui/AnimatedSection';
 
 export default function OurServices() {
   const services = [
@@ -34,20 +35,21 @@ export default function OurServices() {
     <section className="w-full bg-gradient-to-b from-white to-gray-50 py-16 md:py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-12 md:mb-16">
+        <AnimatedSection className="text-center mb-12 md:mb-16">
           <span className="text-[#003C43] text-sm md:text-base font-semibold uppercase tracking-wider">
             OUR SERVICES
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mt-4">
             Breaking Stigmas, Building Strength
           </h2>
-        </div>
+        </AnimatedSection>
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {services.map((service) => (
-            <div
+          {services.map((service, index) => (
+            <AnimatedSection
               key={service.id}
+              delay={index * 0.1}
               className="group relative bg-gradient-to-br from-pink-50 to-purple-50 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
             >
               {/* Image Container */}
@@ -57,7 +59,7 @@ export default function OurServices() {
                   alt={service.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
-                
+
                 {/* Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
@@ -80,10 +82,10 @@ export default function OurServices() {
                 <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 group-hover:text-[#003C43] transition-colors duration-300">
                   {service.title}
                 </h3>
-                
+
                 {/* Divider */}
                 <div className="w-16 h-1 bg-gradient-to-r from-[#003C43] to-[#408E91] mb-4 group-hover:w-full transition-all duration-500"></div>
-                
+
                 <p className="text-gray-600 text-base leading-relaxed">
                   {service.description}
                 </p>
@@ -91,7 +93,7 @@ export default function OurServices() {
 
               {/* Decorative Corner */}
               <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#408E91]/10 to-transparent rounded-bl-full"></div>
-            </div>
+            </AnimatedSection>
           ))}
         </div>
 

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Check, Smile, ThumbsUp, Users } from "lucide-react";
+import AnimatedSection from "@/components/ui/AnimatedSection";
 
 export default function WhyChooseUs() {
     const features = [
@@ -33,7 +34,7 @@ export default function WhyChooseUs() {
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
 
                     {/* LEFT CONTENT */}
-                    <div className="space-y-8">
+                    <AnimatedSection direction="left" className="space-y-8">
                         <span className="text-[#64CCC5] font-semibold text-sm md:text-base uppercase tracking-wider">
                             WHY CHOOSE US?
                         </span>
@@ -98,10 +99,10 @@ export default function WhyChooseUs() {
                                 </svg>
                             </Link>
                         </div>
-                    </div>
+                    </AnimatedSection>
 
                     {/* RIGHT SECTION */}
-                    <div className="flex flex-col xl:flex-row items-center gap-8 relative z-10">
+                    <AnimatedSection direction="right" delay={0.2} className="flex flex-col xl:flex-row items-center gap-8 relative z-10">
 
                         {/* IMAGE */}
                         <div className="relative rounded-3xl overflow-hidden shadow-2xl max-w-md w-full">
@@ -140,7 +141,7 @@ export default function WhyChooseUs() {
                         <div className="absolute -bottom-6 -left-6 w-36 h-36 bg-[#003C43]/30 rounded-full blur-2xl -z-10" />
                         <div className="absolute -top-5 -right-5 w-28 h-28 bg-[#64CCC5]/30 rounded-full blur-xl -z-10" />
 
-                    </div>
+                    </AnimatedSection>
                 </div>
             </div>
         </section>

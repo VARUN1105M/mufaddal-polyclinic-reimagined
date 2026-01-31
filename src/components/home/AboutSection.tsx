@@ -1,4 +1,5 @@
 import { FileText, Users, Headphones, Wrench } from 'lucide-react';
+import AnimatedSection from '@/components/ui/AnimatedSection';
 
 const features = [
   {
@@ -37,8 +38,9 @@ const FeaturesSection = () => {
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
-            <div
+            <AnimatedSection
               key={index}
+              delay={index * 0.1}
               className={`${feature.bgColor} rounded-3xl p-8 text-white transition-transform hover:scale-105 duration-300`}
             >
               {/* Icon */}
@@ -55,7 +57,7 @@ const FeaturesSection = () => {
               <p className="text-white/90 leading-relaxed">
                 {feature.description}
               </p>
-            </div>
+            </AnimatedSection>
           ))}
         </div>
       </div>

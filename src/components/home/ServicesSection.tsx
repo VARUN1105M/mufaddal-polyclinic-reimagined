@@ -1,6 +1,7 @@
 import { Check } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import AnimatedSection from '@/components/ui/AnimatedSection';
 
 const AboutSection = () => {
   const features = [
@@ -15,7 +16,7 @@ const AboutSection = () => {
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Side - Images */}
-          <div className="relative">
+          <AnimatedSection direction="left" className="relative">
             {/* Main Image */}
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
               <img
@@ -42,10 +43,10 @@ const AboutSection = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </AnimatedSection>
 
           {/* Right Side - Content */}
-          <div className="space-y-6">
+          <AnimatedSection delay={0.2} className="space-y-6">
             {/* Section Label */}
             <div className="inline-block">
               <span className="text-[#003C43] font-semibold text-sm uppercase tracking-wider">
@@ -103,7 +104,7 @@ const AboutSection = () => {
                 <Link to="/about">Read More</Link>
               </Button>
             </div>
-          </div>
+          </AnimatedSection>
         </div>
       </div>
     </section>

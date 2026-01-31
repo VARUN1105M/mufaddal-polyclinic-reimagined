@@ -1,5 +1,6 @@
 import React from 'react';
 import { Facebook, Twitter, Linkedin } from 'lucide-react';
+import AnimatedSection from '@/components/ui/AnimatedSection';
 
 export default function OurSpecialist() {
     const therapists = [
@@ -54,20 +55,21 @@ export default function OurSpecialist() {
             <div className="max-w-7xl mx-auto">
 
                 {/* Header */}
-                <div className="text-center mb-12 md:mb-16">
+                <AnimatedSection className="text-center mb-12 md:mb-16">
                     <span className="text-[#003C43] text-sm md:text-base font-semibold uppercase tracking-wider mb-4 block">
                         OUR SPECIALIST
                     </span>
                     <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#003C43]">
                         Meet Our Senior Therapist
                     </h2>
-                </div>
+                </AnimatedSection>
 
                 {/* Therapist Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-                    {therapists.map((therapist) => (
-                        <div
+                    {therapists.map((therapist, index) => (
+                        <AnimatedSection
                             key={therapist.id}
+                            delay={index * 0.1}
                             className="group relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
                         >
                             {/* Image */}
@@ -119,16 +121,16 @@ export default function OurSpecialist() {
                                     </a>
                                 </div>
                             </div>
-                        </div>
+                        </AnimatedSection>
                     ))}
                 </div>
 
                 {/* CTA Button */}
-                <div className="text-center mt-12 md:mt-16">
+                <AnimatedSection delay={0.4} className="text-center mt-12 md:mt-16">
                     <button className="bg-[#003C43] hover:bg-[#245953] text-white px-8 py-4 rounded-full font-semibold text-base md:text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                         View All Therapists
                     </button>
-                </div>
+                </AnimatedSection>
 
             </div>
         </section>
