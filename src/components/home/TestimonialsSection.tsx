@@ -1,133 +1,125 @@
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Quote, Star } from 'lucide-react';
-import AnimatedSection from '@/components/ui/AnimatedSection';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
-const testimonials = [
-  {
-    name: 'Priya Sharma',
-    role: 'Regular Patient',
-    content: 'The care I received at Mufaddal Polyclinic was exceptional. The doctors took time to understand my concerns and provided personalized treatment. I highly recommend their women\'s health services.',
-    rating: 5,
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=100&h=100&fit=crop',
-  },
-  {
-    name: 'Fatima Begum',
-    role: 'New Mother',
-    content: 'From prenatal care to delivery, the team at Mufaddal was with me every step. Their supportive approach made my pregnancy journey smooth and stress-free. Forever grateful!',
-    rating: 5,
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=100&h=100&fit=crop',
-  },
-  {
-    name: 'Anika Patel',
-    role: 'PCOS Patient',
-    content: 'After struggling with PCOS for years, I finally found relief at Mufaddal Polyclinic. Their holistic approach to treatment has transformed my quality of life. Thank you!',
-    rating: 5,
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&h=100&fit=crop',
-  },
-];
-
-const TestimonialsSection = () => {
-  const [current, setCurrent] = useState(0);
-
-  const next = () => setCurrent((prev) => (prev + 1) % testimonials.length);
-  const prev = () => setCurrent((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+export default function BlogSection() {
+  const blogs = [
+    {
+      id: 1,
+      category: 'Depression',
+      date: { day: '27', month: 'Mar' },
+      title: 'The Role of Self-Care in Reducing Stress Levels',
+      excerpt:
+        'Participants learn to identify stress triggers and replace negative responses with practical, mindful strategies...',
+      image: '/blog1.png',
+      link: '/blog/self-care-stress'
+    },
+    {
+      id: 2,
+      category: 'Anxiety',
+      date: { day: '17', month: 'Feb' },
+      title: 'Simple Steps to Build Emotional Resilience Daily',
+      excerpt:
+        'This group provides a compassionate and confidential environment where individuals can openly discuss their fears...',
+      image: '/blog2.png',
+      link: '/blog/emotional-resilience'
+    },
+    {
+      id: 3,
+      category: 'Wellness',
+      date: { day: '06', month: 'Jan' },
+      title: 'Signs You Might Need Professional Mental Health Support',
+      excerpt:
+        'Through guided conversations and shared stories, members are encouraged to reconnect with themselves and others...',
+      image: '/blog3.png',
+      link: '/blog/mental-health-support'
+    }
+  ];
 
   return (
-    <section className="section-padding bg-muted/50 overflow-hidden">
-      <div className="container-custom">
-        <AnimatedSection className="text-center mb-16">
-          <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">
-            Patient Stories
-          </span>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            What Our <span className="text-primary">Patients</span> Say
-          </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Real experiences from real patients who trusted us with their health.
-          </p>
-        </AnimatedSection>
+    <section className="w-full bg-gradient-to-b from-white to-[#408E91]/10 py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
 
-        <div className="max-w-4xl mx-auto relative">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={current}
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -50 }}
-              transition={{ duration: 0.5 }}
-              className="bg-card rounded-3xl p-8 md:p-12 shadow-xl relative"
+        {/* Header */}
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-12 md:mb-16">
+          <div>
+            <span className="text-[#003C43] text-sm md:text-base font-semibold uppercase tracking-wider mb-4 block">
+              NEWSLETTER
+            </span>
+
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#003C43]">
+              Read Our Latest Blog &<br />Article
+            </h2>
+          </div>
+
+          {/* View All Button */}
+          <Link
+            to="/blog"
+            className="mt-6 md:mt-0 inline-flex items-center gap-2 bg-[#003C43] hover:bg-[#245953] text-white px-8 py-4 rounded-full font-semibold text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+          >
+            All Blog & Article
+            <ArrowRight className="w-5 h-5" />
+          </Link>
+        </div>
+
+        {/* Blog Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          {blogs.map((blog) => (
+            <Link
+              key={blog.id}
+              to={blog.link}
+              className="group bg-white rounded-3xl overflow-hidden border-2 border-[#408E91]/20 hover:border-[#408E91] shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
             >
-              <Quote className="absolute top-8 left-8 w-12 h-12 text-secondary/30" />
-              
-              <div className="flex flex-col md:flex-row gap-8 items-center">
-                <div className="flex-shrink-0">
-                  <img
-                    src={testimonials[current].image}
-                    alt={testimonials[current].name}
-                    className="w-24 h-24 rounded-full object-cover ring-4 ring-secondary/30"
-                  />
+              {/* Image */}
+              <div className="relative h-64 overflow-hidden">
+                <img
+                  src={blog.image}
+                  alt={blog.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+
+                {/* Category Badge */}
+                <div className="absolute top-4 left-4">
+                  <span className="inline-block bg-[#003C43] text-white px-4 py-2 rounded-lg text-sm font-semibold">
+                    {blog.category}
+                  </span>
                 </div>
-                
-                <div>
-                  <div className="flex gap-1 mb-4">
-                    {[...Array(testimonials[current].rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-secondary text-secondary" />
-                    ))}
+
+                {/* Date Badge */}
+                <div className="absolute bottom-4 left-4 bg-[#245953] text-white rounded-xl px-4 py-3 text-center shadow-lg">
+                  <div className="text-2xl font-bold leading-none">
+                    {blog.date.day}
                   </div>
-                  
-                  <p className="text-lg text-foreground leading-relaxed mb-6 italic">
-                    "{testimonials[current].content}"
-                  </p>
-                  
-                  <div>
-                    <h4 className="font-display font-semibold text-foreground">
-                      {testimonials[current].name}
-                    </h4>
-                    <p className="text-muted-foreground text-sm">
-                      {testimonials[current].role}
-                    </p>
+                  <div className="text-sm font-medium mt-1">
+                    {blog.date.month}
                   </div>
+                </div>
+
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+
+              {/* Content */}
+              <div className="p-6 md:p-8">
+                <h3 className="text-xl md:text-2xl font-bold text-[#003C43] mb-4 group-hover:text-[#245953] transition-colors duration-300 line-clamp-2">
+                  {blog.title}
+                </h3>
+
+                <p className="text-gray-600 text-sm md:text-base leading-relaxed line-clamp-4">
+                  {blog.excerpt}
+                </p>
+
+                {/* Read More */}
+                <div className="mt-6 flex items-center gap-2 text-[#003C43] font-semibold group-hover:text-[#245953] group-hover:gap-4 transition-all duration-300">
+                  <span>Read More</span>
+                  <ArrowRight className="w-5 h-5" />
                 </div>
               </div>
-            </motion.div>
-          </AnimatePresence>
-
-          {/* Navigation */}
-          <div className="flex justify-center gap-4 mt-8">
-            <button
-              onClick={prev}
-              className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:bg-primary/90 transition-colors"
-              aria-label="Previous testimonial"
-            >
-              <ChevronLeft className="w-5 h-5" />
-            </button>
-            
-            <div className="flex items-center gap-2">
-              {testimonials.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrent(index)}
-                  className={`w-3 h-3 rounded-full transition-all ${
-                    index === current ? 'bg-primary w-8' : 'bg-primary/30'
-                  }`}
-                  aria-label={`Go to testimonial ${index + 1}`}
-                />
-              ))}
-            </div>
-            
-            <button
-              onClick={next}
-              className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:bg-primary/90 transition-colors"
-              aria-label="Next testimonial"
-            >
-              <ChevronRight className="w-5 h-5" />
-            </button>
-          </div>
+            </Link>
+          ))}
         </div>
+
       </div>
     </section>
   );
-};
-
-export default TestimonialsSection;
+}

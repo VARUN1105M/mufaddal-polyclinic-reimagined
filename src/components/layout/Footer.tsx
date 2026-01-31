@@ -1,55 +1,109 @@
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Twitter, Linkedin } from 'lucide-react';
+import { Facebook, Twitter, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
 
-const Footer = () => {
-  const currentYear = new Date().getFullYear();
+export default function Footer() {
+  const [email, setEmail] = useState('');
+
+  const handleSubscribe = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log('Subscribed with email:', email);
+    setEmail('');
+  };
+
+  const quickLinks = [
+    { name: 'Homepage', path: '/' },
+    { name: 'Services', path: '/services' },
+    { name: 'Appointment', path: '/contact' },
+    { name: 'Blogs', path: '/blog' },
+    { name: 'FAQs', path: '/faqs' }
+  ];
 
   return (
-    <footer className="bg-primary text-primary-foreground">
-      {/* Main Footer */}
-      <div className="container-custom section-padding">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* About */}
+    <footer className="w-full relative text-white overflow-hidden">
+
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img
+          src="/footer-background.png"
+          alt="Footer Background"
+          className="w-full h-full object-cover"
+        />
+
+        {/* Soft Gradient Overlay with Glass Effect */}
+        <div className="absolute inset-0 bg-[#003C43]/80 mix-blend-multiply"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-[#003C43] via-[#003C43]/80 to-transparent opacity-90"></div>
+      </div>
+
+      {/* Main Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+
+        {/* Main Footer Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
+
+          {/* Logo + About */}
           <div>
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
-                <span className="font-display font-bold text-xl">M</span>
-              </div>
-              <div>
-                <h3 className="font-display text-xl font-bold">Mufaddal</h3>
-                <p className="text-xs opacity-80 -mt-1">Polyclinic</p>
-              </div>
+            <div className="mb-4">
+              <img
+                src="/mufaddal-logo.png"
+                alt="Mufaddal Polyclinic Logo"
+                className="h-16 w-auto"
+              />
             </div>
-            <p className="text-primary-foreground/80 leading-relaxed">
-              Dedicated to providing compassionate healthcare with a focus on women's wellness and supportive care services.
+
+            <p className="text-white/80 text-sm leading-relaxed mb-6">
+              Professional, responsive, and soothing design for therapists, counselors, and life coaches.
             </p>
-            <div className="flex gap-3 mt-6">
-              {[Facebook, Instagram, Twitter, Linkedin].map((Icon, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-primary transition-all duration-300"
-                >
-                  <Icon className="w-4 h-4" />
+
+            <div className="flex items-center gap-3">
+              <a href="#" className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
+                <Facebook className="w-5 h-5 text-white" />
+              </a>
+              <a href="#" className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
+                <Twitter className="w-5 h-5 text-white" />
+              </a>
+              <a href="#" className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
+                <Linkedin className="w-5 h-5 text-white" />
+              </a>
+            </div>
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h3 className="text-white font-bold text-lg mb-6">Contact</h3>
+            <div className="space-y-4">
+              <div className="flex items-start gap-3">
+                <MapPin className="w-5 h-5 text-white/60 mt-1" />
+                <p className="text-white/80 text-sm">
+                  123 Serenity Lane, Blissfield, CA 90210, United States
+                </p>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <Mail className="w-5 h-5 text-white/60" />
+                <a href="mailto:info@yourmail.com" className="text-white/80 text-sm hover:text-white">
+                  Info@yourmail.com
                 </a>
-              ))}
+              </div>
+
+              <div className="flex items-center gap-3">
+                <Phone className="w-5 h-5 text-white/60" />
+                <a href="tel:+15551234567" className="text-white/80 text-sm hover:text-white">
+                  (555) 123-4567
+                </a>
+              </div>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-display text-lg font-semibold mb-6">Quick Links</h4>
+            <h3 className="text-white font-bold text-lg mb-6">Quick Links</h3>
             <ul className="space-y-3">
-              {[
-                { name: 'About Us', path: '/about' },
-                { name: 'Our Services', path: '/women-care' },
-                { name: 'Our Doctors', path: '/doctors' },
-                { name: 'Contact Us', path: '/contact' },
-              ].map((link) => (
-                <li key={link.path}>
+              {quickLinks.map((link, index) => (
+                <li key={index}>
                   <Link
                     to={link.path}
-                    className="text-primary-foreground/80 hover:text-secondary transition-colors duration-300"
+                    className="text-white/80 text-sm hover:text-white transition-all duration-300 inline-block hover:translate-x-1"
                   >
                     {link.name}
                   </Link>
@@ -58,69 +112,45 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Newsletter */}
           <div>
-            <h4 className="font-display text-lg font-semibold mb-6">Our Services</h4>
-            <ul className="space-y-3">
-              {[
-                'Women Wellness',
-                'Period Care',
-                'PCOS Care',
-                'Pregnancy Check',
-                'General Health',
-              ].map((service) => (
-                <li key={service}>
-                  <span className="text-primary-foreground/80">{service}</span>
-                </li>
-              ))}
-            </ul>
+            <h3 className="text-white font-bold text-lg mb-6">Newsletter</h3>
+            <p className="text-white/80 text-sm mb-4">
+              Get the latest news other tips.
+            </p>
+
+            <form onSubmit={handleSubscribe} className="space-y-3">
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Your email here"
+                className="w-full px-4 py-3 rounded-full bg-white text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#408E91]"
+                required
+              />
+
+              <button
+                type="submit"
+                className="w-full bg-[#003C43] hover:bg-[#245953] text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 hover:shadow-lg border-2 border-white/20"
+              >
+                Subscribe now
+              </button>
+            </form>
           </div>
 
-          {/* Contact Info */}
-          <div>
-            <h4 className="font-display text-lg font-semibold mb-6">Contact Info</h4>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 mt-0.5 text-secondary" />
-                <span className="text-primary-foreground/80">
-                  Mufaddal Polyclinic, Healthcare District, City Center
-                </span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-secondary" />
-                <span className="text-primary-foreground/80">+91 98765 43210</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-secondary" />
-                <span className="text-primary-foreground/80">info@mufaddalclinic.com</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Clock className="w-5 h-5 text-secondary" />
-                <span className="text-primary-foreground/80">Mon - Sat: 9AM - 8PM</span>
-              </li>
-            </ul>
-          </div>
         </div>
-      </div>
 
-      {/* Bottom Bar */}
-      <div className="border-t border-white/10">
-        <div className="container-custom py-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-primary-foreground/60 text-sm">
-            © {currentYear} Mufaddal Polyclinic. All rights reserved.
+        {/* Divider */}
+        <div className="w-full h-px bg-white/20 mb-8"></div>
+
+        {/* Copyright */}
+        <div className="text-center">
+          <p className="text-white/70 text-sm">
+            Copyright © 2025 Widagdos. All Rights Reserved.
           </p>
-          <div className="flex gap-6 text-sm">
-            <a href="#" className="text-primary-foreground/60 hover:text-secondary transition-colors">
-              Privacy Policy
-            </a>
-            <a href="#" className="text-primary-foreground/60 hover:text-secondary transition-colors">
-              Terms of Service
-            </a>
-          </div>
         </div>
+
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}
