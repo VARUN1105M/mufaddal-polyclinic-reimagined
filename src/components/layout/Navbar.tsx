@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Phone, Clock, MapPin } from 'lucide-react';
+import { Menu, X, Clock, MapPin, Facebook, Twitter, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const navLinks = [
@@ -33,21 +33,29 @@ const Navbar = () => {
   return (
     <>
       {/* Top Bar */}
-      <div className="hidden lg:block bg-primary text-primary-foreground py-2">
+      <div className="hidden lg:block bg-primary text-primary-foreground py-3 px-0">
         <div className="container-custom flex items-center justify-between text-sm">
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-8">
             <div className="flex items-center gap-2">
               <Clock className="w-4 h-4" />
-              <span>Mon - Sat: 9:00 AM - 8:00 PM</span>
+              <span>Office Time: Mon - Fri 8:00 - 6:30</span>
             </div>
+            <div className="h-4 w-px bg-primary-foreground/30"></div>
             <div className="flex items-center gap-2">
               <MapPin className="w-4 h-4" />
-              <span>Mufaddal Polyclinic, Healthcare Center</span>
+              <span>123 Serenity Lane, Blissfield, CA 90210</span>
             </div>
           </div>
           <div className="flex items-center gap-2">
-            <Phone className="w-4 h-4" />
-            <span>Call us: +91 98765 43210</span>
+            <a href="#" className="w-9 h-9 rounded-md bg-primary-foreground/20 hover:bg-primary-foreground/30 flex items-center justify-center transition-colors">
+              <Facebook className="w-4 h-4" />
+            </a>
+            <a href="#" className="w-9 h-9 rounded-md bg-primary-foreground/20 hover:bg-primary-foreground/30 flex items-center justify-center transition-colors">
+              <Twitter className="w-4 h-4" />
+            </a>
+            <a href="#" className="w-9 h-9 rounded-md bg-primary-foreground/20 hover:bg-primary-foreground/30 flex items-center justify-center transition-colors">
+              <Linkedin className="w-4 h-4" />
+            </a>
           </div>
         </div>
       </div>
@@ -56,23 +64,20 @@ const Navbar = () => {
       <motion.header
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        className={`sticky top-0 z-50 transition-all duration-300 ${
-          scrolled 
-            ? 'bg-white/95 backdrop-blur-lg shadow-lg' 
-            : 'bg-white'
-        }`}
+        className={`sticky top-0 z-50 transition-all duration-300 ${scrolled
+          ? 'bg-white/95 backdrop-blur-lg shadow-lg'
+          : 'bg-white'
+          }`}
       >
         <div className="container-custom">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                <span className="text-white font-display font-bold text-xl">M</span>
-              </div>
-              <div>
-                <h1 className="font-display text-xl font-bold text-primary">Mufaddal</h1>
-                <p className="text-xs text-muted-foreground -mt-1">Polyclinic</p>
-              </div>
+            <Link to="/" className="flex items-center gap-2">
+              <img
+                src="/mufaddal-logo.png"
+                alt="Mufaddal Polyclinic"
+                className="h-16 w-auto object-contain"
+              />
             </Link>
 
             {/* Desktop Navigation */}
@@ -81,11 +86,10 @@ const Navbar = () => {
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                    location.pathname === link.path
-                      ? 'bg-primary text-primary-foreground'
-                      : 'text-foreground hover:bg-muted'
-                  }`}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${location.pathname === link.path
+                    ? 'bg-primary text-primary-foreground'
+                    : 'text-foreground hover:bg-muted'
+                    }`}
                 >
                   {link.name}
                 </Link>
@@ -125,11 +129,10 @@ const Navbar = () => {
                     <Link
                       key={link.path}
                       to={link.path}
-                      className={`px-4 py-3 rounded-lg text-base font-medium transition-all ${
-                        location.pathname === link.path
-                          ? 'bg-primary text-primary-foreground'
-                          : 'text-foreground hover:bg-muted'
-                      }`}
+                      className={`px-4 py-3 rounded-lg text-base font-medium transition-all ${location.pathname === link.path
+                        ? 'bg-primary text-primary-foreground'
+                        : 'text-foreground hover:bg-muted'
+                        }`}
                     >
                       {link.name}
                     </Link>

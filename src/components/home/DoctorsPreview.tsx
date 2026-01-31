@@ -1,102 +1,101 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Linkedin, Mail } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import AnimatedSection from '@/components/ui/AnimatedSection';
+import { Heart, Users, Brain } from 'lucide-react';
 
-const doctors = [
-  {
-    name: 'Dr. Sarah Ahmed',
-    specialty: 'Gynecologist',
-    experience: '15+ years',
-    image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=400&h=500&fit=crop',
-  },
-  {
-    name: 'Dr. Fatima Khan',
-    specialty: 'Obstetrician',
-    experience: '12+ years',
-    image: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=400&h=500&fit=crop',
-  },
-  {
-    name: 'Dr. Aisha Patel',
-    specialty: 'Women\'s Health Specialist',
-    experience: '10+ years',
-    image: 'https://images.unsplash.com/photo-1651008376811-b90baee60c1f?q=80&w=400&h=500&fit=crop',
-  },
-  {
-    name: 'Dr. Mariam Ali',
-    specialty: 'General Physician',
-    experience: '8+ years',
-    image: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=400&h=500&fit=crop',
-  },
-];
+export default function OurServices() {
+  const services = [
+    {
+      id: 1,
+      title: 'Individual Therapy',
+      description: 'Tailored guidance crafted to meet your unique needs and goals effectively.',
+      image: '/Individual Therapy.png',
+      icon: Heart,
+      link: '/services/individual-therapy'
+    },
+    {
+      id: 2,
+      title: 'Group Counseling',
+      description: 'Professional support designed to guide emotional well-being every single day.',
+      image: '/Group Counseling.png',
+      icon: Users,
+      link: '/services/group-counseling'
+    },
+    {
+      id: 3,
+      title: 'Stress Management',
+      description: 'Empowering digital resources to build healthy habits independently.',
+      image: '/Stress Management.png',
+      icon: Brain,
+      link: '/services/stress-management'
+    }
+  ];
 
-const DoctorsPreview = () => {
   return (
-    <section className="section-padding bg-background">
-      <div className="container-custom">
-        <AnimatedSection className="text-center mb-16">
-          <span className="inline-block px-4 py-2 bg-secondary/20 text-primary rounded-full text-sm font-medium mb-6">
-            Our Medical Team
+    <section className="w-full bg-gradient-to-b from-white to-gray-50 py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-12 md:mb-16">
+          <span className="text-[#003C43] text-sm md:text-base font-semibold uppercase tracking-wider">
+            OUR SERVICES
           </span>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Meet Our <span className="text-primary">Expert Doctors</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mt-4">
+            Breaking Stigmas, Building Strength
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Our team of dedicated healthcare professionals combines expertise 
-            with compassion to provide you the best care.
-          </p>
-        </AnimatedSection>
+        </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          {doctors.map((doctor, index) => (
-            <AnimatedSection key={doctor.name} delay={index * 0.1} direction="up">
-              <div className="group relative overflow-hidden rounded-2xl bg-card card-elevated">
-                <div className="aspect-[4/5] overflow-hidden">
-                  <img
-                    src={doctor.image}
-                    alt={doctor.name}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  {/* Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  
-                  {/* Social Icons */}
-                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-3 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-                    <a href="#" className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-secondary transition-colors">
-                      <Linkedin className="w-4 h-4" />
-                    </a>
-                    <a href="#" className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-secondary transition-colors">
-                      <Mail className="w-4 h-4" />
-                    </a>
-                  </div>
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          {services.map((service) => (
+            <div
+              key={service.id}
+              className="group relative bg-gradient-to-br from-pink-50 to-purple-50 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+            >
+              {/* Image Container */}
+              <div className="relative h-64 md:h-72 overflow-hidden">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                {/* Icon Badge */}
+                <div className="absolute bottom-6 left-6 w-16 h-16 md:w-20 md:h-20 bg-[#003C43] rounded-full flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-500">
+                  <service.icon className="w-8 h-8 md:w-10 md:h-10 text-white" />
                 </div>
-                <div className="p-6 text-center">
-                  <h3 className="font-display text-lg font-semibold text-foreground mb-1">
-                    {doctor.name}
-                  </h3>
-                  <p className="text-secondary font-medium text-sm mb-1">
-                    {doctor.specialty}
-                  </p>
-                  <p className="text-muted-foreground text-sm">
-                    {doctor.experience} experience
-                  </p>
-                </div>
+
+                {/* Read More Button */}
+                <Link
+                  to={service.link}
+                  className="absolute bottom-6 right-6 bg-gray-900 hover:bg-[#003C43] text-white px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0"
+                >
+                  Read More
+                </Link>
               </div>
-            </AnimatedSection>
+
+              {/* Content */}
+              <div className="p-6 md:p-8">
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 group-hover:text-[#003C43] transition-colors duration-300">
+                  {service.title}
+                </h3>
+                
+                {/* Divider */}
+                <div className="w-16 h-1 bg-gradient-to-r from-[#003C43] to-[#408E91] mb-4 group-hover:w-full transition-all duration-500"></div>
+                
+                <p className="text-gray-600 text-base leading-relaxed">
+                  {service.description}
+                </p>
+              </div>
+
+              {/* Decorative Corner */}
+              <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#408E91]/10 to-transparent rounded-bl-full"></div>
+            </div>
           ))}
         </div>
 
-        <AnimatedSection className="text-center">
-          <Button size="lg" asChild>
-            <Link to="/doctors">
-              View All Doctors
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </Button>
-        </AnimatedSection>
       </div>
     </section>
   );
-};
-
-export default DoctorsPreview;
+}

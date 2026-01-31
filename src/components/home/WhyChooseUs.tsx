@@ -1,86 +1,137 @@
-import { Shield, Clock, Heart, Award, Users, Sparkles } from 'lucide-react';
-import AnimatedSection from '@/components/ui/AnimatedSection';
+import React from "react";
+import { Link } from "react-router-dom";
 
-const reasons = [
-  {
-    icon: Shield,
-    title: 'Trusted Expertise',
-    description: 'Board-certified specialists with years of experience in women\'s health and general medicine.',
-  },
-  {
-    icon: Clock,
-    title: '24/7 Support',
-    description: 'Round-the-clock medical support and emergency services for your peace of mind.',
-  },
-  {
-    icon: Heart,
-    title: 'Compassionate Care',
-    description: 'We treat every patient with empathy, respect, and personalized attention.',
-  },
-  {
-    icon: Award,
-    title: 'Quality Assured',
-    description: 'State-of-the-art facilities and adherence to highest healthcare standards.',
-  },
-  {
-    icon: Users,
-    title: 'Patient-Centered',
-    description: 'Your health goals drive our treatment approach and care plans.',
-  },
-  {
-    icon: Sparkles,
-    title: 'Modern Technology',
-    description: 'Advanced diagnostic and treatment technologies for accurate care.',
-  },
-];
+export default function HowWeWork() {
+  const steps = [
+    {
+      number: "01",
+      title: "Listen & Understand",
+      description:
+        "Your wellness journey matters. We're dedicated to supporting both mental clarity and emotional strength every step forward.",
+    },
+    {
+      number: "02",
+      title: "Create A Tailored Plan",
+      description:
+        "From daily stress to life's hardest moments, our team supports your healing and overall well-being.",
+    },
+    {
+      number: "03",
+      title: "Support & Empower",
+      description:
+        "Empowering you to live well with care that nurtures your body, mind, and emotional peace every single day.",
+    },
+  ];
 
-const WhyChooseUs = () => {
   return (
-    <section className="section-padding bg-primary relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-20 w-64 h-64 rounded-full border border-white" />
-        <div className="absolute bottom-20 right-20 w-96 h-96 rounded-full border border-white" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-white" />
-      </div>
+    <section className="w-full bg-gradient-to-br from-[#003C43] via-[#245953] to-[#003C43] py-16 md:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 text-white relative overflow-hidden">
+      {/* Animated Background Decorations */}
+      <div className="absolute top-0 left-0 w-64 h-64 md:w-96 md:h-96 bg-[#408E91]/20 blur-3xl rounded-full animate-pulse"></div>
+      <div className="absolute bottom-0 right-0 w-72 h-72 md:w-[500px] md:h-[500px] bg-white/10 blur-3xl rounded-full animate-pulse delay-1000"></div>
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#245953]/10 blur-3xl rounded-full"></div>
 
-      <div className="container-custom relative z-10">
-        <AnimatedSection className="text-center mb-16">
-          <span className="inline-block px-4 py-2 bg-white/10 text-secondary rounded-full text-sm font-medium mb-6">
-            Why Choose Us
-          </span>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-            The <span className="text-secondary">Mufaddal</span> Difference
-          </h2>
-          <p className="text-white/80 text-lg max-w-2xl mx-auto">
-            We combine medical excellence with genuine care to deliver 
-            healthcare experiences that make a real difference.
-          </p>
-        </AnimatedSection>
+      <div className="relative max-w-7xl mx-auto">
+        {/* Header Section */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center mb-16 md:mb-20">
+          {/* Left Content */}
+          <div className="space-y-4 md:space-y-6">
+            <div className="inline-block">
+              <span className="text-xs md:text-sm font-bold text-[#64CCC5] tracking-widest uppercase px-4 py-2 bg-white/10 rounded-full backdrop-blur-sm">
+                How We Work
+              </span>
+            </div>
+            
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-tight">
+              Here For Your{" "}
+              <span className="text-[#64CCC5] relative inline-block">
+                Health
+                <span className="absolute bottom-0 left-0 w-full h-2 bg-[#64CCC5]/30 -z-10"></span>
+              </span>
+              ,
+              <br />
+              Here For Your{" "}
+              <span className="text-[#408E91]">Heart</span>
+            </h2>
+          </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {reasons.map((reason, index) => {
-            const Icon = reason.icon;
-            return (
-              <AnimatedSection key={reason.title} delay={index * 0.1} direction="scale">
-                <div className="group p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-500">
-                  <div className="w-14 h-14 rounded-xl bg-secondary/20 flex items-center justify-center mb-6 group-hover:bg-secondary/30 transition-colors">
-                    <Icon className="w-7 h-7 text-secondary" />
-                  </div>
-                  <h3 className="font-display text-xl font-semibold text-white mb-3">
-                    {reason.title}
-                  </h3>
-                  <p className="text-white/70 leading-relaxed">
-                    {reason.description}
-                  </p>
-                </div>
-              </AnimatedSection>
-            );
-          })}
+          {/* Right Content */}
+          <div className="flex flex-col items-start lg:items-end space-y-6">
+            <p className="text-base md:text-lg lg:text-xl leading-relaxed text-white/90 max-w-xl lg:text-right">
+              We offer compassionate care, combining physical and emotional
+              support to help you thrive in every aspect.
+            </p>
+            
+            <Link
+              to="/contact"
+              className="group relative inline-flex items-center gap-3 bg-[#408E91] hover:bg-[#64CCC5] transition-all duration-300 text-white px-8 py-4 rounded-full font-semibold shadow-2xl hover:shadow-[#64CCC5]/50 text-sm md:text-base overflow-hidden"
+            >
+              <span className="relative z-10">Get Consult Now</span>
+              <svg
+                className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform duration-300"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+              <span className="absolute inset-0 bg-gradient-to-r from-[#64CCC5] to-[#408E91] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+            </Link>
+          </div>
         </div>
+
+        {/* Divider with Gradient */}
+        <div className="relative w-full h-px bg-gradient-to-r from-transparent via-white/30 to-transparent mb-16 md:mb-20">
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-[#64CCC5] rounded-full animate-pulse"></div>
+        </div>
+
+        {/* Steps Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          {steps.map((step, index) => (
+            <div
+              key={index}
+              className="group relative p-8 md:p-10 rounded-3xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-lg border border-white/10 hover:border-[#64CCC5]/50 shadow-xl hover:shadow-2xl hover:shadow-[#64CCC5]/20 transition-all duration-500 hover:-translate-y-2"
+              style={{
+                animationDelay: `${index * 150}ms`,
+              }}
+            >
+              {/* Number Background */}
+              <div className="absolute top-4 right-4 text-8xl md:text-9xl font-black text-white/5 leading-none select-none group-hover:text-[#64CCC5]/10 transition-colors duration-500">
+                {step.number}
+              </div>
+
+              {/* Content */}
+              <div className="relative z-10 space-y-4">
+                <div className="flex items-center gap-4">
+                  <span className="text-5xl md:text-6xl font-extrabold text-[#64CCC5] group-hover:scale-110 transition-transform duration-300">
+                    {step.number}
+                  </span>
+                  <div className="h-12 w-px bg-gradient-to-b from-[#64CCC5] to-transparent"></div>
+                </div>
+
+                <h4 className="text-xl md:text-2xl font-bold text-white group-hover:text-[#64CCC5] transition-colors duration-300">
+                  {step.title}
+                </h4>
+
+                <p className="text-sm md:text-base leading-relaxed text-white/80 group-hover:text-white transition-colors duration-300">
+                  {step.description}
+                </p>
+              </div>
+
+              {/* Bottom Accent Line */}
+              <div className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-[#64CCC5] via-[#408E91] to-[#245953] group-hover:w-full transition-all duration-700 rounded-b-3xl"></div>
+
+              {/* Corner Decoration */}
+              <div className="absolute -top-1 -right-1 w-8 h-8 border-t-2 border-r-2 border-[#64CCC5]/0 group-hover:border-[#64CCC5]/50 rounded-tr-3xl transition-all duration-500"></div>
+            </div>
+          ))}
+        </div>
+
       </div>
     </section>
   );
-};
-
-export default WhyChooseUs;
+}

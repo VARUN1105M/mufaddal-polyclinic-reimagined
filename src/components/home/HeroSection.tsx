@@ -5,160 +5,140 @@ import { Button } from '@/components/ui/button';
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[90vh] overflow-hidden bg-gradient-to-br from-primary via-primary to-accent">
-      {/* Floating Shapes */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="floating-shape w-72 h-72 bg-secondary/30 top-20 -left-20 animate-float" />
-        <div className="floating-shape w-96 h-96 bg-white/10 bottom-20 right-10 animate-float-delayed" />
-        <div className="floating-shape w-48 h-48 bg-secondary/20 top-1/2 left-1/3 animate-float" />
-        
-        {/* Decorative Lines */}
-        <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M-100,300 Q300,100 600,400 T1200,300"
-            stroke="rgba(255,255,255,0.1)"
-            strokeWidth="2"
-            fill="none"
-          />
-          <path
-            d="M-100,500 Q400,200 700,500 T1400,400"
-            stroke="rgba(255,255,255,0.05)"
-            strokeWidth="2"
-            fill="none"
-          />
+    <section className="relative min-h-[90vh] overflow-hidden bg-gradient-to-br from-[#1a4f5a] to-[#2d6e7e]">
+      {/* Floating Shapes/Lines Background */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <svg className="absolute w-full h-full opacity-30" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <path d="M0,50 Q25,40 50,50 T100,50" stroke="white" strokeWidth="0.2" fill="none" />
+          <path d="M0,30 Q25,20 50,30 T100,30" stroke="white" strokeWidth="0.2" fill="none" />
+          <path d="M0,70 Q25,60 50,70 T100,70" stroke="white" strokeWidth="0.2" fill="none" />
+          {/* Add more wavy lines as needed for "abstract lines" effect */}
+          <path d="M80,0 Q70,25 80,50 T80,100" stroke="white" strokeWidth="0.2" fill="none" />
+          <path d="M90,0 Q80,25 90,50 T90,100" stroke="white" strokeWidth="0.2" fill="none" />
         </svg>
+        <div className="absolute right-0 top-0 w-1/2 h-full">
+          {/* Abstract curved lines similar to the image */}
+          <svg className="w-full h-full" viewBox="0 0 500 800" fill="none">
+            <path d="M100,0 C150,200 50,600 300,800" stroke="rgba(255,255,255,0.2)" strokeWidth="2" />
+            <path d="M400,0 C350,200 450,600 200,800" stroke="rgba(255,255,255,0.2)" strokeWidth="2" />
+            <circle cx="200" cy="500" r="10" fill="white" fillOpacity="0.8" />
+            <circle cx="400" cy="200" r="15" fill="white" fillOpacity="0.8" />
+            <circle cx="450" cy="700" r="12" fill="white" fillOpacity="0.8" />
+          </svg>
+        </div>
       </div>
 
-      <div className="container-custom relative z-10 py-20 lg:py-32">
+      <div className="container-custom relative z-10 py-16 lg:py-24">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Content */}
+          {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: 'easeOut' }}
+            transition={{ duration: 0.8 }}
+            className="text-left"
           >
-            <motion.span
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
-              className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-secondary text-sm font-medium mb-6"
+              className="text-[#64ccc5] font-medium tracking-wider text-sm uppercase mb-4"
             >
-              Your Trusted Healthcare Partner
-            </motion.span>
+              FIND BALANCE, EMBRACE LIFE
+            </motion.p>
 
             <motion.h1
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3, duration: 0.8 }}
-              className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6"
+              transition={{ delay: 0.3 }}
+              className="text-5xl lg:text-7xl font-bold text-white leading-tight mb-6 font-display"
             >
-              Caring for{' '}
-              <span className="text-secondary">Women's</span>{' '}
-              Health & Wellness
+              Caring for Your <br />
+              <span className="text-[#88e8dd]">Inner Peace</span>
             </motion.h1>
 
+            <motion.div
+              initial={{ opacity: 0, width: 0 }}
+              animate={{ opacity: 1, width: "100px" }}
+              transition={{ delay: 0.4 }}
+              className="h-1 bg-white/50 mb-8"
+            />
+
             <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.8 }}
-              className="text-lg text-white/80 leading-relaxed mb-8 max-w-lg"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5 }}
+              className="text-white/90 text-lg leading-relaxed mb-10 max-w-xl"
             >
-              Experience compassionate healthcare at Mufaddal Polyclinic. 
-              From women's wellness to comprehensive supportive care, 
-              we're dedicated to your complete health journey.
+              Discover clarity, confidence, and emotional wellness through guided support that helps you manage stress, heal from within, and grow stronger in every aspect of your mental health journey.
             </motion.p>
 
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5, duration: 0.8 }}
-              className="flex flex-wrap gap-4"
+              transition={{ delay: 0.6 }}
+              className="flex items-center gap-6"
             >
-              <Button variant="hero" size="xl" asChild>
-                <Link to="/contact">
-                  Book Appointment
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
+              <Button
+                className="bg-[#134e4a] hover:bg-[#115e59] text-white rounded-full px-8 py-6 text-base"
+              >
+                <Link to="/contact">Start A Checkup Now</Link>
               </Button>
-              <Button variant="heroOutline" size="xl" asChild>
-                <Link to="/about">Learn More</Link>
-              </Button>
-            </motion.div>
 
-            {/* Stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.8 }}
-              className="flex flex-wrap gap-8 mt-12"
-            >
-              <div>
-                <div className="text-3xl font-bold text-secondary">15+</div>
-                <div className="text-white/70 text-sm">Years Experience</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-secondary">10k+</div>
-                <div className="text-white/70 text-sm">Happy Patients</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-secondary">20+</div>
-                <div className="text-white/70 text-sm">Expert Doctors</div>
-              </div>
+              <button
+                className="w-12 h-12 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center backdrop-blur-sm transition-all"
+                aria-label="Play Video"
+              >
+                <div className="w-0 h-0 border-t-[6px] border-t-transparent border-l-[10px] border-l-white border-b-[6px] border-b-transparent ml-1"></div>
+              </button>
             </motion.div>
           </motion.div>
 
-          {/* Hero Image Area */}
+          {/* Right Image Area */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="relative hidden lg:block"
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="relative lg:ml-auto"
           >
-            {/* Main Image Container */}
-            <div className="relative">
-              <div className="w-[480px] h-[600px] rounded-[2rem] overflow-hidden bg-gradient-to-br from-secondary/30 to-white/10 backdrop-blur-sm border border-white/20">
-                <img
-                  src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=600&h=750&fit=crop"
-                  alt="Healthcare professional"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-
-              {/* Floating Cards */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.8, duration: 0.5 }}
-                className="absolute -top-4 -right-4 glass-card rounded-2xl p-4 flex items-center gap-3"
-              >
-                <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center">
-                  <Phone className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <p className="text-xs text-muted-foreground">Call us anytime</p>
-                  <p className="font-semibold text-primary">+91 98765 43210</p>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 1, duration: 0.5 }}
-                className="absolute -bottom-4 -left-4 glass-card rounded-2xl p-4"
-              >
-                <div className="flex items-center gap-2 mb-2">
-                  <div className="flex">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-secondary text-secondary" />
-                    ))}
-                  </div>
-                  <span className="font-bold text-primary">4.9/5</span>
-                </div>
-                <p className="text-sm text-muted-foreground">
-                  Based on 500+ reviews
-                </p>
-              </motion.div>
+            {/* Main Image */}
+            <div className="relative z-10 w-full max-w-[400px] mx-auto">
+              <img
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop"
+                alt="Smiling Woman"
+                className="w-full h-auto object-cover rounded-none"
+                style={{
+                  maskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)',
+                  WebkitMaskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)'
+                }}
+              />
             </div>
+
+            {/* Floating Call Card */}
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8 }}
+              className="absolute top-10 -right-4 lg:-right-12 bg-[#0e4853] text-white p-4 rounded-2xl shadow-lg flex items-center gap-3 z-20 max-w-[240px]"
+            >
+              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center shrink-0">
+                <Phone className="w-5 h-5 text-[#0e4853] fill-current" />
+              </div>
+              <div>
+                <p className="text-xs text-white/80">Call us anytime</p>
+                <p className="font-bold text-lg">(555) 123-4567</p>
+              </div>
+            </motion.div>
+
+            {/* Floating Review Card */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 1.0 }}
+              className="absolute bottom-20 -left-8 lg:-left-16 bg-[#4a7c7c]/90 backdrop-blur-md text-white p-4 rounded-xl shadow-lg z-20"
+            >
+              <div className="text-2xl font-bold">4.9 /5</div>
+              <div className="text-sm text-white/80">Review on Google</div>
+            </motion.div>
           </motion.div>
         </div>
       </div>
