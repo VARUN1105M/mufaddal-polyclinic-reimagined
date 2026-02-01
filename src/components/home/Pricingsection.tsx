@@ -1,49 +1,50 @@
 import React from 'react';
+import AnimatedSection from '@/components/ui/AnimatedSection';
 
 const PricingPlans = () => {
-  const plans = [
-    {
-      name: 'Basic Plan',
-      price: 49,
-      description: 'Creates a compassionate environment where healing begins with shared stories, emotional validation, and gentle guidance.',
-      features: [
-        'Access to group counseling sessions (twice a month)',
-        'Unlimited access to self-help resources',
-        'Weekly guided meditation and mindfulness exercises',
-        '24/7 support via chat and email'
-      ],
-      isPopular: false
-    },
-    {
-      name: 'Standard Plan',
-      price: 99,
-      description: 'Strengthens inner stability by teaching coping skills, improving self-awareness, and fostering a supportive group dynamic.',
-      features: [
-        'Everything in Basic Plan',
-        'One-on-one counseling session (once a month)',
-        'Personalized mental wellness plan',
-        'Priority response from mental health professionals'
-      ],
-      isPopular: true
-    },
-    {
-      name: 'Premium Plan',
-      price: 149,
-      description: 'Focuses on emotional recovery through trauma-informed care, building trust, and nurturing personal growth in a safe setting.',
-      features: [
-        'Everything in Standard Plan',
-        'Weekly one-on-one counseling sessions',
-        'Access to exclusive workshops and webinars',
-        'Direct access to expert therapists anytime',
-        'Ongoing progress tracking and feedback'
-      ],
-      isPopular: false
-    }
-  ];
+    const plans = [
+        {
+            name: 'Basic Plan',
+            price: 49,
+            description: 'Creates a compassionate environment where healing begins with shared stories, emotional validation, and gentle guidance.',
+            features: [
+                'Access to group counseling sessions (twice a month)',
+                'Unlimited access to self-help resources',
+                'Weekly guided meditation and mindfulness exercises',
+                '24/7 support via chat and email'
+            ],
+            isPopular: false
+        },
+        {
+            name: 'Standard Plan',
+            price: 99,
+            description: 'Strengthens inner stability by teaching coping skills, improving self-awareness, and fostering a supportive group dynamic.',
+            features: [
+                'Everything in Basic Plan',
+                'One-on-one counseling session (once a month)',
+                'Personalized mental wellness plan',
+                'Priority response from mental health professionals'
+            ],
+            isPopular: true
+        },
+        {
+            name: 'Premium Plan',
+            price: 149,
+            description: 'Focuses on emotional recovery through trauma-informed care, building trust, and nurturing personal growth in a safe setting.',
+            features: [
+                'Everything in Standard Plan',
+                'Weekly one-on-one counseling sessions',
+                'Access to exclusive workshops and webinars',
+                'Direct access to expert therapists anytime',
+                'Ongoing progress tracking and feedback'
+            ],
+            isPopular: false
+        }
+    ];
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-neutral-100 py-20 px-4">
-      <style>{`
+    return (
+        <div className="min-h-screen bg-gradient-to-br from-gray-50 to-neutral-100 py-20 px-4">
+            <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Work+Sans:wght@400;500;600;700&display=swap');
         
         .pricing-card {
@@ -150,109 +151,116 @@ const PricingPlans = () => {
         }
       `}</style>
 
-      <div className="max-w-7xl mx-auto">
-        
-        {/* Header */}
-        <div className="text-center mb-16">
-          <p 
-            className="text-sm font-semibold tracking-wider mb-3"
-            style={{ fontFamily: "'Work Sans', sans-serif", color: '#6B7280', letterSpacing: '0.15em' }}
-          >
-            PRICING PLAN
-          </p>
-          <h1 
-            className="text-5xl font-bold mb-4"
-            style={{ fontFamily: "'Lora', serif", color: '#003C43' }}
-          >
-            Affordable Plans for<br />a Healthier Mind
-          </h1>
-        </div>
+            <div className="max-w-7xl mx-auto">
 
-        {/* Pricing Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {plans.map((plan, index) => (
-            <div
-              key={index}
-              className={`pricing-card rounded-3xl p-8 ${
-                plan.isPopular ? 'popular-card shadow-2xl text-white' : 'bg-white shadow-lg'
-              } relative`}
-            >
-              {/* Popular Badge */}
-              {plan.isPopular && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <div 
-                    className="badge text-white px-6 py-2 rounded-full text-sm font-semibold shadow-lg"
-                    style={{ fontFamily: "'Work Sans', sans-serif" }}
-                  >
-                    Most Popular
-                  </div>
+                {/* Header */}
+                <AnimatedSection direction="fade" delay={0.1}>
+                    <div className="text-center mb-16">
+                        <p
+                            className="text-sm font-semibold tracking-wider mb-3"
+                            style={{ fontFamily: "'Work Sans', sans-serif", color: '#6B7280', letterSpacing: '0.15em' }}
+                        >
+                            PRICING PLAN
+                        </p>
+                        <h1
+                            className="text-5xl font-bold mb-4"
+                            style={{ fontFamily: "'Lora', serif", color: '#003C43' }}
+                        >
+                            Affordable Plans for<br />a Healthier Mind
+                        </h1>
+                    </div>
+                </AnimatedSection>
+
+
+                {/* Pricing Cards */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {plans.map((plan, index) => (
+                        <AnimatedSection
+                            key={index}
+                            direction="scale"
+                            delay={0.2 + (index * 0.1)}
+                        >
+                            <div
+                                className={`pricing-card rounded-3xl p-8 ${plan.isPopular ? 'popular-card shadow-2xl text-white' : 'bg-white shadow-lg'
+                                    } relative`}
+                            >
+                                {/* Popular Badge */}
+                                {plan.isPopular && (
+                                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                                        <div
+                                            className="badge text-white px-6 py-2 rounded-full text-sm font-semibold shadow-lg"
+                                            style={{ fontFamily: "'Work Sans', sans-serif" }}
+                                        >
+                                            Most Popular
+                                        </div>
+                                    </div>
+                                )}
+
+                                {/* Plan Name */}
+                                <h3
+                                    className="text-2xl font-bold mb-6"
+                                    style={{ fontFamily: "'Lora', serif" }}
+                                >
+                                    {plan.name}
+                                </h3>
+
+                                {/* Price */}
+                                <div className="mb-6">
+                                    <span className="price-tag text-6xl">${plan.price}</span>
+                                    <span
+                                        className="text-lg ml-2"
+                                        style={{ fontFamily: "'Work Sans', sans-serif", color: plan.isPopular ? 'rgba(255,255,255,0.9)' : '#6B7280' }}
+                                    >
+                                        /Month
+                                    </span>
+                                </div>
+
+                                {/* Description */}
+                                <p
+                                    className="mb-8 leading-relaxed"
+                                    style={{ fontFamily: "'Work Sans', sans-serif", fontSize: '0.95rem', color: plan.isPopular ? 'rgba(255,255,255,0.9)' : '#6B7280' }}
+                                >
+                                    {plan.description}
+                                </p>
+
+                                {/* Features */}
+                                <h4
+                                    className="font-semibold mb-6"
+                                    style={{ fontFamily: "'Work Sans', sans-serif" }}
+                                >
+                                    What We Offer ?
+                                </h4>
+
+                                <div className="space-y-4 mb-8">
+                                    {plan.features.map((feature, fIndex) => (
+                                        <div
+                                            key={fIndex}
+                                            className="feature-item text-sm leading-relaxed"
+                                            style={{
+                                                fontFamily: "'Work Sans', sans-serif",
+                                                color: plan.isPopular ? 'rgba(255,255,255,0.95)' : '#4B5563'
+                                            }}
+                                        >
+                                            {feature}
+                                        </div>
+                                    ))}
+                                </div>
+
+                                {/* Button */}
+                                <button
+                                    className="select-btn w-full py-4 rounded-full font-semibold text-white relative z-10"
+                                    style={{ fontFamily: "'Work Sans', sans-serif" }}
+                                >
+                                    Select Plan
+                                </button>
+                            </div>
+                        </AnimatedSection>
+                    ))}
                 </div>
-              )}
 
-              {/* Plan Name */}
-              <h3 
-                className="text-2xl font-bold mb-6"
-                style={{ fontFamily: "'Lora', serif" }}
-              >
-                {plan.name}
-              </h3>
-
-              {/* Price */}
-              <div className="mb-6">
-                <span className="price-tag text-6xl">${plan.price}</span>
-                <span 
-                  className="text-lg ml-2" 
-                  style={{ fontFamily: "'Work Sans', sans-serif", color: plan.isPopular ? 'rgba(255,255,255,0.9)' : '#6B7280' }}
-                >
-                  /Month
-                </span>
-              </div>
-
-              {/* Description */}
-              <p 
-                className="mb-8 leading-relaxed"
-                style={{ fontFamily: "'Work Sans', sans-serif", fontSize: '0.95rem', color: plan.isPopular ? 'rgba(255,255,255,0.9)' : '#6B7280' }}
-              >
-                {plan.description}
-              </p>
-
-              {/* Features */}
-              <h4 
-                className="font-semibold mb-6"
-                style={{ fontFamily: "'Work Sans', sans-serif" }}
-              >
-                What We Offer ?
-              </h4>
-
-              <div className="space-y-4 mb-8">
-                {plan.features.map((feature, fIndex) => (
-                  <div
-                    key={fIndex}
-                    className="feature-item text-sm leading-relaxed"
-                    style={{ 
-                      fontFamily: "'Work Sans', sans-serif",
-                      color: plan.isPopular ? 'rgba(255,255,255,0.95)' : '#4B5563'
-                    }}
-                  >
-                    {feature}
-                  </div>
-                ))}
-              </div>
-
-              {/* Button */}
-              <button
-                className="select-btn w-full py-4 rounded-full font-semibold text-white relative z-10"
-                style={{ fontFamily: "'Work Sans', sans-serif" }}
-              >
-                Select Plan
-              </button>
             </div>
-          ))}
         </div>
-
-      </div>
-    </div>
-  );
+    );
 };
 
 export default PricingPlans;

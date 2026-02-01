@@ -7,8 +7,8 @@ import { Button } from '@/components/ui/button';
 const navLinks = [
   { name: 'Homepage', path: '/' },
   { name: 'About Us', path: '/about' },
-  { 
-    name: 'Services', 
+  {
+    name: 'Services',
     path: '/services',
     dropdown: [
       { name: 'Our Services', path: '/services' },
@@ -16,8 +16,8 @@ const navLinks = [
       { name: 'Appointment', path: '/appointment' },
     ]
   },
-  { 
-    name: 'Pages', 
+  {
+    name: 'Pages',
     path: '/pages',
     dropdown: [
       { name: 'Pricing', path: '/pricing' },
@@ -70,22 +70,22 @@ const Navbar = () => {
               </div>
             </div>
             <div className="flex items-center gap-2">
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="w-9 h-9 rounded-md bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all duration-300 hover:scale-110"
                 aria-label="Facebook"
               >
                 <Facebook className="w-4 h-4" />
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="w-9 h-9 rounded-md bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all duration-300 hover:scale-110"
                 aria-label="Twitter"
               >
                 <Twitter className="w-4 h-4" />
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="w-9 h-9 rounded-md bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all duration-300 hover:scale-110"
                 aria-label="LinkedIn"
               >
@@ -100,11 +100,10 @@ const Navbar = () => {
       <motion.header
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        className={`sticky top-0 z-50 transition-all duration-300 ${
-          scrolled
+        className={`sticky top-0 z-50 transition-all duration-300 ${scrolled
             ? 'bg-white shadow-md'
             : 'bg-white shadow-sm'
-        }`}
+          }`}
       >
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="flex items-center justify-between h-24">
@@ -120,32 +119,40 @@ const Navbar = () => {
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-1">
               {navLinks.map((link) => {
-                const isActive = location.pathname === link.path || 
+                const isActive = location.pathname === link.path ||
                   (link.dropdown && link.dropdown.some(item => location.pathname === item.path));
                 const hasDropdown = link.dropdown && link.dropdown.length > 0;
-                
+
                 return (
                   <div key={link.path} className="relative group">
-                    <Link
-                      to={link.path}
-                      className={`px-5 py-2.5 text-base font-medium transition-all duration-200 flex items-center gap-1 ${
-                        isActive
-                          ? 'text-gray-900'
-                          : 'text-gray-600 hover:text-gray-900'
-                      }`}
-                    >
-                      {link.name}
-                      {hasDropdown && (
-                        <svg 
-                          className="w-4 h-4 ml-0.5 transition-transform group-hover:rotate-180 duration-300" 
-                          fill="none" 
-                          viewBox="0 0 24 24" 
+                    {hasDropdown ? (
+                      <button
+                        className={`px-5 py-2.5 text-base font-medium transition-all duration-200 flex items-center gap-1 cursor-pointer ${isActive
+                            ? 'text-gray-900'
+                            : 'text-gray-600 hover:text-gray-900'
+                          }`}
+                      >
+                        {link.name}
+                        <svg
+                          className="w-4 h-4 ml-0.5 transition-transform group-hover:rotate-180 duration-300"
+                          fill="none"
+                          viewBox="0 0 24 24"
                           stroke="currentColor"
                         >
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                         </svg>
-                      )}
-                    </Link>
+                      </button>
+                    ) : (
+                      <Link
+                        to={link.path}
+                        className={`px-5 py-2.5 text-base font-medium transition-all duration-200 flex items-center gap-1 ${isActive
+                            ? 'text-gray-900'
+                            : 'text-gray-600 hover:text-gray-900'
+                          }`}
+                      >
+                        {link.name}
+                      </Link>
+                    )}
                     {isActive && (
                       <motion.div
                         layoutId="navbar-indicator"
@@ -154,7 +161,7 @@ const Navbar = () => {
                         transition={{ type: "spring", stiffness: 380, damping: 30 }}
                       />
                     )}
-                    
+
                     {/* Dropdown Menu */}
                     {hasDropdown && (
                       <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
@@ -178,7 +185,7 @@ const Navbar = () => {
 
             {/* CTA Button */}
             <div className="hidden lg:flex items-center gap-4">
-              <Button 
+              <Button
                 className="bg-[#003C43] hover:bg-[#245953] text-white px-6 py-6 rounded-full font-semibold text-base flex items-center gap-2 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
                 asChild
               >
@@ -215,10 +222,10 @@ const Navbar = () => {
                     const isActive = location.pathname === link.path ||
                       (link.dropdown && link.dropdown.some(item => location.pathname === item.path));
                     const hasDropdown = link.dropdown && link.dropdown.length > 0;
-                    const isDropdownOpen = hasDropdown && 
-                      ((link.name === 'Services' && servicesOpen) || 
-                       (link.name === 'Pages' && pagesOpen));
-                    
+                    const isDropdownOpen = hasDropdown &&
+                      ((link.name === 'Services' && servicesOpen) ||
+                        (link.name === 'Pages' && pagesOpen));
+
                     return (
                       <div key={link.path}>
                         {hasDropdown ? (
@@ -228,23 +235,22 @@ const Navbar = () => {
                                 if (link.name === 'Services') setServicesOpen(!servicesOpen);
                                 if (link.name === 'Pages') setPagesOpen(!pagesOpen);
                               }}
-                              className={`w-full px-4 py-3 rounded-lg text-base font-medium transition-all flex items-center justify-between ${
-                                isActive
+                              className={`w-full px-4 py-3 rounded-lg text-base font-medium transition-all flex items-center justify-between ${isActive
                                   ? 'bg-gradient-to-r from-[#245953] to-[#408E91] text-white'
                                   : 'text-gray-600 hover:bg-gray-100'
-                              }`}
+                                }`}
                             >
                               {link.name}
-                              <svg 
+                              <svg
                                 className={`w-4 h-4 transition-transform duration-300 ${isDropdownOpen ? 'rotate-180' : ''}`}
-                                fill="none" 
-                                viewBox="0 0 24 24" 
+                                fill="none"
+                                viewBox="0 0 24 24"
                                 stroke="currentColor"
                               >
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                               </svg>
                             </button>
-                            
+
                             <AnimatePresence>
                               {isDropdownOpen && (
                                 <motion.div
@@ -259,11 +265,10 @@ const Navbar = () => {
                                       <Link
                                         key={item.path}
                                         to={item.path}
-                                        className={`px-4 py-2.5 rounded-lg text-sm font-medium transition-all ${
-                                          location.pathname === item.path
+                                        className={`px-4 py-2.5 rounded-lg text-sm font-medium transition-all ${location.pathname === item.path
                                             ? 'bg-[#408E91]/10 text-[#003C43]'
                                             : 'text-gray-600 hover:bg-gray-50'
-                                        }`}
+                                          }`}
                                       >
                                         {item.name}
                                       </Link>
@@ -276,11 +281,10 @@ const Navbar = () => {
                         ) : (
                           <Link
                             to={link.path}
-                            className={`px-4 py-3 rounded-lg text-base font-medium transition-all ${
-                              isActive
+                            className={`px-4 py-3 rounded-lg text-base font-medium transition-all ${isActive
                                 ? 'bg-gradient-to-r from-[#245953] to-[#408E91] text-white'
                                 : 'text-gray-600 hover:bg-gray-100'
-                            }`}
+                              }`}
                           >
                             {link.name}
                           </Link>
@@ -288,8 +292,8 @@ const Navbar = () => {
                       </div>
                     );
                   })}
-                  <Button 
-                    className="mt-4 bg-[#003C43] hover:bg-[#245953] text-white py-6 rounded-full font-semibold flex items-center justify-center gap-2" 
+                  <Button
+                    className="mt-4 bg-[#003C43] hover:bg-[#245953] text-white py-6 rounded-full font-semibold flex items-center justify-center gap-2"
                     asChild
                   >
                     <Link to="/contact">
