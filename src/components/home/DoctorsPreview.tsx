@@ -1,9 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Heart, Users, Brain } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
+import { Heart, Users, Brain, Smile, ShieldCheck, Headphones } from 'lucide-react';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 
 export default function OurServices() {
+  const location = useLocation();
+
   const services = [
     {
       id: 1,
@@ -28,8 +30,34 @@ export default function OurServices() {
       image: '/Stress Management.png',
       icon: Brain,
       link: '/services/stress-management'
+    },
+    {
+      id: 4,
+      title: 'Career & Life Coaching',
+      description: 'Helping you gain clarity, confidence, and direction to build the life you aspire to.',
+      image: '/Blog4.png',
+      icon: Smile,
+      link: '/services/career-life-coaching'
+    },
+    {
+      id: 5,
+      title: 'Crisis Intervention Support',
+      description: 'Immediate emotional support to help you stabilize, recover, and regain balance.',
+      image: '/Blog5.png',
+      icon: ShieldCheck,
+      link: '/services/crisis-support'
+    },
+    {
+      id: 6,
+      title: 'Mindfulness & Meditation Sessions',
+      description: 'Guided sessions that cultivate inner calm, self-awareness, and daily emotional balance.',
+      image: '/Blog6.png',
+      icon: Headphones,
+      link: '/services/mindfulness-meditation'
     }
   ];
+
+  const displayedServices = location.pathname === '/services' ? services : services.slice(0, 3);
 
   return (
     <section className="w-full bg-gradient-to-b from-white to-gray-50 py-16 md:py-24 px-4 sm:px-6 lg:px-8">
@@ -46,7 +74,7 @@ export default function OurServices() {
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {services.map((service, index) => (
+          {displayedServices.map((service, index) => (
             <AnimatedSection
               key={service.id}
               delay={index * 0.1}

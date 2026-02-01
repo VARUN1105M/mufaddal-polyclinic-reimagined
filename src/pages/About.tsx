@@ -7,12 +7,14 @@ import Therapist from '@/components/home/Therapist';
 import Carosel from '@/components/home/Carosel';
 import FAQSection from '@/components/home/Faq';
 import AboutSection from '@/components/home/Aboutpage';
+import PageBanner from '@/components/home/Banner';
 
 const About = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
       <main>
+        <PageBanner title="About Us" />
         <AboutSection/>
         <WhyChooseUs/>
         <Therapist/>

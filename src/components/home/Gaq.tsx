@@ -40,7 +40,7 @@ export default function ContactSection() {
             <div className="relative z-10 max-w-7xl mx-auto">
                 {/* Header */}
                 <div className="text-center mb-12">
-                    <span className="text-[#408E91] text-sm md:text-base font-semibold uppercase tracking-wider mb-4 block">
+                    <span className="text-[#ffffff] text-sm md:text-base font-semibold uppercase tracking-wider mb-4 block">
                         GET A QUOTE
                     </span>
 
