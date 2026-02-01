@@ -7,7 +7,7 @@ import WhyChooseUs from '@/components/home/WhyChooseUs';
 import DoctorsPreview from '@/components/home/DoctorsPreview';
 import TestimonialsSection from '@/components/home/TestimonialsSection';
 import CTASection from '@/components/home/CTASection';
-import Appointment from '@/components/home/Appointment';
+import Appointment from '@/components/home/Appointmentsection';
 import Carosel from '@/components/home/Carosel';
 import Therapist from '@/components/home/Therapist';
 import Gaq from '@/components/home/Gaq';
@@ -23,9 +23,9 @@ const Index = () => {
         <WhyChooseUs />
         <DoctorsPreview />
         <Appointment />
-        <Carosel/>
-        <Therapist/>
-        <Gaq/>
+        <Carosel />
+        <Therapist />
+        <Gaq />
         <TestimonialsSection />
         {/* <CTASection /> */}
       </main>

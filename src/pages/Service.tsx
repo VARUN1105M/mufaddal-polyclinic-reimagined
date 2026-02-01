@@ -6,7 +6,7 @@ import Footer from '@/components/layout/Footer';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 import PageBanner from '@/components/home/Banner';
 import DoctorsPreview from '@/components/home/DoctorsPreview';
-import Appointment from '@/components/home/Appointment';
+import Appointment from '@/components/home/Appointmentsection';
 import Carosel from '@/components/home/Carosel';
 import Gaq from '@/components/home/Gaq';
 
@@ -60,8 +60,8 @@ const SupportiveCare = () => {
       <main>
         <PageBanner title="Our Services" />
         <DoctorsPreview />
-        <Gaq/>
-        <Carosel/>
+        <Gaq />
+        <Carosel />
       </main>
       <Footer />
     </div>

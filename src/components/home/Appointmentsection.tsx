@@ -3,7 +3,11 @@ import { Link } from "react-router-dom";
 import { Check, Smile, ThumbsUp, Users } from "lucide-react";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 
-export default function WhyChooseUs() {
+interface AppointmentSectionProps {
+    lightMode?: boolean;
+}
+
+export default function AppointmentSection({ lightMode = false }: AppointmentSectionProps) {
     const features = [
         { text: "Compassionate & Experienced Professionals" },
         { text: "Holistic Approach To Well-Being" },
@@ -18,17 +22,21 @@ export default function WhyChooseUs() {
 
     return (
         <section
-            className="
+            className={`
         w-full py-20 md:py-28 px-6 lg:px-10 xl:px-16
-        relative overflow-hidden text-white
-      "
+        relative overflow-hidden ${lightMode ? 'text-gray-900' : 'text-white'}
+      `}
             style={{
-                background: "linear-gradient(to bottom left, #003C43, #245953, #408E91)"
+                background: lightMode ? "#ffffff" : "linear-gradient(to bottom left, #003C43, #245953, #408E91)"
             }}
         >
-            {/* Soft Glow Background */}
-            <div className="absolute top-0 left-0 w-80 h-80 bg-white/10 blur-3xl rounded-full" />
-            <div className="absolute bottom-0 right-0 w-[420px] h-[420px] bg-white/10 blur-3xl rounded-full" />
+            {/* Soft Glow Background - Only in Dark Mode */}
+            {!lightMode && (
+                <>
+                    <div className="absolute top-0 left-0 w-80 h-80 bg-white/10 blur-3xl rounded-full" />
+                    <div className="absolute bottom-0 right-0 w-[420px] h-[420px] bg-white/10 blur-3xl rounded-full" />
+                </>
+            )}
 
             <div className="max-w-7xl mx-auto relative z-10">
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -40,14 +48,14 @@ export default function WhyChooseUs() {
                         </span>
 
                         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
-                            <span className="text-white">Restoring </span>
+                            <span className={lightMode ? "text-gray-900" : "text-white"}>Restoring </span>
                             <span className="text-[#64CCC5]">Hope</span>
-                            <span className="text-white">, One</span><br />
-                            <span className="text-white">Day </span>
+                            <span className={lightMode ? "text-gray-900" : "text-white"}>, One</span><br />
+                            <span className={lightMode ? "text-gray-900" : "text-white"}>Day </span>
                             <span className="text-[#64CCC5]">At A Time</span>
                         </h2>
 
-                        <p className="text-white/90 text-lg md:text-xl leading-relaxed max-w-xl">
+                        <p className={`${lightMode ? "text-gray-600" : "text-white/90"} text-lg md:text-xl leading-relaxed max-w-xl`}>
                             Through consistent care and compassionate guidance, we help individuals
                             rediscover strength, build resilience, and move toward a brighter, healthier future.
                         </p>
@@ -65,7 +73,7 @@ export default function WhyChooseUs() {
                   ">
                                         <Check className="w-6 h-6 text-white" strokeWidth={3} />
                                     </div>
-                                    <span className="text-white text-lg md:text-xl font-medium">
+                                    <span className={`${lightMode ? "text-gray-800" : "text-white"} text-lg md:text-xl font-medium`}>
                                         {feature.text}
                                     </span>
                                 </div>
@@ -137,9 +145,13 @@ export default function WhyChooseUs() {
 
                         </div>
 
-                        {/* DECORATIVE GLOWS */}
-                        <div className="absolute -bottom-6 -left-6 w-36 h-36 bg-[#003C43]/30 rounded-full blur-2xl -z-10" />
-                        <div className="absolute -top-5 -right-5 w-28 h-28 bg-[#64CCC5]/30 rounded-full blur-xl -z-10" />
+                        {/* DECORATIVE GLOWS - Dark mode only for simplicity, or adjusted colors */}
+                        {!lightMode && (
+                            <>
+                                <div className="absolute -bottom-6 -left-6 w-36 h-36 bg-[#003C43]/30 rounded-full blur-2xl -z-10" />
+                                <div className="absolute -top-5 -right-5 w-28 h-28 bg-[#64CCC5]/30 rounded-full blur-xl -z-10" />
+                            </>
+                        )}
 
                     </AnimatedSection>
                 </div>
