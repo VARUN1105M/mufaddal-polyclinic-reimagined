@@ -2,53 +2,71 @@ import React from 'react';
 import { Facebook, Twitter, Linkedin } from 'lucide-react';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 
-export default function OurSpecialist() {
+interface OurSpecialistProps {
+    showAll?: boolean;
+}
+
+export default function OurSpecialist({ showAll = false }: OurSpecialistProps) {
     const therapists = [
         {
             id: 1,
             name: 'Ubeid Una',
             role: 'Psychologist',
             image: '/doctor1.png',
-            social: {
-                facebook: '#',
-                twitter: '#',
-                linkedin: '#'
-            }
+            social: { facebook: '#', twitter: '#', linkedin: '#' }
         },
         {
             id: 2,
             name: 'Hafsha Jasmine',
             role: 'Psychologist',
             image: '/doctor2.png',
-            social: {
-                facebook: '#',
-                twitter: '#',
-                linkedin: '#'
-            }
+            social: { facebook: '#', twitter: '#', linkedin: '#' }
         },
         {
             id: 3,
             name: 'Farina Amira',
             role: 'Psychologist',
             image: '/doctor3.png',
-            social: {
-                facebook: '#',
-                twitter: '#',
-                linkedin: '#'
-            }
+            social: { facebook: '#', twitter: '#', linkedin: '#' }
         },
         {
             id: 4,
             name: 'Idayati Ilyas',
             role: 'Psychologist',
             image: '/doctor4.png',
-            social: {
-                facebook: '#',
-                twitter: '#',
-                linkedin: '#'
-            }
+            social: { facebook: '#', twitter: '#', linkedin: '#' }
+        },
+        {
+            id: 5,
+            name: 'Hima Wanabe',
+            role: 'Psychologist',
+            image: '/Doctor5.png',
+            social: { facebook: '#', twitter: '#', linkedin: '#' }
+        },
+        {
+            id: 6,
+            name: 'Raul Axios',
+            role: 'Psychologist',
+            image: '/Doctor6.png',
+            social: { facebook: '#', twitter: '#', linkedin: '#' }
+        },
+        {
+            id: 7,
+            name: 'Akio Mirfaq',
+            role: 'Psychologist',
+            image: '/Doctor7.png',
+            social: { facebook: '#', twitter: '#', linkedin: '#' }
+        },
+        {
+            id: 8,
+            name: 'Bella Megumi',
+            role: 'Psychologist',
+            image: '/Doctor8.png',
+            social: { facebook: '#', twitter: '#', linkedin: '#' }
         }
     ];
+
+    const visibleTherapists = showAll ? therapists : therapists.slice(0, 4);
 
     return (
         <section className="w-full bg-gradient-to-b from-white to-[#408E91]/10 py-16 md:py-24 px-4 sm:px-6 lg:px-8">
@@ -66,7 +84,7 @@ export default function OurSpecialist() {
 
                 {/* Therapist Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-                    {therapists.map((therapist, index) => (
+                    {visibleTherapists.map((therapist, index) => (
                         <AnimatedSection
                             key={therapist.id}
                             delay={index * 0.1}
@@ -124,13 +142,6 @@ export default function OurSpecialist() {
                         </AnimatedSection>
                     ))}
                 </div>
-
-                {/* CTA Button */}
-                <AnimatedSection delay={0.4} className="text-center mt-12 md:mt-16">
-                    <button className="bg-[#003C43] hover:bg-[#245953] text-white px-8 py-4 rounded-full font-semibold text-base md:text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                        View All Therapists
-                    </button>
-                </AnimatedSection>
 
             </div>
         </section>
