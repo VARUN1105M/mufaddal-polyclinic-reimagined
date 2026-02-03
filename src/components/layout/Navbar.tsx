@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 
 const navLinks = [
   { name: 'Homepage', path: '/' },
-  { name: 'About Us', path: '/about' },
+  { name: 'About', path: '/about' },
   {
     name: 'Women Care Services',
     path: '/women-care',
@@ -51,7 +51,7 @@ const navLinks = [
   //     { name: 'Error 404', path: '/404' },
   //   ]
   // },
-  { name: 'Contact Us', path: '/contact' },
+  { name: 'Contact', path: '/contact' },
 ];
 
 const Navbar = () => {
