@@ -5,13 +5,10 @@ import { Button } from '@/components/ui/button';
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[90vh] overflow-hidden bg-gradient-to-br from-[#1a4f5a] to-[#2d6e7e]">
+    <section className="relative min-h-[90vh] overflow-hidden bg-gradient-to-br from-[#1a4f5a] to-[#2d6e7e] flex items-end">
       {/* Floating Shapes/Lines Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <svg className="absolute w-full h-full opacity-30" viewBox="0 0 100 100" preserveAspectRatio="none">
-          <path d="M0,50 Q25,40 50,50 T100,50" stroke="white" strokeWidth="0.2" fill="none" />
-          <path d="M0,30 Q25,20 50,30 T100,30" stroke="white" strokeWidth="0.2" fill="none" />
-          <path d="M0,70 Q25,60 50,70 T100,70" stroke="white" strokeWidth="0.2" fill="none" />
           {/* Add more wavy lines as needed for "abstract lines" effect */}
           <path d="M80,0 Q70,25 80,50 T80,100" stroke="white" strokeWidth="0.2" fill="none" />
           <path d="M90,0 Q80,25 90,50 T90,100" stroke="white" strokeWidth="0.2" fill="none" />
@@ -28,14 +25,14 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="container-custom relative z-10 py-16 lg:py-24">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container-custom relative z-10 pt-16 pb-0 lg:pt-24 lg:pb-0">
+        <div className="grid lg:grid-cols-2 gap-12 items-end">
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-left"
+            className="text-left self-center pb-12 lg:pb-24"
           >
             <motion.p
               initial={{ opacity: 0 }}
@@ -101,15 +98,11 @@ const HeroSection = () => {
             className="relative lg:ml-auto"
           >
             {/* Main Image */}
-            <div className="relative z-10 w-full max-w-[400px] mx-auto">
+            <div className="relative z-10 w-full max-w-[500px] mx-auto">
               <img
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop"
-                alt="Smiling Woman"
-                className="w-full h-auto object-cover rounded-none"
-                style={{
-                  maskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)',
-                  WebkitMaskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)'
-                }}
+                src="/hero-woman-transparent (2).png"
+                alt="Smiling Doctor"
+                className="w-full h-auto object-contain"
               />
             </div>
 

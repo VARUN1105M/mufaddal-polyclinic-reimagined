@@ -23,17 +23,7 @@ export default function Footer() {
     <footer className="w-full relative text-white overflow-hidden">
 
       {/* Background Image */}
-      <div className="absolute inset-0">
-        <img
-          src="/footer-background.png"
-          alt="Footer Background"
-          className="w-full h-full object-cover"
-        />
-
-        {/* Soft Gradient Overlay with Glass Effect */}
-        <div className="absolute inset-0 bg-[#003C43]/80 mix-blend-multiply"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-[#003C43] via-[#003C43]/80 to-transparent opacity-90"></div>
-      </div>
+      <div className="absolute inset-0 bg-[#003C43]"></div>
 
       {/* Main Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
