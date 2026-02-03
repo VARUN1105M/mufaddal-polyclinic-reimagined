@@ -4,6 +4,7 @@ export interface ServiceData {
     description: string;
     features: string[];
     benefits: string[];
+    layout?: 'sidebar-left' | 'sidebar-right' | 'centered';
 }
 
 export const serviceData: Record<string, ServiceData> = {
@@ -12,61 +13,71 @@ export const serviceData: Record<string, ServiceData> = {
         title: 'Women Wellness',
         description: 'Comprehensive wellness programs designed specifically for women at every stage of life. Our holistic approach addresses physical, emotional, and mental health needs through personalized care plans.',
         features: ['Annual Health Screenings', 'Nutritional Counseling', 'Stress Management Workshops', 'Lifestyle Assessment'],
-        benefits: ['Early detection of health issues', 'Improved energy and vitality', 'Personalized health roadmap', 'Holistic support system']
+        benefits: ['Early detection of health issues', 'Improved energy and vitality', 'Personalized health roadmap', 'Holistic support system'],
+        layout: 'sidebar-left'
     },
     'period-care': {
         title: 'Period Care',
         description: 'Expert care for menstrual health, addressing irregularities, pain, and other concerns. We provide diagnosis and treatment for various menstrual disorders to ensure your comfort and well-being.',
         features: ['Cycle Tracking Support', 'Pain Management Strategies', 'Hormonal Evaluation', 'Treatment of Menstrual Disorders'],
-        benefits: ['Reduced menstrual pain', 'Regulated cycles', 'Better understanding of your body', 'Enhanced quality of life']
+        benefits: ['Reduced menstrual pain', 'Regulated cycles', 'Better understanding of your body', 'Enhanced quality of life'],
+        layout: 'sidebar-right'
     },
     'hormone-balance': {
         title: 'Hormone Balance',
         description: 'Specialized diagnosis and treatment for hormonal imbalances affecting mood, energy, and overall health. We use advanced testing and integrative therapies to restore hormonal harmony.',
         features: ['Comprehensive Hormone Panel', 'Bioidentical Hormone Therapy', 'Dietary Adjustments', 'Lifestyle Modifications'],
-        benefits: ['Stabilized mood', ' increased energy levels', 'Improved sleep quality', 'Weight management support']
+        benefits: ['Stabilized mood', ' increased energy levels', 'Improved sleep quality', 'Weight management support'],
+        layout: 'centered'
     },
     'pcos-care': {
         title: 'PCOS Care',
         description: 'Dedicated management programs for Polycystic Ovary Syndrome (PCOS). Our multidisciplinary team helps you manage symptoms, improve fertility, and reduce long-term health risks.',
         features: ['Metabolic Screening', 'Fertility Support', 'Customized Diet Plans', 'Skin and Hair Management'],
-        benefits: ['Symptom control', 'Improved metabolic health', 'Fertility enhancement', 'Long-term risk reduction']
+        benefits: ['Symptom control', 'Improved metabolic health', 'Fertility enhancement', 'Long-term risk reduction'],
+        layout: 'sidebar-left'
     },
     'pregnancy': {
         title: 'Pregnancy Check',
         description: 'Complete prenatal care to ensure a healthy pregnancy for both mother and baby. From conception to delivery, we provide regular check-ups, monitoring, and guidance.',
         features: ['Regular Ultrasound Scans', 'Prenatal Screening', 'Nutritional Guidance for Pregnancy', 'Labor Preparation Classes'],
-        benefits: ['Healthy fetal development', 'Early detection of complications', 'Confident birthing experience', 'Ongoing support']
+        benefits: ['Healthy fetal development', 'Early detection of complications', 'Confident birthing experience', 'Ongoing support'],
+        layout: 'sidebar-right'
     },
     'postnatal': {
         title: 'Postnatal Care',
         description: 'Supportive care for new mothers during the recovery period after childbirth. We focus on physical recovery, lactation support, and adjusting to life with a newborn.',
         features: ['Post-delivery Health Checks', 'Lactation Consulting', 'Pelvic Floor Rehabilitation', 'Postpartum Depression Screening'],
-        benefits: ['Faster physical recovery', 'Successful breastfeeding', 'Emotional support', 'Confidence in parenting']
+        benefits: ['Faster physical recovery', 'Successful breastfeeding', 'Emotional support', 'Confidence in parenting'],
+        layout: 'centered'
     },
     'anemia-thyroid': {
         title: 'Anemia & Thyroid Management',
         description: 'Diagnosis and effective management of anemia and thyroid disorders common in women. We monitor your levels and adjust treatments to optimize your energy and metabolism.',
         features: ['Blood Panel Analysis', 'Thyroid Function Tests', 'Iron Deficiency Treatment', 'Medication Management'],
-        benefits: ['Restored energy levels', 'Improved metabolism', 'Better cognitive function', 'Overall physical stability']
+        benefits: ['Restored energy levels', 'Improved metabolism', 'Better cognitive function', 'Overall physical stability'],
+        layout: 'sidebar-left'
     },
     'menopause': {
         title: 'Menopause Care',
         description: 'Compassionate care to navigate the transition of menopause. We offer treatments and lifestyle advice to manage symptoms and maintain health during this new life phase.',
         features: ['Symptom Management (Hot Flashes, etc.)', 'Bone Density Health', 'Hormone Replacement Therapy (if needed)', 'Heart Health Monitoring'],
-        benefits: ['Relief from symptoms', 'Bone health protection', 'Emotional balance', 'Healthy aging']
+        benefits: ['Relief from symptoms', 'Bone health protection', 'Emotional balance', 'Healthy aging'],
+        layout: 'sidebar-right'
     },
     'breast-care': {
         title: 'Breast Care',
         description: 'Routine screenings and clinical exams for early detection of breast issues. We prioritize breast health education and provide swift referrals for further diagnostics if needed.',
         features: ['Clinical Breast Exams', 'Mammogram Referrals', 'Self-Exam Education', 'Benign Breast Condition Management'],
-        benefits: ['Early detection', 'Peace of mind', 'Breast health awareness', 'Proactive care']
+        benefits: ['Early detection', 'Peace of mind', 'Breast health awareness', 'Proactive care'],
+        layout: 'centered'
     },
     'mental-wellness': {
         title: 'Mental Wellness',
         description: 'Mental health support tailored for women, addressing anxiety, depression, and stress. Our safe space allows you to discuss your feelings and find effective coping strategies.',
         features: ['Individual Counseling', 'Stress & Anxiety Management', 'Postpartum Support', 'Mindfulness Training'],
-        benefits: ['Emotional resilience', 'Better stress coping', 'Improved mental clarity', 'Balanced life']
+        benefits: ['Emotional resilience', 'Better stress coping', 'Improved mental clarity', 'Balanced life'],
+        layout: 'sidebar-left'
     },
 
     // Supportive Care Services

@@ -37,18 +37,20 @@ const navLinks = [
       { name: 'Preventive Care', path: '/supportive-care/preventive' },
     ]
   },
-  {
-    name: 'Pages',
-    path: '/pages',
-    dropdown: [
-      { name: 'Pricing', path: '/pricing' },
-      { name: 'Team', path: '/team' },
-      { name: 'Blogs', path: '/blogs' },
-      { name: 'Blog Detail', path: '/blogs/detail' },
-      { name: 'FAQs', path: '/faqs' },
-      { name: 'Error 404', path: '/404' },
-    ]
-  },
+  { name: 'Doctors', path: '/team' },
+  // disabled pages
+  // {
+  //   name: 'Pages',
+  //   path: '/pages',
+  //   dropdown: [
+  //     { name: 'Pricing', path: '/pricing' },
+  //     { name: 'Doctors', path: '/team' },
+  //     { name: 'Blogs', path: '/blogs' },
+  //     { name: 'Blog Detail', path: '/blogs/detail' },
+  //     { name: 'FAQs', path: '/faqs' },
+  //     { name: 'Error 404', path: '/404' },
+  //   ]
+  // },
   { name: 'Contact Us', path: '/contact' },
 ];
 

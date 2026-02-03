@@ -9,7 +9,7 @@ const Team = () => {
         <div className="min-h-screen">
             <Navbar />
             <main>
-                <PageBanner title="Team" />
+                <PageBanner title="Doctors" />
                 <Therapist showAll />
             </main>
             <Footer />
