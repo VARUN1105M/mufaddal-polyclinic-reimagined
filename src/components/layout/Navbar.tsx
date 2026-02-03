@@ -5,7 +5,7 @@ import { Menu, X, Clock, MapPin, Facebook, Twitter, Linkedin, FileText } from 'l
 import { Button } from '@/components/ui/button';
 
 const navLinks = [
-  { name: 'Homepage', path: '/' },
+  { name: 'Home', path: '/' },
   { name: 'About', path: '/about' },
   {
     name: 'Women Care Services',
