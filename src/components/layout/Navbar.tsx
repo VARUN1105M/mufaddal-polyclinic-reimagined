@@ -8,12 +8,33 @@ const navLinks = [
   { name: 'Homepage', path: '/' },
   { name: 'About Us', path: '/about' },
   {
-    name: 'Services',
-    path: '/services',
+    name: 'Women Care Services',
+    path: '/women-care',
     dropdown: [
-      { name: 'Our Services', path: '/services' },
-      { name: 'Service Detail', path: '/services/detail' },
-      { name: 'Appointment', path: '/appointment' },
+      { name: 'Women Wellness', path: '/women-care/wellness' },
+      { name: 'Period Care', path: '/women-care/period-care' },
+      { name: 'Hormone Balance', path: '/women-care/hormone-balance' },
+      { name: 'PCOS Care', path: '/women-care/pcos-care' },
+      { name: 'Pregnancy Check', path: '/women-care/pregnancy' },
+      { name: 'Postnatal Care', path: '/women-care/postnatal' },
+      { name: 'Anemia & Thyroid Management', path: '/women-care/anemia-thyroid' },
+      { name: 'Menopause Care', path: '/women-care/menopause' },
+      { name: 'Breast Care', path: '/women-care/breast-care' },
+      { name: 'Mental Wellness', path: '/women-care/mental-wellness' },
+    ]
+  },
+  {
+    name: 'Supportive Care Services',
+    path: '/supportive-care',
+    dropdown: [
+      { name: 'General Physician', path: '/supportive-care/physician' },
+      { name: 'Dental Care', path: '/supportive-care/dental' },
+      { name: 'Physiotherapy Care', path: '/supportive-care/physiotherapy' },
+      { name: 'ENT Care', path: '/supportive-care/ent' },
+      { name: 'Diabetes Care', path: '/supportive-care/diabetes' },
+      { name: 'Nutrition Care', path: '/supportive-care/nutrition' },
+      { name: 'Pain Management', path: '/supportive-care/pain-management' },
+      { name: 'Preventive Care', path: '/supportive-care/preventive' },
     ]
   },
   {
@@ -34,8 +55,7 @@ const navLinks = [
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
-  const [pagesOpen, setPagesOpen] = useState(false);
+  const [activeMobileDropdown, setActiveMobileDropdown] = useState<string | null>(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -48,8 +68,7 @@ const Navbar = () => {
 
   useEffect(() => {
     setIsOpen(false);
-    setServicesOpen(false);
-    setPagesOpen(false);
+    setActiveMobileDropdown(null);
   }, [location]);
 
   return (
@@ -101,8 +120,8 @@ const Navbar = () => {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         className={`sticky top-0 z-50 transition-all duration-300 ${scrolled
-            ? 'bg-white shadow-md'
-            : 'bg-white shadow-sm'
+          ? 'bg-white shadow-md'
+          : 'bg-white shadow-sm'
           }`}
       >
         <div className="container mx-auto px-4 max-w-7xl">
@@ -128,8 +147,8 @@ const Navbar = () => {
                     {hasDropdown ? (
                       <button
                         className={`px-5 py-2.5 text-base font-medium transition-all duration-200 flex items-center gap-1 cursor-pointer ${isActive
-                            ? 'text-gray-900'
-                            : 'text-gray-600 hover:text-gray-900'
+                          ? 'text-gray-900'
+                          : 'text-gray-600 hover:text-gray-900'
                           }`}
                       >
                         {link.name}
@@ -146,8 +165,8 @@ const Navbar = () => {
                       <Link
                         to={link.path}
                         className={`px-5 py-2.5 text-base font-medium transition-all duration-200 flex items-center gap-1 ${isActive
-                            ? 'text-gray-900'
-                            : 'text-gray-600 hover:text-gray-900'
+                          ? 'text-gray-900'
+                          : 'text-gray-600 hover:text-gray-900'
                           }`}
                       >
                         {link.name}
@@ -222,22 +241,17 @@ const Navbar = () => {
                     const isActive = location.pathname === link.path ||
                       (link.dropdown && link.dropdown.some(item => location.pathname === item.path));
                     const hasDropdown = link.dropdown && link.dropdown.length > 0;
-                    const isDropdownOpen = hasDropdown &&
-                      ((link.name === 'Services' && servicesOpen) ||
-                        (link.name === 'Pages' && pagesOpen));
+                    const isDropdownOpen = hasDropdown && activeMobileDropdown === link.name;
 
                     return (
                       <div key={link.path}>
                         {hasDropdown ? (
                           <>
                             <button
-                              onClick={() => {
-                                if (link.name === 'Services') setServicesOpen(!servicesOpen);
-                                if (link.name === 'Pages') setPagesOpen(!pagesOpen);
-                              }}
+                              onClick={() => setActiveMobileDropdown(isDropdownOpen ? null : link.name)}
                               className={`w-full px-4 py-3 rounded-lg text-base font-medium transition-all flex items-center justify-between ${isActive
-                                  ? 'bg-gradient-to-r from-[#245953] to-[#408E91] text-white'
-                                  : 'text-gray-600 hover:bg-gray-100'
+                                ? 'bg-gradient-to-r from-[#245953] to-[#408E91] text-white'
+                                : 'text-gray-600 hover:bg-gray-100'
                                 }`}
                             >
                               {link.name}
@@ -266,8 +280,8 @@ const Navbar = () => {
                                         key={item.path}
                                         to={item.path}
                                         className={`px-4 py-2.5 rounded-lg text-sm font-medium transition-all ${location.pathname === item.path
-                                            ? 'bg-[#408E91]/10 text-[#003C43]'
-                                            : 'text-gray-600 hover:bg-gray-50'
+                                          ? 'bg-[#408E91]/10 text-[#003C43]'
+                                          : 'text-gray-600 hover:bg-gray-50'
                                           }`}
                                       >
                                         {item.name}
@@ -282,8 +296,8 @@ const Navbar = () => {
                           <Link
                             to={link.path}
                             className={`px-4 py-3 rounded-lg text-base font-medium transition-all ${isActive
-                                ? 'bg-gradient-to-r from-[#245953] to-[#408E91] text-white'
-                                : 'text-gray-600 hover:bg-gray-100'
+                              ? 'bg-gradient-to-r from-[#245953] to-[#408E91] text-white'
+                              : 'text-gray-600 hover:bg-gray-100'
                               }`}
                           >
                             {link.name}

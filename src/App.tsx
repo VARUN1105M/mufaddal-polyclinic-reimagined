@@ -19,6 +19,7 @@ import Blog from "./pages/Blog";
 import BlogDetail from "./pages/Blogdetail";
 import FaqPage from "./pages/Faqpage";
 import Error from "./pages/Error";
+import ServiceTemplate from "./pages/ServiceTemplate";
 
 const queryClient = new QueryClient();
 
@@ -44,6 +45,28 @@ const App = () => (
           <Route path="/blogs/detail" element={<BlogDetail />} />
           <Route path="/faqs" element={<FaqPage />} />
           <Route path="/404" element={<Error />} />
+
+          {/* Women Care Services */}
+          <Route path="/women-care/wellness" element={<ServiceTemplate serviceId="wellness" />} />
+          <Route path="/women-care/period-care" element={<ServiceTemplate serviceId="period-care" />} />
+          <Route path="/women-care/hormone-balance" element={<ServiceTemplate serviceId="hormone-balance" />} />
+          <Route path="/women-care/pcos-care" element={<ServiceTemplate serviceId="pcos-care" />} />
+          <Route path="/women-care/pregnancy" element={<ServiceTemplate serviceId="pregnancy" />} />
+          <Route path="/women-care/postnatal" element={<ServiceTemplate serviceId="postnatal" />} />
+          <Route path="/women-care/anemia-thyroid" element={<ServiceTemplate serviceId="anemia-thyroid" />} />
+          <Route path="/women-care/menopause" element={<ServiceTemplate serviceId="menopause" />} />
+          <Route path="/women-care/breast-care" element={<ServiceTemplate serviceId="breast-care" />} />
+          <Route path="/women-care/mental-wellness" element={<ServiceTemplate serviceId="mental-wellness" />} />
+
+          {/* Supportive Care Services */}
+          <Route path="/supportive-care/physician" element={<ServiceTemplate serviceId="physician" />} />
+          <Route path="/supportive-care/dental" element={<ServiceTemplate serviceId="dental" />} />
+          <Route path="/supportive-care/physiotherapy" element={<ServiceTemplate serviceId="physiotherapy" />} />
+          <Route path="/supportive-care/ent" element={<ServiceTemplate serviceId="ent" />} />
+          <Route path="/supportive-care/diabetes" element={<ServiceTemplate serviceId="diabetes" />} />
+          <Route path="/supportive-care/nutrition" element={<ServiceTemplate serviceId="nutrition" />} />
+          <Route path="/supportive-care/pain-management" element={<ServiceTemplate serviceId="pain-management" />} />
+          <Route path="/supportive-care/preventive" element={<ServiceTemplate serviceId="preventive" />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
