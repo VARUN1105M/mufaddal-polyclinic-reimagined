@@ -47,69 +47,71 @@ const TestimonialCarousel: React.FC = () => {
     }, []);
 
     return (
-        <section className="py-20 px-6 max-w-7xl mx-auto bg-white">
-            {/* Header */}
-            <AnimatedSection className="flex flex-col lg:flex-row justify-between items-end mb-16 gap-8">
-                <div className="lg:w-3/5">
-                    <p className="text-sm font-bold tracking-[0.2em] uppercase mb-4" style={{ color: '#408E91' }}>
-                        Client Feedbacks
-                    </p>
-                    <h2 className="text-5xl md:text-6xl font-serif leading-tight" style={{ color: '#003C43' }}>
-                        Healing Begins with a <br /> Conversation
-                    </h2>
-                </div>
-                <div className="lg:w-1/3">
-                    <p className="text-lg leading-relaxed" style={{ color: '#245953' }}>
-                        Healing isn’t rushed—it’s supported. Our team walks beside you,
-                        offering understanding and tailored support to help you rebuild.
-                    </p>
-                </div>
-            </AnimatedSection>
+        <section className="py-20 w-full" style={{ background: 'linear-gradient(to bottom, #ffffff 60%, #408E91 60%)' }}>
+            <div className="px-6 max-w-7xl mx-auto">
+                {/* Header */}
+                <AnimatedSection className="flex flex-col lg:flex-row justify-between items-end mb-16 gap-8">
+                    <div className="lg:w-3/5">
+                        <p className="text-sm font-bold tracking-[0.2em] uppercase mb-4" style={{ color: '#408E91' }}>
+                            Client Feedbacks
+                        </p>
+                        <h2 className="text-5xl md:text-6xl font-serif leading-tight" style={{ color: '#003C43' }}>
+                            Healing Begins with a <br /> Conversation
+                        </h2>
+                    </div>
+                    <div className="lg:w-1/3">
+                        <p className="text-lg leading-relaxed" style={{ color: '#245953' }}>
+                            Healing isn’t rushed—it’s supported. Our team walks beside you,
+                            offering understanding and tailored support to help you rebuild.
+                        </p>
+                    </div>
+                </AnimatedSection>
 
-            {/* Carousel Wrapper with Scroll Snap */}
-            <AnimatedSection delay={0.2}>
-                <div
-                    ref={scrollRef}
-                    className="flex gap-6 overflow-x-auto pb-8 no-scrollbar snap-x snap-mandatory scroll-smooth"
-                >
-                    {testimonials.map((t) => (
-                        <div
-                            key={t.id}
-                            className="min-w-[90%] md:min-w-[45%] lg:min-w-[31%] snap-center"
-                        >
-                            <div className="h-full p-10 rounded-3xl border-2 transition-all duration-300 hover:shadow-xl"
-                                style={{ borderColor: '#E8F3F2', backgroundColor: '#FFFFFF' }}>
+                {/* Carousel Wrapper with Scroll Snap */}
+                <AnimatedSection delay={0.2}>
+                    <div
+                        ref={scrollRef}
+                        className="flex gap-6 overflow-x-auto pb-8 no-scrollbar snap-x snap-mandatory scroll-smooth"
+                    >
+                        {testimonials.map((t) => (
+                            <div
+                                key={t.id}
+                                className="min-w-[90%] md:min-w-[45%] lg:min-w-[31%] snap-center"
+                            >
+                                <div className="h-full p-10 rounded-3xl border-2 transition-all duration-300 hover:shadow-xl"
+                                    style={{ borderColor: '#E8F3F2', backgroundColor: '#FFFFFF' }}>
 
-                                {/* Star Rating */}
-                                <div className="flex gap-1 mb-6">
-                                    {[...Array(t.rating)].map((_, i) => (
-                                        <svg key={i} width="20" height="20" viewBox="0 0 24 24" fill="#408E91">
-                                            <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                                        </svg>
-                                    ))}
-                                </div>
-
-                                {/* Quote */}
-                                <p className="text-xl italic leading-relaxed mb-10" style={{ color: '#245953' }}>
-                                    "{t.quote}"
-                                </p>
-
-                                {/* User Info */}
-                                <div className="flex items-center border-t pt-8" style={{ borderColor: '#E8F3F2' }}>
-                                    <div className="w-14 h-14 rounded-full mr-4 flex-shrink-0 overflow-hidden"
-                                        style={{ backgroundColor: '#003C43' }}>
-                                        <img src={t.image} alt={t.name} className="w-full h-full object-cover" />
+                                    {/* Star Rating */}
+                                    <div className="flex gap-1 mb-6">
+                                        {[...Array(t.rating)].map((_, i) => (
+                                            <svg key={i} width="20" height="20" viewBox="0 0 24 24" fill="#408E91">
+                                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                            </svg>
+                                        ))}
                                     </div>
-                                    <div>
-                                        <h4 className="font-bold text-lg" style={{ color: '#003C43' }}>{t.name}</h4>
-                                        <p className="text-sm uppercase tracking-wider" style={{ color: '#408E91' }}>{t.role}</p>
+
+                                    {/* Quote */}
+                                    <p className="text-xl italic leading-relaxed mb-10" style={{ color: '#245953' }}>
+                                        "{t.quote}"
+                                    </p>
+
+                                    {/* User Info */}
+                                    <div className="flex items-center border-t pt-8" style={{ borderColor: '#E8F3F2' }}>
+                                        <div className="w-14 h-14 rounded-full mr-4 flex-shrink-0 overflow-hidden"
+                                            style={{ backgroundColor: '#003C43' }}>
+                                            <img src={t.image} alt={t.name} className="w-full h-full object-cover" />
+                                        </div>
+                                        <div>
+                                            <h4 className="font-bold text-lg" style={{ color: '#003C43' }}>{t.name}</h4>
+                                            <p className="text-sm uppercase tracking-wider" style={{ color: '#408E91' }}>{t.role}</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    ))}
-                </div>
-            </AnimatedSection>
+                        ))}
+                    </div>
+                </AnimatedSection>
+            </div>
 
             {/* Custom Scrollbar Styles */}
             <style>{`

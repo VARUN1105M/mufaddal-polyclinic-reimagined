@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[600px] md:min-h-[700px] lg:min-h-[85vh] xl:min-h-[90vh] overflow-hidden bg-gradient-to-br from-[#1a4f5a] to-[#2d6e7e] flex items-end">
+    <section className="relative min-h-[600px] md:min-h-[700px] lg:min-h-[85vh] xl:min-h-[90vh] overflow-hidden bg-gradient-to-br from-[#88E8DD] to-[#408E91] flex items-end">
       {/* Floating Shapes/Lines Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <svg className="absolute w-full h-full opacity-30" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -37,8 +37,8 @@ const HeroSection = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
-              className="text-[#64ccc5] font-medium tracking-wider text-xs md:text-sm xl:text-base uppercase mb-3 md:mb-4">
-              FIND BALANCE, EMBRACE LIFE
+              className="text-white font-medium tracking-wider text-xs md:text-sm xl:text-base uppercase mb-3 md:mb-4">
+              <span className="text-[#003C43]">FIND BALANCE, EMBRACE LIFE</span>
             </motion.p>
 
             <motion.h1
@@ -47,7 +47,8 @@ const HeroSection = () => {
               transition={{ delay: 0.3 }}
               className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold text-white leading-tight mb-4 md:mb-6 font-display">
               Caring for Your <br />
-              <span className="text-[#88e8dd]">Inner Peace</span>
+              <span className="text-[#003C43]">Inner </span>
+              <span>Peace</span>
             </motion.h1>
 
             <motion.div
