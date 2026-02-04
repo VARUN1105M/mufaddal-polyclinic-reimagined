@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[90vh] overflow-hidden bg-gradient-to-br from-[#1a4f5a] to-[#2d6e7e] flex items-end">
+    <section className="relative min-h-[600px] md:min-h-[700px] lg:min-h-[85vh] xl:min-h-[90vh] overflow-hidden bg-gradient-to-br from-[#1a4f5a] to-[#2d6e7e] flex items-end">
       {/* Floating Shapes/Lines Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <svg className="absolute w-full h-full opacity-30" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -25,21 +25,19 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="container-custom relative z-10 pt-16 pb-0 lg:pt-24 lg:pb-0">
-        <div className="grid lg:grid-cols-2 gap-12 items-end">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 max-w-7xl 2xl:max-w-[1600px] relative z-10 pt-12 md:pt-16 lg:pt-24 pb-0">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 xl:gap-16 items-end">
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-left self-center pb-12 lg:pb-24"
-          >
+            className="text-left self-center pb-12 lg:pb-20 xl:pb-24">
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
-              className="text-[#64ccc5] font-medium tracking-wider text-sm uppercase mb-4"
-            >
+              className="text-[#64ccc5] font-medium tracking-wider text-xs md:text-sm xl:text-base uppercase mb-3 md:mb-4">
               FIND BALANCE, EMBRACE LIFE
             </motion.p>
 
@@ -47,8 +45,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="text-5xl lg:text-7xl font-bold text-white leading-tight mb-6 font-display"
-            >
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold text-white leading-tight mb-4 md:mb-6 font-display">
               Caring for Your <br />
               <span className="text-[#88e8dd]">Inner Peace</span>
             </motion.h1>
@@ -57,15 +54,14 @@ const HeroSection = () => {
               initial={{ opacity: 0, width: 0 }}
               animate={{ opacity: 1, width: "100px" }}
               transition={{ delay: 0.4 }}
-              className="h-1 bg-white/50 mb-8"
+              className="h-1 bg-white/50 mb-6 md:mb-8"
             />
 
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
-              className="text-white/90 text-lg leading-relaxed mb-10 max-w-xl"
-            >
+              className="text-white/90 text-base md:text-lg xl:text-xl 2xl:text-2xl leading-relaxed mb-8 md:mb-10 max-w-xl xl:max-w-2xl">
               Discover clarity, confidence, and emotional wellness through guided support that helps you manage stress, heal from within, and grow stronger in every aspect of your mental health journey.
             </motion.p>
 
@@ -73,18 +69,15 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="flex items-center gap-6"
-            >
+              className="flex items-center gap-4 md:gap-6">
               <Button
-                className="bg-[#134e4a] hover:bg-[#115e59] text-white rounded-full px-8 py-6 text-base"
-              >
+                className="bg-[#134e4a] hover:bg-[#115e59] text-white rounded-full px-6 md:px-8 py-5 md:py-6 text-sm md:text-base xl:text-lg">
                 <Link to="/contact">Start A Checkup Now</Link>
               </Button>
 
               <button
-                className="w-12 h-12 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center backdrop-blur-sm transition-all"
-                aria-label="Play Video"
-              >
+                className="w-10 h-10 md:w-12 md:h-12 xl:w-14 xl:h-14 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center backdrop-blur-sm transition-all"
+                aria-label="Play Video">
                 <div className="w-0 h-0 border-t-[6px] border-t-transparent border-l-[10px] border-l-white border-b-[6px] border-b-transparent ml-1"></div>
               </button>
             </motion.div>
@@ -98,7 +91,7 @@ const HeroSection = () => {
             className="relative lg:ml-auto"
           >
             {/* Main Image */}
-            <div className="relative z-10 w-full max-w-[500px] mx-auto">
+            <div className="relative z-10 w-full max-w-[350px] md:max-w-[450px] lg:max-w-[500px] xl:max-w-[600px] 2xl:max-w-[700px] mx-auto">
               <img
                 src="/hero-woman-transparent (2).png"
                 alt="Smiling Doctor"
@@ -111,14 +104,13 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8 }}
-              className="absolute top-10 -right-4 lg:-right-12 bg-[#0e4853] text-white p-4 rounded-2xl shadow-lg flex items-center gap-3 z-20 max-w-[240px]"
-            >
-              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center shrink-0">
-                <Phone className="w-5 h-5 text-[#0e4853] fill-current" />
+              className="absolute top-6 md:top-10 -right-2 md:-right-4 lg:-right-8 xl:-right-12 2xl:-right-16 bg-[#0e4853] text-white p-3 md:p-4 xl:p-5 rounded-xl md:rounded-2xl shadow-lg flex items-center gap-2 md:gap-3 z-20 max-w-[180px] md:max-w-[220px] xl:max-w-[260px]">
+              <div className="w-8 h-8 md:w-10 md:h-10 xl:w-12 xl:h-12 bg-white rounded-full flex items-center justify-center shrink-0">
+                <Phone className="w-4 h-4 md:w-5 md:h-5 xl:w-6 xl:h-6 text-[#0e4853] fill-current" />
               </div>
               <div>
-                <p className="text-xs text-white/80">Call us anytime</p>
-                <p className="font-bold text-lg">(555) 123-4567</p>
+                <p className="text-xs xl:text-sm text-white/80">Call us anytime</p>
+                <p className="font-bold text-base md:text-lg xl:text-xl">(555) 123-4567</p>
               </div>
             </motion.div>
 
@@ -127,10 +119,9 @@ const HeroSection = () => {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 1.0 }}
-              className="absolute bottom-20 -left-8 lg:-left-16 bg-[#4a7c7c]/90 backdrop-blur-md text-white p-4 rounded-xl shadow-lg z-20"
-            >
-              <div className="text-2xl font-bold">4.9 /5</div>
-              <div className="text-sm text-white/80">Review on Google</div>
+              className="absolute bottom-16 md:bottom-20 -left-4 md:-left-8 lg:-left-12 xl:-left-16 bg-[#4a7c7c]/90 backdrop-blur-md text-white p-3 md:p-4 xl:p-5 rounded-lg md:rounded-xl shadow-lg z-20">
+              <div className="text-xl md:text-2xl xl:text-3xl font-bold">4.9 /5</div>
+              <div className="text-xs md:text-sm xl:text-base text-white/80">Review on Google</div>
             </motion.div>
           </motion.div>
         </div>

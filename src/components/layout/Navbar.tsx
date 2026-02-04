@@ -76,41 +76,41 @@ const Navbar = () => {
   return (
     <>
       {/* Top Bar - Primary Color */}
-      <div className="bg-[#003C43] text-white py-3.5 px-0">
-        <div className="container mx-auto px-4 max-w-7xl">
-          <div className="flex items-center justify-between text-sm">
-            <div className="flex items-center gap-6">
+      <div className="bg-[#003C43] text-white py-2.5 md:py-3.5 px-0">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 max-w-7xl 2xl:max-w-[1600px]">
+          <div className="flex items-center justify-between text-xs md:text-sm xl:text-base">
+            <div className="flex items-center gap-3 md:gap-4 xl:gap-6">
               <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4" />
+                <Clock className="w-3 h-3 md:w-4 md:h-4" />
                 <span className="font-medium">Office Time : Mon - Fri 8:00 - 6:30</span>
               </div>
               <div className="h-4 w-px bg-white/30 hidden lg:block"></div>
               <div className="hidden lg:flex items-center gap-2">
-                <MapPin className="w-4 h-4" />
+                <MapPin className="w-3 h-3 md:w-4 md:h-4" />
                 <span className="font-medium">123 Serenity Lane, Blissfield, CA 90210</span>
               </div>
             </div>
             <div className="flex items-center gap-2">
               <a
                 href="#"
-                className="w-9 h-9 rounded-md bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all duration-300 hover:scale-110"
+                className="w-8 h-8 md:w-9 md:h-9 xl:w-10 xl:h-10 rounded-md bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all duration-300 hover:scale-110"
                 aria-label="Facebook"
               >
-                <Facebook className="w-4 h-4" />
+                <Facebook className="w-3 h-3 md:w-4 md:h-4" />
               </a>
               <a
                 href="#"
-                className="w-9 h-9 rounded-md bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all duration-300 hover:scale-110"
+                className="w-8 h-8 md:w-9 md:h-9 xl:w-10 xl:h-10 rounded-md bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all duration-300 hover:scale-110"
                 aria-label="Twitter"
               >
-                <Twitter className="w-4 h-4" />
+                <Twitter className="w-3 h-3 md:w-4 md:h-4" />
               </a>
               <a
                 href="#"
-                className="w-9 h-9 rounded-md bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all duration-300 hover:scale-110"
+                className="w-8 h-8 md:w-9 md:h-9 xl:w-10 xl:h-10 rounded-md bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all duration-300 hover:scale-110"
                 aria-label="LinkedIn"
               >
-                <Linkedin className="w-4 h-4" />
+                <Linkedin className="w-3 h-3 md:w-4 md:h-4" />
               </a>
             </div>
           </div>
@@ -126,19 +126,19 @@ const Navbar = () => {
           : 'bg-white shadow-sm'
           }`}
       >
-        <div className="container mx-auto px-4 max-w-7xl">
-          <div className="flex items-center justify-between h-24">
+        <div className="px-[5%]">
+          <div className="flex items-center justify-evenly h-20 md:h-24 xl:h-28">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-2 group">
               <img
                 src="/mufaddal-logo.png"
                 alt="Mufaddal Polyclinic"
-                className="h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                className="h-12 md:h-16 xl:h-20 2xl:h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
               />
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center gap-1">
+            <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
               {navLinks.map((link) => {
                 const isActive = location.pathname === link.path ||
                   (link.dropdown && link.dropdown.some(item => location.pathname === item.path));
@@ -148,7 +148,7 @@ const Navbar = () => {
                   <div key={link.path} className="relative group">
                     {hasDropdown ? (
                       <button
-                        className={`px-5 py-2.5 text-base font-medium transition-all duration-200 flex items-center gap-1 cursor-pointer ${isActive
+                        className={`px-4 xl:px-5 2xl:px-6 py-2.5 text-sm xl:text-base 2xl:text-lg font-medium transition-all duration-200 flex items-center gap-1 cursor-pointer ${isActive
                           ? 'text-gray-900'
                           : 'text-gray-600 hover:text-gray-900'
                           }`}
@@ -166,7 +166,7 @@ const Navbar = () => {
                     ) : (
                       <Link
                         to={link.path}
-                        className={`px-5 py-2.5 text-base font-medium transition-all duration-200 flex items-center gap-1 ${isActive
+                        className={`px-4 xl:px-5 2xl:px-6 py-2.5 text-sm xl:text-base 2xl:text-lg font-medium transition-all duration-200 flex items-center gap-1 ${isActive
                           ? 'text-gray-900'
                           : 'text-gray-600 hover:text-gray-900'
                           }`}
@@ -207,11 +207,11 @@ const Navbar = () => {
             {/* CTA Button */}
             <div className="hidden lg:flex items-center gap-4">
               <Button
-                className="bg-[#003C43] hover:bg-[#245953] text-white px-6 py-6 rounded-full font-semibold text-base flex items-center gap-2 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                className="bg-[#003C43] hover:bg-[#245953] text-white px-6 xl:px-8 py-5 xl:py-6 rounded-full font-semibold text-sm xl:text-base 2xl:text-lg flex items-center gap-2 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
                 asChild
               >
                 <Link to="/contact">
-                  <FileText className="w-4 h-4" />
+                  <FileText className="w-4 h-4 xl:w-5 xl:h-5" />
                   Get Quotes
                 </Link>
               </Button>

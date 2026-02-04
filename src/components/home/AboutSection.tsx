@@ -1,5 +1,5 @@
 import { FileText, Users, Headphones, Wrench } from 'lucide-react';
-import AnimatedSection from '@/components/ui/AnimatedSection';
+import { motion } from 'framer-motion';
 
 const features = [
   {
@@ -34,30 +34,41 @@ const features = [
 
 const FeaturesSection = () => {
   return (
-    <section className="py-16 px-4">
-      <div className="container-custom">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <section className="py-12 md:py-16 xl:py-20 px-4">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 max-w-7xl 2xl:max-w-[1600px]">
+        {/* Using the new responsive grid utility */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 xl:gap-10">
           {features.map((feature, index) => (
-            <AnimatedSection
+            <motion.div
               key={index}
-              delay={index * 0.1}
-              className={`${feature.bgColor} rounded-3xl p-8 text-white transition-transform hover:scale-105 duration-300`}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0 20px 30px rgba(0,0,0,0.2)"
+              }}
+              className={`${feature.bgColor} rounded-2xl md:rounded-3xl p-6 lg:p-8 xl:p-10 text-white h-full flex flex-col justify-between cursor-pointer`}
             >
-              {/* Icon */}
-              <div className={`w-16 h-16 ${feature.iconBg} rounded-2xl flex items-center justify-center mb-6`}>
-                <feature.icon className="w-8 h-8 text-white" />
+              {/* Header: Icon + Title */}
+              <div className="flex items-center gap-4">
+                {/* Icon */}
+                <div className={`w-12 h-12 md:w-14 md:h-14 xl:w-16 xl:h-16 2xl:w-20 2xl:h-20 ${feature.iconBg} rounded-xl md:rounded-2xl flex items-center justify-center flex-shrink-0`}>
+                  <feature.icon className="w-6 h-6 md:w-7 md:h-7 xl:w-8 xl:h-8 2xl:w-10 2xl:h-10 text-white" />
+                </div>
+
+                {/* Title */}
+                <h3 className="text-2xl 2xl:text-3xl font-bold leading-tight">
+                  {feature.title}
+                </h3>
               </div>
 
-              {/* Title */}
-              <h3 className="text-xl font-bold mb-4 leading-tight">
-                {feature.title}
-              </h3>
-
               {/* Description */}
-              <p className="text-white/90 leading-relaxed">
+              <p className="text-white/90 text-sm md:text-base xl:text-lg 2xl:text-xl leading-relaxed mt-4">
                 {feature.description}
               </p>
-            </AnimatedSection>
+            </motion.div>
           ))}
         </div>
       </div>

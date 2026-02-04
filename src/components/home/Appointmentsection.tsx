@@ -110,14 +110,14 @@ export default function AppointmentSection({ lightMode = false }: AppointmentSec
                     </AnimatedSection>
 
                     {/* RIGHT SECTION */}
-                    <AnimatedSection direction="right" delay={0.2} className="flex flex-col xl:flex-row items-center gap-8 relative z-10">
+                    <AnimatedSection direction="right" delay={0.2} className="flex flex-col xl:flex-row items-stretch gap-8 relative z-10">
 
                         {/* IMAGE */}
                         <div className="relative rounded-3xl overflow-hidden shadow-2xl max-w-md w-full">
                             <img
                                 src="/Appointment.png"
                                 alt="Therapy Session"
-                                className="w-full h-auto object-cover"
+                                className="w-full h-full object-cover"
                             />
                         </div>
 

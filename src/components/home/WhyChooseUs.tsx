@@ -42,14 +42,13 @@ export default function HowWeWork() {
               </span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight">
               Here For Your{" "}
               <span className="text-[#64CCC5] relative inline-block">
                 Health
                 <span className="absolute bottom-0 left-0 w-full h-2 bg-[#64CCC5]/30 -z-10"></span>
               </span>
-              ,
-              <br />
+              ,{" "}
               Here For Your{" "}
               <span className="text-[#408E91]">Heart</span>
             </h2>
