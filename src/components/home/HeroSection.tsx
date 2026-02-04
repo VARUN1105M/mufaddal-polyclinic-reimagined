@@ -90,39 +90,39 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative lg:ml-auto"
           >
-            {/* Main Image */}
+            {/* Main Image Container - Now acts as anchor for floating cards */}
             <div className="relative z-10 w-full max-w-[350px] md:max-w-[450px] lg:max-w-[500px] xl:max-w-[600px] 2xl:max-w-[700px] mx-auto">
               <img
                 src="/hero-woman-transparent (2).png"
                 alt="Smiling Doctor"
-                className="w-full h-auto object-contain"
+                className="relative w-full h-auto object-contain z-10"
               />
+
+              {/* Floating Call Card */}
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.8 }}
+                className="absolute top-6 md:top-10 -right-4 md:-right-8 lg:-right-12 xl:-right-16 bg-[#0e4853] text-white p-3 md:p-4 xl:p-5 rounded-xl md:rounded-2xl shadow-lg flex items-center gap-2 md:gap-3 -z-10 max-w-[180px] md:max-w-[220px] xl:max-w-[260px]">
+                <div className="w-8 h-8 md:w-10 md:h-10 xl:w-12 xl:h-12 bg-white rounded-full flex items-center justify-center shrink-0">
+                  <Phone className="w-4 h-4 md:w-5 md:h-5 xl:w-6 xl:h-6 text-[#0e4853] fill-current" />
+                </div>
+                <div>
+                  <p className="text-xs xl:text-sm text-white/80">Call us anytime</p>
+                  <p className="font-bold text-base md:text-lg xl:text-xl">(555) 123-4567</p>
+                </div>
+              </motion.div>
+
+              {/* Floating Review Card */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 1.0 }}
+                className="absolute bottom-16 md:bottom-20 -left-4 md:-left-8 lg:-left-12 xl:-left-16 bg-[#4a7c7c]/90 backdrop-blur-md text-white p-3 md:p-4 xl:p-5 rounded-lg md:rounded-xl shadow-lg z-20">
+                <div className="text-xl md:text-2xl xl:text-3xl font-bold">4.9 /5</div>
+                <div className="text-xs md:text-sm xl:text-base text-white/80">Review on Google</div>
+              </motion.div>
             </div>
-
-            {/* Floating Call Card */}
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8 }}
-              className="absolute top-6 md:top-10 -right-2 md:-right-4 lg:-right-8 xl:-right-12 2xl:-right-16 bg-[#0e4853] text-white p-3 md:p-4 xl:p-5 rounded-xl md:rounded-2xl shadow-lg flex items-center gap-2 md:gap-3 z-20 max-w-[180px] md:max-w-[220px] xl:max-w-[260px]">
-              <div className="w-8 h-8 md:w-10 md:h-10 xl:w-12 xl:h-12 bg-white rounded-full flex items-center justify-center shrink-0">
-                <Phone className="w-4 h-4 md:w-5 md:h-5 xl:w-6 xl:h-6 text-[#0e4853] fill-current" />
-              </div>
-              <div>
-                <p className="text-xs xl:text-sm text-white/80">Call us anytime</p>
-                <p className="font-bold text-base md:text-lg xl:text-xl">(555) 123-4567</p>
-              </div>
-            </motion.div>
-
-            {/* Floating Review Card */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 1.0 }}
-              className="absolute bottom-16 md:bottom-20 -left-4 md:-left-8 lg:-left-12 xl:-left-16 bg-[#4a7c7c]/90 backdrop-blur-md text-white p-3 md:p-4 xl:p-5 rounded-lg md:rounded-xl shadow-lg z-20">
-              <div className="text-xl md:text-2xl xl:text-3xl font-bold">4.9 /5</div>
-              <div className="text-xs md:text-sm xl:text-base text-white/80">Review on Google</div>
-            </motion.div>
           </motion.div>
         </div>
       </div>

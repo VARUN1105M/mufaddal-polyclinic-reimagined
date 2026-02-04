@@ -26,9 +26,9 @@ export default function ContactSection() {
     };
 
     return (
-        <section className="relative w-full min-h-[600px] py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+        <section className="relative w-full min-h-[600px] lg:min-h-[700px] xl:min-h-[800px] py-16 md:py-24 xl:py-32 px-4 sm:px-6 lg:px-8">
             {/* Background Image with Overlay */}
-            <div className="absolute inset-0 z-0">
+            <div className="absolute top-0 left-0 w-full h-[60%] z-0">
                 <img
                     src="/div.quotes-background.png"
                     alt="Therapy session background"
@@ -55,11 +55,11 @@ export default function ContactSection() {
 
                 {/* Form Container */}
                 <div className="grid lg:grid-cols-2 max-w-5xl mx-auto bg-white rounded-3xl overflow-hidden shadow-2xl">
-                    
+
                     {/* Left - Form */}
                     <div className="bg-white p-8 md:p-10">
                         <form onSubmit={handleSubmit} className="space-y-5">
-                            
+
                             {/* Name + Email */}
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div>
@@ -194,7 +194,7 @@ export default function ContactSection() {
 
                     {/* Right - Contact Info */}
                     <div className="bg-gradient-to-br from-[#408E91]/20 to-[#245953]/20 p-8 md:p-10 flex flex-col justify-center">
-                        
+
                         <h3 className="text-2xl md:text-3xl font-bold text-[#003C43] mb-4">
                             Need Any Help? Get In Touch With Us
                         </h3>
@@ -206,7 +206,7 @@ export default function ContactSection() {
 
                         {/* Contact Details */}
                         <div className="space-y-6">
-                            
+
                             {/* Phone */}
                             <div className="flex items-start gap-4">
                                 <div className="w-12 h-12 bg-[#003C43] rounded-full flex items-center justify-center">

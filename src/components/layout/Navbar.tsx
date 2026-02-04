@@ -75,10 +75,9 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Top Bar - Primary Color */}
       <div className="bg-[#003C43] text-white py-2.5 md:py-3.5 px-0">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 max-w-7xl 2xl:max-w-[1600px]">
-          <div className="flex items-center justify-between text-xs md:text-sm xl:text-base">
+        <div className="px-[5%]">
+          <div className="flex items-center justify-between md:justify-evenly text-xs md:text-sm xl:text-base">
             <div className="flex items-center gap-3 md:gap-4 xl:gap-6">
               <div className="flex items-center gap-2">
                 <Clock className="w-3 h-3 md:w-4 md:h-4" />
@@ -127,7 +126,7 @@ const Navbar = () => {
           }`}
       >
         <div className="px-[5%]">
-          <div className="flex items-center justify-evenly h-20 md:h-24 xl:h-28">
+          <div className="flex items-center justify-between md:justify-evenly h-20 md:h-24 xl:h-28">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-2 group">
               <img
@@ -237,7 +236,7 @@ const Navbar = () => {
               exit={{ opacity: 0, height: 0 }}
               className="lg:hidden bg-white border-t"
             >
-              <div className="container mx-auto px-4 py-4">
+              <div className="px-[10%] py-4">
                 <nav className="flex flex-col gap-2">
                   {navLinks.map((link) => {
                     const isActive = location.pathname === link.path ||
