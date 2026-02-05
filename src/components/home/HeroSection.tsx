@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Phone, Star, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import NumberTicker from '@/components/ui/NumberTicker';
 
 const HeroSection = () => {
   return (
@@ -120,7 +121,9 @@ const HeroSection = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 1.0 }}
                 className="absolute bottom-16 md:bottom-20 -left-4 md:-left-8 lg:-left-12 xl:-left-16 bg-[#4a7c7c]/90 backdrop-blur-md text-white p-3 md:p-4 xl:p-5 rounded-lg md:rounded-xl shadow-lg z-20">
-                <div className="text-xl md:text-2xl xl:text-3xl font-bold">4.9 /5</div>
+                <div className="text-xl md:text-2xl xl:text-3xl font-bold">
+                  <NumberTicker value={4.9} decimalPlaces={1} /> /5
+                </div>
                 <div className="text-xs md:text-sm xl:text-base text-white/80">Review on Google</div>
               </motion.div>
             </div>

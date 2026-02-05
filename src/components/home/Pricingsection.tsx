@@ -1,5 +1,6 @@
 import React from 'react';
 import AnimatedSection from '@/components/ui/AnimatedSection';
+import NumberTicker from '@/components/ui/NumberTicker';
 
 const PricingPlans = () => {
     const plans = [
@@ -206,7 +207,9 @@ const PricingPlans = () => {
 
                                 {/* Price */}
                                 <div className="mb-6">
-                                    <span className="price-tag text-6xl">${plan.price}</span>
+                                    <span className="price-tag text-6xl">
+                                        $<NumberTicker value={plan.price} />
+                                    </span>
                                     <span
                                         className="text-lg ml-2"
                                         style={{ fontFamily: "'Work Sans', sans-serif", color: plan.isPopular ? 'rgba(255,255,255,0.9)' : '#6B7280' }}

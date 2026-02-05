@@ -1,23 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import AnimatedSection from '@/components/ui/AnimatedSection';
+import NumberTicker from '@/components/ui/NumberTicker';
 
 export default function HowWeWork() {
   const steps = [
     {
-      number: "01",
+      number: 1,
       title: "Listen & Understand",
       description:
         "Your wellness journey matters. We're dedicated to supporting both mental clarity and emotional strength every step forward.",
     },
     {
-      number: "02",
+      number: 2,
       title: "Create A Tailored Plan",
       description:
         "From daily stress to life's hardest moments, our team supports your healing and overall well-being.",
     },
     {
-      number: "03",
+      number: 3,
       title: "Support & Empower",
       description:
         "Empowering you to live well with care that nurtures your body, mind, and emotional peace every single day.",
@@ -99,14 +100,14 @@ export default function HowWeWork() {
             >
               {/* Number Background */}
               <div className="absolute top-4 right-4 text-8xl md:text-9xl font-black text-white/5 leading-none select-none group-hover:text-[#64CCC5]/10 transition-colors duration-500">
-                {step.number}
+                <NumberTicker value={step.number} minimumIntegerDigits={2} />
               </div>
 
               {/* Content */}
               <div className="relative z-10 space-y-4">
                 <div className="flex items-center gap-4">
                   <span className="text-5xl md:text-6xl font-extrabold text-[#64CCC5] group-hover:scale-110 transition-transform duration-300">
-                    {step.number}
+                    <NumberTicker value={step.number} minimumIntegerDigits={2} />
                   </span>
                   <div className="h-12 w-px bg-gradient-to-b from-[#64CCC5] to-transparent"></div>
                 </div>

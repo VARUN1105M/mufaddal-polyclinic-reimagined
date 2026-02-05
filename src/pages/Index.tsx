@@ -12,6 +12,7 @@ import Carosel from '@/components/home/Carosel';
 import Therapist from '@/components/home/Therapist';
 import Gaq from '@/components/home/Gaq';
 
+
 const Index = () => {
   return (
     <div className="min-h-screen">

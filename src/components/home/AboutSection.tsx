@@ -47,7 +47,8 @@ const FeaturesSection = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{
                 scale: 1.05,
-                boxShadow: "0 20px 30px rgba(0,0,0,0.2)"
+                boxShadow: "0 20px 30px rgba(0,0,0,0.2)",
+                transition: { duration: 0.2, delay: 0 }
               }}
               className={`${feature.bgColor} rounded-2xl md:rounded-3xl p-6 lg:p-8 xl:p-10 text-white h-full flex flex-col justify-between cursor-pointer`}
             >
@@ -59,13 +60,13 @@ const FeaturesSection = () => {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-2xl 2xl:text-3xl font-bold leading-tight">
+                <h3 className="text-xl md:text-2xl font-bold leading-tight">
                   {feature.title}
                 </h3>
               </div>
 
               {/* Description */}
-              <p className="text-white/90 text-sm md:text-base xl:text-lg 2xl:text-xl leading-relaxed mt-4">
+              <p className="text-white/90 text-sm md:text-base leading-relaxed mt-4">
                 {feature.description}
               </p>
             </motion.div>
