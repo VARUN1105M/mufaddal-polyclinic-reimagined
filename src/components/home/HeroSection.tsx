@@ -120,7 +120,7 @@ const HeroSection = () => {
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.0 }}
-                className="absolute bottom-16 md:bottom-20 left-0 md:-left-8 lg:-left-12 xl:-left-16 bg-[#4a7c7c]/90 backdrop-blur-md text-white p-3 md:p-4 xl:p-5 rounded-lg md:rounded-xl shadow-lg z-10">
+                className="absolute bottom-16 md:bottom-20 left-0 md:-left-8 lg:-left-12 xl:-left-16 bg-[#4a7c7c]/90 backdrop-blur-md text-white p-3 md:p-4 xl:p-5 rounded-lg md:rounded-xl shadow-lg z-10 text-center">
                 <div className="text-xl md:text-2xl xl:text-3xl font-bold">
                   <NumberTicker value={4.9} decimalPlaces={1} /> /5
                 </div>
