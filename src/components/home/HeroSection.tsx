@@ -33,7 +33,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center md:text-left self-center pb-12 lg:pb-20 xl:pb-24">
+            className="text-center lg:text-left self-center pb-12 lg:pb-20 xl:pb-24">
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -56,14 +56,14 @@ const HeroSection = () => {
               initial={{ opacity: 0, width: 0 }}
               animate={{ opacity: 1, width: "100px" }}
               transition={{ delay: 0.4 }}
-              className="h-1 bg-white/50 mb-6 md:mb-8 mx-auto md:mx-0"
+              className="h-1 bg-white/50 mb-6 md:mb-8 mx-auto lg:mx-0"
             />
 
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
-              className="text-white/90 text-base md:text-lg xl:text-xl 2xl:text-2xl leading-relaxed mb-8 md:mb-10 max-w-xl xl:max-w-2xl mx-auto md:mx-0">
+              className="text-white/90 text-base md:text-lg xl:text-xl 2xl:text-2xl leading-relaxed mb-8 md:mb-10 max-w-xl xl:max-w-2xl mx-auto lg:mx-0">
               Discover clarity, confidence, and emotional wellness through guided support that helps you manage stress, heal from within, and grow stronger in every aspect of your mental health journey.
             </motion.p>
 
@@ -71,7 +71,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="flex items-center justify-center md:justify-start gap-4 md:gap-6">
+              className="flex items-center justify-center lg:justify-start gap-4 md:gap-6">
               <Button
                 className="bg-[#134e4a] hover:bg-[#115e59] text-white rounded-full px-6 md:px-8 py-5 md:py-6 text-sm md:text-base xl:text-lg">
                 <Link to="/contact">Start A Checkup Now</Link>
@@ -97,7 +97,7 @@ const HeroSection = () => {
               <img
                 src="/hero-woman-transparent (2).png"
                 alt="Smiling Doctor"
-                className="relative w-full h-auto object-contain z-10"
+                className="relative w-full h-auto object-contain z-[1]"
               />
 
               {/* Floating Call Card */}
@@ -105,7 +105,7 @@ const HeroSection = () => {
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8 }}
-                className="hidden md:flex absolute top-6 md:top-10 -right-4 md:-right-8 lg:-right-12 xl:-right-16 bg-[#0e4853] text-white p-3 md:p-4 xl:p-5 rounded-xl md:rounded-2xl shadow-lg items-center gap-2 md:gap-3 -z-10 max-w-[180px] md:max-w-[220px] xl:max-w-[260px]">
+                className="absolute top-[-50px] md:top-10 right-0 md:-right-8 lg:-right-12 xl:-right-16 bg-[#0e4853] text-white p-3 md:p-4 xl:p-5 rounded-xl md:rounded-2xl shadow-lg flex items-center gap-0 md:gap-3 z-[-1] max-w-[180px] md:max-w-[220px] xl:max-w-[260px]">
                 <div className="w-8 h-8 md:w-10 md:h-10 xl:w-12 xl:h-12 bg-white rounded-full flex items-center justify-center shrink-0">
                   <Phone className="w-4 h-4 md:w-5 md:h-5 xl:w-6 xl:h-6 text-[#0e4853] fill-current" />
                 </div>
@@ -117,10 +117,10 @@ const HeroSection = () => {
 
               {/* Floating Review Card */}
               <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.0 }}
-                className="hidden md:block absolute bottom-16 md:bottom-20 -left-4 md:-left-8 lg:-left-12 xl:-left-16 bg-[#4a7c7c]/90 backdrop-blur-md text-white p-3 md:p-4 xl:p-5 rounded-lg md:rounded-xl shadow-lg z-20">
+                className="absolute bottom-16 md:bottom-20 left-0 md:-left-8 lg:-left-12 xl:-left-16 bg-[#4a7c7c]/90 backdrop-blur-md text-white p-3 md:p-4 xl:p-5 rounded-lg md:rounded-xl shadow-lg z-10">
                 <div className="text-xl md:text-2xl xl:text-3xl font-bold">
                   <NumberTicker value={4.9} decimalPlaces={1} /> /5
                 </div>
