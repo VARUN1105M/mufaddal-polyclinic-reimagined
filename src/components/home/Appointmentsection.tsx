@@ -10,15 +10,15 @@ interface AppointmentSectionProps {
 
 export default function AppointmentSection({ lightMode = false }: AppointmentSectionProps) {
     const features = [
-        { text: "Compassionate & Experienced Professionals" },
-        { text: "Holistic Approach To Well-Being" },
-        { text: "Safe & Supportive Environment" }
+        { text: "Women Health Awareness Programs" },
+        { text: "Preventive Health Checkups" },
+        { text: "Simple Guidance, No Pressure" }
     ];
 
     const stats = [
-        { icon: Smile, value: 100, suffix: "%", label: "Satisfaction", color: "bg-[#003C43]" },
-        { icon: ThumbsUp, value: 257, suffix: "+", label: "Happy Patient", color: "bg-[#245953]" },
-        { icon: Users, value: 10, suffix: "+", label: "Expert Therapist", color: "bg-[#408E91]" }
+        { icon: Smile, value: 100, suffix: "%", label: "Trusted Care Experience", color: "bg-[#003C43]" },
+        { icon: ThumbsUp, value: 10000, suffix: "+", label: "Patients Supported", color: "bg-[#245953]" },
+        { icon: Users, value: 10, suffix: "+", label: "Care Specialties", color: "bg-[#408E91]" }
     ];
 
     return (
@@ -49,16 +49,16 @@ export default function AppointmentSection({ lightMode = false }: AppointmentSec
                         </span>
 
                         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight">
-                            <span className={lightMode ? "text-gray-900" : "text-white"}>Restoring </span>
-                            <span className="text-[#64CCC5]">Hope</span>
-                            <span className={lightMode ? "text-gray-900" : "text-white"}>, One</span><br />
-                            <span className={lightMode ? "text-gray-900" : "text-white"}>Day </span>
-                            <span className="text-[#64CCC5]">At A Time</span>
+                            <span className={lightMode ? "text-gray-900" : "text-white"}>Every Woman Deserves </span>
+                            <span className="text-[#64CCC5]">Care</span>
+                            <span className={lightMode ? "text-gray-900" : "text-white"}>,</span><br />
+                            <span className={lightMode ? "text-gray-900" : "text-white"}>Understanding, </span>
+                            <span className="text-[#64CCC5]">And Support</span>
                         </h2>
 
                         <p className={`${lightMode ? "text-gray-600" : "text-white/90"} text-base md:text-lg leading-relaxed`}>
-                            Through consistent care and compassionate guidance, we help individuals
-                            rediscover strength, build resilience, and move toward a brighter, healthier future.
+                            We focus on health awareness programs and preventive checkups that help women understand
+                            their bodies better and make informed health choices early.
                         </p>
 
                         {/* FEATURES */}

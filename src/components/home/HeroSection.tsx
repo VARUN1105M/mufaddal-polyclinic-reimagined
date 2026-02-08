@@ -39,7 +39,7 @@ const HeroSection = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
               className="text-white font-medium tracking-wider text-xs md:text-sm xl:text-base uppercase mb-3 md:mb-4">
-              <span className="text-[#003C43]">FIND BALANCE, EMBRACE LIFE</span>
+              <span className="text-[#003C43]">CARE WITH BALANCE, FOR LIFE</span>
             </motion.p>
 
             <motion.h1
@@ -49,7 +49,7 @@ const HeroSection = () => {
               className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold text-white leading-tight mb-4 md:mb-6 font-display">
               Caring for Your <br />
               <span className="text-[#003C43]">Inner </span>
-              <span>Peace</span>
+              <span>Wellbeing</span>
             </motion.h1>
 
             <motion.div
@@ -64,7 +64,7 @@ const HeroSection = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
               className="text-white/90 text-base md:text-lg xl:text-xl 2xl:text-2xl leading-relaxed mb-8 md:mb-10 max-w-xl xl:max-w-2xl mx-auto lg:mx-0">
-              Discover clarity, confidence, and emotional wellness through guided support that helps you manage stress, heal from within, and grow stronger in every aspect of your mental health journey.
+              Build clarity, confidence, and balance through preventive mental wellbeing care and guided support, focusing on awareness, early attention, and wellbeing to reduce long-term stress, risks, and avoidable costs.
             </motion.p>
 
             <motion.div
@@ -74,7 +74,7 @@ const HeroSection = () => {
               className="flex items-center justify-center lg:justify-start gap-4 md:gap-6">
               <Button
                 className="bg-[#134e4a] hover:bg-[#115e59] text-white rounded-full px-6 md:px-8 py-5 md:py-6 text-sm md:text-base xl:text-lg">
-                <Link to="/contact">Start A Checkup Now</Link>
+                <Link to="/contact">Start a Checkup</Link>
               </Button>
 
               <button
@@ -112,7 +112,7 @@ const HeroSection = () => {
                 <div className="min-w-0">
                   <p className="text-[10px] sm:text-xs xl:text-sm text-white/80 whitespace-nowrap">Call us anytime</p>
                   <p className="font-bold text-sm sm:text-base md:text-lg xl:text-xl whitespace-nowrap">
-                    (<NumberTicker value={555} decimalPlaces={0} />) <NumberTicker value={123} decimalPlaces={0} />-<NumberTicker value={4567} decimalPlaces={0} />
+                    +91 9840 418 974
                   </p>
                 </div>
               </motion.div>

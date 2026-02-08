@@ -56,13 +56,13 @@ const TestimonialCarousel: React.FC = () => {
                             Client Feedbacks
                         </p>
                         <h2 className="text-4xl md:text-5xl font-serif leading-tight" style={{ color: '#003C43' }}>
-                            Healing Begins with a <br /> Conversation
+                            Care Begins with <br /> Being Heard
                         </h2>
                     </div>
                     <div className="lg:w-1/3">
                         <p className="text-base md:text-lg leading-relaxed" style={{ color: '#245953' }}>
-                            Healing isn’t rushed—it’s supported. Our team walks beside you,
-                            offering understanding and tailored support to help you rebuild.
+                            Care is not rushed it is guided with patience. Our team listens, understands concerns, and
+                            offers supportive guidance to help you feel informed, reassured, and cared for at every step.
                         </p>
                     </div>
                 </AnimatedSection>

@@ -81,12 +81,12 @@ const Navbar = () => {
             <div className="flex items-center gap-3 md:gap-4 xl:gap-6">
               <div className="flex items-center gap-2">
                 <Clock className="w-3 h-3 md:w-4 md:h-4" />
-                <span className="font-medium">Office Time : Mon - Fri 8:00 - 6:30</span>
+                <span className="font-medium">Working Hours: Mon - Saturday 7:00 - 11:00</span>
               </div>
               <div className="h-4 w-px bg-white/30 hidden lg:block"></div>
               <div className="hidden lg:flex items-center gap-2">
                 <MapPin className="w-3 h-3 md:w-4 md:h-4" />
-                <span className="font-medium">123 Serenity Lane, Blissfield, CA 90210</span>
+                <span className="font-medium">4/7 South Madha Church Street Royapuram, Chennai – 600013</span>
               </div>
             </div>
             <div className="flex items-center gap-2">

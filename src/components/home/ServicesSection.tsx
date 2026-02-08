@@ -6,10 +6,10 @@ import NumberTicker from '@/components/ui/NumberTicker';
 
 const AboutSection = () => {
   const features = [
-    { text: 'Free Consultation', color: 'bg-[#003C43]' },
-    { text: 'Mental Satisfaction', color: 'bg-[#408E91]' },
-    { text: 'Emergency Service', color: 'bg-[#245953]' },
-    { text: 'Psychologists Services', color: 'bg-[#408E91]' }
+    { text: 'Affordable Care', color: 'bg-[#003C43]' },
+    { text: 'PCOD Support', color: 'bg-[#408E91]' },
+    { text: 'Menstrual Guidance', color: 'bg-[#245953]' },
+    { text: 'Preventive Checkups', color: 'bg-[#408E91]' }
   ];
 
   return (
@@ -40,7 +40,7 @@ const AboutSection = () => {
             <div className="absolute -bottom-6 -right-6 md:-bottom-8 md:-right-8 lg:-bottom-10 lg:-right-10 bg-gradient-to-br from-[#408E91] to-[#245953] rounded-2xl md:rounded-3xl px-6 py-5 md:px-8 md:py-6 lg:px-10 lg:py-8 xl:px-12 xl:py-9 text-white shadow-xl z-20 flex flex-col justify-center items-center">
               <div className="text-center">
                 <div className="text-2xl md:text-3xl lg:text-4xl font-bold mb-1">
-                  <NumberTicker value={10} />+
+                  <NumberTicker value={6} />+
                 </div>
                 <div className="text-base md:text-lg font-semibold">Years</div>
                 <div className="text-xs md:text-sm opacity-90">Of Experience</div>
@@ -60,12 +60,12 @@ const AboutSection = () => {
 
             {/* Main Heading */}
             <h2 className="heading-3 md:text-4xl lg:text-5xl text-gray-900 leading-tight">
-              Your Journey To Mental Wellness Starts Here
+              Your Journey To Women-Centered Preventive Care Starts Here
             </h2>
 
             {/* Description */}
             <p className="text-gray-600 text-sm md:text-base lg:text-lg leading-relaxed">
-              Every small step toward better mental health is a significant achievement in our lives. With the right support, each individual can find the strength to face challenges, manage stress, and build positive habits. We believe that everyone deserves the opportunity to grow, thrive, and experience inner peace. Through an empathetic and professional approach, we are here to help you discover the best solutions for lasting mental and emotional well-being.
+              Every small step toward better health awareness is a meaningful milestone in women's lives. With the right guidance, individuals can understand concerns early, manage daily stress, and build practical health habits. We believe everyone deserves accessible, affordable, and respectful care throughout life stages. Through a preventive, professional approach, we focus on yearly monitoring, timely support, and informed decisions for long-term physical and emotional wellbeing.
             </p>
 
             {/* Features Grid */}
@@ -85,7 +85,7 @@ const AboutSection = () => {
             {/* Quote */}
             <div className="bg-gray-50 border-l-4 border-[#408E91] pl-4 md:pl-6 py-3 md:py-4 my-3 md:my-5">
               <p className="text-gray-700 italic text-sm md:text-base lg:text-lg leading-relaxed">
-                Healing doesn't mean the damage never existed; it means the strength to rise is greater than the pain
+                Prevention doesn't mean illness never appears; it means early awareness and timely care reduce impact and suffering costs
               </p>
             </div>
 

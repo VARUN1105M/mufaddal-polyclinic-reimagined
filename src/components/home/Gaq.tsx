@@ -41,15 +41,14 @@ export default function ContactSection() {
                 {/* Header */}
                 <div className="text-center mb-12">
                     <span className="text-[#ffffff] text-sm md:text-base font-semibold uppercase tracking-wider mb-4 block">
-                        GET A QUOTE
+                        GET A CONSULTATION
                     </span>
 
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight">
-                        Take <span className="text-[#408E91]">The first step</span> toward a{' '}
-                        <span className="text-[#408E91]">healthier</span> mind.
+                        Start with a conversation focused on <span className="text-[#408E91]">awareness</span>,{' '}
+                        <span className="text-[#408E91]">guidance</span>, and
                         <br />
-                        Join us today and start your journey to{' '}
-                        <span className="text-[#408E91]">well-being!</span>
+                        informed <span className="text-[#408E91]">health decisions</span>.
                     </h2>
                 </div>
 
@@ -200,8 +199,8 @@ export default function ContactSection() {
                         </h3>
 
                         <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-8">
-                            Every small step counts. We're committed to walking with you through
-                            difficult moments and helping you rebuild emotional strength.
+                            Questions or concerns matter. Reach out for clear information, calm guidance, and a
+                            respectful care experience.
                         </p>
 
                         {/* Contact Details */}
@@ -213,8 +212,8 @@ export default function ContactSection() {
                                     <Phone className="w-6 h-6 text-white" />
                                 </div>
                                 <div>
-                                    <p className="text-gray-600 text-sm font-medium mb-1">Call us anytime</p>
-                                    <p className="text-gray-900 font-bold text-lg">(555) 123-4567</p>
+                                    <p className="text-gray-600 text-sm font-medium mb-1">Call us</p>
+                                    <p className="text-gray-900 font-bold text-lg">+91 9840 418 974</p>
                                 </div>
                             </div>
 
@@ -224,8 +223,8 @@ export default function ContactSection() {
                                     <Mail className="w-6 h-6 text-white" />
                                 </div>
                                 <div>
-                                    <p className="text-gray-600 text-sm font-medium mb-1">Email us</p>
-                                    <p className="text-gray-900 font-bold text-lg">Info@Yourmail.Com</p>
+                                    <p className="text-gray-600 text-sm font-medium mb-1">WhatsApp</p>
+                                    <p className="text-gray-900 font-bold text-lg">+91 7305 088 491</p>
                                 </div>
                             </div>
 
@@ -235,14 +234,22 @@ export default function ContactSection() {
                                     <MapPin className="w-6 h-6 text-white" />
                                 </div>
                                 <div>
-                                    <p className="text-gray-600 text-sm font-medium mb-1">Our Location</p>
+                                    <p className="text-gray-600 text-sm font-medium mb-1">Visit Us</p>
                                     <p className="text-gray-900 font-bold text-base">
-                                        123 Serenity Lane,<br />
-                                        Blissfield, CA 90210, US.
+                                        4/7 South Madha Church Street<br />
+                                        Royapuram, Chennai – 600013
                                     </p>
                                 </div>
                             </div>
 
+                        </div>
+
+                        {/* Additional Info */}
+                        <div className="mt-8 pt-6 border-t border-gray-300">
+                            <p className="text-gray-700 text-sm md:text-base leading-relaxed italic">
+                                Yearly preventive care helps us reduce health risks and avoid unnecessary medical
+                                costs.
+                            </p>
                         </div>
 
                     </div>

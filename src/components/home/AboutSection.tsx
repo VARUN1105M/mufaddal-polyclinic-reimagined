@@ -4,29 +4,29 @@ import { motion } from 'framer-motion';
 const features = [
   {
     icon: FileText,
-    title: 'Personalized Wellness Plans',
-    description: 'Tailored guidance crafted to meet your unique needs and goals effectively.',
+    title: 'Yearly Women Care',
+    description: 'Preventive yearly care focused on awareness, early attention, and long-term wellbeing.',
     bgColor: 'bg-[#408E91]',
     iconBg: 'bg-white/30'
   },
   {
     icon: Users,
-    title: 'Expert-Led Counseling Sessions',
-    description: 'Professional support designed to guide emotional well-being every single day.',
+    title: 'Guided Women Support',
+    description: 'Care and guidance delivered by trained women doctors and healthcare professionals.',
     bgColor: 'bg-[#245953]',
     iconBg: 'bg-white/30'
   },
   {
     icon: Headphones,
-    title: '24/7 Support Community',
-    description: 'Always-connected space offering care, encouragement, and shared growth.',
+    title: 'Integrated Lab Support',
+    description: 'In-house lab support for timely tests, early detection, and preventive monitoring.',
     bgColor: 'bg-[#003C43]',
     iconBg: 'bg-white/20'
   },
   {
     icon: Wrench,
-    title: 'Interactive Self-Care Tools',
-    description: 'Empowering digital resources to build healthy habits independently.',
+    title: 'Women-Led Care Team',
+    description: 'Care environment fully supported by women staff, doctors, and care coordinators.',
     bgColor: 'bg-[#245953]',
     iconBg: 'bg-white/20'
   }
