@@ -95,7 +95,7 @@ const HeroSection = () => {
             {/* Main Image Container - Now acts as anchor for floating cards */}
             <div className="relative z-10 w-full max-w-[350px] md:max-w-[450px] lg:max-w-[500px] xl:max-w-[600px] 2xl:max-w-[700px] mx-auto">
               <img
-                src="/hero-woman-transparent (2).png"
+                src="/doctor.png"
                 alt="Smiling Doctor"
                 className="relative w-full h-auto object-contain z-[1]"
               />
@@ -105,13 +105,15 @@ const HeroSection = () => {
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8 }}
-                className="absolute top-[-50px] md:top-10 right-0 md:-right-8 lg:-right-12 xl:-right-16 bg-[#0e4853] text-white p-3 md:p-4 xl:p-5 rounded-xl md:rounded-2xl shadow-lg flex items-center gap-0 md:gap-3 z-[-1] max-w-[180px] md:max-w-[220px] xl:max-w-[260px]">
-                <div className="w-8 h-8 md:w-10 md:h-10 xl:w-12 xl:h-12 bg-white rounded-full flex items-center justify-center shrink-0">
-                  <Phone className="w-4 h-4 md:w-5 md:h-5 xl:w-6 xl:h-6 text-[#0e4853] fill-current" />
+                className="absolute top-[2rem] right-0 sm:top-[2.5rem] sm:right-4 md:top-[3rem] md:right-8 lg:top-[4rem] lg:right-12 xl:top-[5rem] xl:right-16 2xl:top-[6.5rem] 2xl:right-20 bg-[#0e4853] text-white p-2 sm:p-3 md:p-4 xl:p-5 rounded-xl md:rounded-2xl shadow-lg flex items-center gap-2 md:gap-3 z-[-1] w-[160px] sm:w-[180px] md:w-[220px] xl:w-[260px]">
+                <div className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 xl:w-12 xl:h-12 bg-white rounded-full flex items-center justify-center shrink-0">
+                  <Phone className="w-4 h-4 sm:w-4 sm:h-4 md:w-5 md:h-5 xl:w-6 xl:h-6 text-[#0e4853] fill-current" />
                 </div>
-                <div>
-                  <p className="text-xs xl:text-sm text-white/80">Call us anytime</p>
-                  <p className="font-bold text-base md:text-lg xl:text-xl">(555) 123-4567</p>
+                <div className="min-w-0">
+                  <p className="text-[10px] sm:text-xs xl:text-sm text-white/80 whitespace-nowrap">Call us anytime</p>
+                  <p className="font-bold text-sm sm:text-base md:text-lg xl:text-xl whitespace-nowrap">
+                    (<NumberTicker value={555} decimalPlaces={0} />) <NumberTicker value={123} decimalPlaces={0} />-<NumberTicker value={4567} decimalPlaces={0} />
+                  </p>
                 </div>
               </motion.div>
 
@@ -120,11 +122,12 @@ const HeroSection = () => {
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.0 }}
-                className="absolute bottom-16 md:bottom-20 left-0 md:-left-8 lg:-left-12 xl:-left-16 bg-[#4a7c7c]/90 backdrop-blur-md text-white p-3 md:p-4 xl:p-5 rounded-lg md:rounded-xl shadow-lg z-10 text-center">
-                <div className="text-xl md:text-2xl xl:text-3xl font-bold">
+                style={{ left: '2rem' }}
+                className="absolute bottom-12 sm:bottom-14 md:bottom-20 bg-[#4a7c7c]/90 backdrop-blur-md text-white p-2 sm:p-3 md:p-4 xl:p-5 rounded-lg md:rounded-xl shadow-lg z-10 text-center min-w-[100px] sm:min-w-[120px] md:min-w-[140px]">
+                <div className="text-lg sm:text-xl md:text-2xl xl:text-3xl font-bold">
                   <NumberTicker value={4.9} decimalPlaces={1} /> /5
                 </div>
-                <div className="text-xs md:text-sm xl:text-base text-white/80">Review on Google</div>
+                <div className="text-[10px] sm:text-xs md:text-sm xl:text-base text-white/80 whitespace-nowrap">Review on Google</div>
               </motion.div>
             </div>
           </motion.div>
