@@ -9,19 +9,19 @@ export default function HowWeWork() {
       number: 1,
       title: "Listen & Understand",
       description:
-        "Your wellness journey matters. We're dedicated to supporting both mental clarity and emotional strength every step forward.",
+        "Every woman's health concern is unique. We take time to understand symptoms, lifestyle, and changes without rushing decisions.",
     },
     {
       number: 2,
-      title: "Create A Tailored Plan",
+      title: "Plan Preventive Care",
       description:
-        "From daily stress to life's hardest moments, our team supports your healing and overall well-being.",
+        "From menstrual concerns to yearly checkups, we guide women toward timely care that helps avoid future complications.",
     },
     {
       number: 3,
-      title: "Support & Empower",
+      title: "Support Through Stages",
       description:
-        "Empowering you to live well with care that nurtures your body, mind, and emotional peace every single day.",
+        "Supporting women with continuity of care that adapts to changing health needs over time.",
     },
   ];
 
@@ -44,22 +44,22 @@ export default function HowWeWork() {
             </div>
 
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight">
-              Here For Your{" "}
+              Here For Women's{" "}
               <span className="text-[#64CCC5] relative inline-block">
                 Health
                 <span className="absolute bottom-0 left-0 w-full h-2 bg-[#64CCC5]/30 -z-10"></span>
               </span>
               ,{" "}
-              Here For Your{" "}
-              <span className="text-[#408E91]">Heart</span>
+              Here For{" "}
+              <span className="text-[#408E91]">Everyday Care</span>
             </h2>
           </div>
 
           {/* Right Content */}
           <div className="flex flex-col items-start lg:items-end space-y-6">
             <p className="text-base md:text-lg lg:text-xl leading-relaxed text-white/90 max-w-xl lg:text-right">
-              We offer compassionate care, combining physical and emotional
-              support to help you thrive in every aspect.
+              We focus on preventive women care, combining health awareness and timely guidance to
+              support better decisions across every stage of life.
             </p>
 
             <Link

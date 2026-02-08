@@ -13,24 +13,24 @@ const FAQSection = () => {
 
   const faqs = [
     {
-      question: "What is mental health, and why is it important?",
+      question: "What is preventive women's health care, and why is it important?",
       answer:
-        "If you experience persistent feelings of sadness, anxiety, or stress that interfere with daily life, it may be time to seek professional support.",
+        "Preventive care focuses on early awareness, regular checkups, and guidance to avoid future health complications.",
     },
     {
-      question: "How can I tell if I need professional mental health support?",
+      question: "When should I consider a women's health checkup?",
       answer:
-        "Look for persistent changes in mood, behavior, or thinking that last more than two weeks.",
+        "If you notice changes in periods, energy levels, weight, or general health, it's advisable.",
     },
     {
-      question: "Are online therapy sessions effective?",
+      question: "Do I need yearly health checkups even without symptoms?",
       answer:
-        "Yes, research shows that online therapy can be just as effective as in-person sessions for many mental health conditions.",
+        "Yes, regular checkups help detect silent issues early and support long-term health planning.",
     },
     {
-      question: "What can I do to improve my mental well-being daily?",
+      question: "How can I maintain better women's health daily?",
       answer:
-        "Small daily habits such as exercise, sleep, mindfulness, and social connections can make a big impact.",
+        "Balanced nutrition, regular activity, stress management, and routine checkups support overall wellbeing.",
     },
   ];
 
@@ -60,7 +60,7 @@ const FAQSection = () => {
 
       <div className="container mx-auto px-4 max-w-6xl relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
-          
+
           {/* Left Content */}
           <AnimatedSection direction="left" className="lg:sticky lg:top-24">
             <div className="space-y-6">
@@ -68,7 +68,7 @@ const FAQSection = () => {
                 className="font-semibold text-xs md:text-sm tracking-wider uppercase"
                 style={{ color: colors.tertiary }}
               >
-                FREQUENTLY ASKED QUESTION
+                FREQUENTLY ASKED QUESTIONS
               </span>
 
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
@@ -104,7 +104,7 @@ const FAQSection = () => {
               </div>
 
               <p className="text-gray-700 text-base md:text-lg leading-relaxed max-w-md">
-                Through consistent care and compassionate guidance, we help individuals rediscover strength, build resilience, and move forward toward a brighter, healthier future.
+                Through awareness, preventive care, and timely guidance, we help women understand health early, reduce risks, and move forward with confidence and clarity.
               </p>
             </div>
           </AnimatedSection>
@@ -115,41 +115,37 @@ const FAQSection = () => {
               {faqs.map((faq, index) => (
                 <div
                   key={index}
-                  className={`rounded-2xl overflow-hidden transition-all duration-300 ${
-                    openIndex === index
+                  className={`rounded-2xl overflow-hidden transition-all duration-300 ${openIndex === index
                       ? "bg-white shadow-xl"
                       : "bg-white/70 backdrop-blur-md shadow-md hover:shadow-lg"
-                  }`}
+                    }`}
                 >
                   <button
                     onClick={() => toggleFAQ(index)}
-                    className={`w-full px-6 md:px-8 py-5 md:py-6 flex items-center justify-between gap-4 text-left transition-colors ${
-                      openIndex === index
+                    className={`w-full px-6 md:px-8 py-5 md:py-6 flex items-center justify-between gap-4 text-left transition-colors ${openIndex === index
                         ? "bg-gradient-to-r"
                         : "hover:bg-white/80"
-                    }`}
+                      }`}
                     style={
                       openIndex === index
                         ? {
-                            backgroundImage: `linear-gradient(90deg, ${colors.tertiary}20, ${colors.secondary}20)`
-                          }
+                          backgroundImage: `linear-gradient(90deg, ${colors.tertiary}20, ${colors.secondary}20)`
+                        }
                         : {}
                     }
                   >
                     <span
-                      className={`font-semibold text-base md:text-lg ${
-                        openIndex === index ? "text-gray-900" : "text-gray-700"
-                      }`}
+                      className={`font-semibold text-base md:text-lg ${openIndex === index ? "text-gray-900" : "text-gray-700"
+                        }`}
                     >
                       {faq.question}
                     </span>
 
                     <ChevronDown
-                      className={`w-5 h-5 flex-shrink-0 transition-transform duration-300 ${
-                        openIndex === index
+                      className={`w-5 h-5 flex-shrink-0 transition-transform duration-300 ${openIndex === index
                           ? "rotate-180"
                           : "text-gray-400"
-                      }`}
+                        }`}
                       style={{
                         color: openIndex === index ? colors.tertiary : undefined
                       }}
@@ -157,11 +153,10 @@ const FAQSection = () => {
                   </button>
 
                   <div
-                    className={`transition-all duration-300 ease-in-out ${
-                      openIndex === index
+                    className={`transition-all duration-300 ease-in-out ${openIndex === index
                         ? "max-h-96 opacity-100"
                         : "max-h-0 opacity-0"
-                    }`}
+                      }`}
                   >
                     <div className="px-6 md:px-8 pb-5 md:pb-6 pt-2">
                       <p className="text-gray-600 text-sm md:text-base leading-relaxed">

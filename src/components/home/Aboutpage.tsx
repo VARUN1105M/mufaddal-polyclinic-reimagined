@@ -8,30 +8,30 @@ interface Benefit {
 const AboutSection: React.FC = () => {
   const benefits: Benefit[] = [
     {
-      text: "Prioritizing well-being helps you thrive emotionally, socially, and personally every day.",
+      text: "Yearly women health checkups help identify concerns early and avoid future complications.",
     },
     {
-      text: "Strong minds build strong lives; support and care create lasting peace.",
+      text: "Preventive women care supports informed choices, timely guidance, and controlled healthcare spending.",
     },
     {
-      text: "Inner peace starts with awareness, acceptance, and support when it's needed most.",
+      text: "Women's health awareness builds confidence, understanding, and continuity across every life stage.",
     },
     {
-      text: "Emotional strength shapes how we live, connect, and move forward confidently.",
+      text: "Regular monitoring helps women plan care better and manage long-term health needs.",
     },
   ];
 
   const features: string[] = [
-    "Free Consultation",
-    "Mental Satisfaction",
-    "Emergency Service",
+    "Preventive Health Checkups",
+    "Yearly Health Awareness",
+    "Timely Medical Guidance",
   ];
 
   return (
     <section className="py-12 md:py-16 lg:py-20 bg-[#F5FAFA]">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr,1.2fr,1fr] gap-8 md:gap-10 lg:gap-12 items-center">
-          
+
           {/* Left Image */}
           <AnimatedSection direction="left" className="order-1 lg:order-1">
             <div className="relative mx-auto max-w-md lg:max-w-none">
@@ -53,7 +53,7 @@ const AboutSection: React.FC = () => {
               </span>
 
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#003C43] leading-tight">
-                Because Your Mental Health Matters
+                Because Preventive Health Matters
               </h2>
 
               <div className="space-y-4 md:space-y-5 pt-2 md:pt-4">
@@ -73,7 +73,7 @@ const AboutSection: React.FC = () => {
           <AnimatedSection direction="right" delay={0.4} className="order-3 lg:order-3">
             <div className="bg-gradient-to-br from-[#003C43] to-[#245953] rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-2xl mx-auto max-w-md lg:max-w-none">
               <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-6 md:mb-8 leading-snug">
-                Together, We Overcome
+                Together, We Care Preventively
               </h3>
 
               <div className="space-y-4 md:space-y-5">
