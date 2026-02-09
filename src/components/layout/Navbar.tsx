@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Clock, MapPin, Facebook, Twitter, Linkedin, FileText } from 'lucide-react';
+import { Menu, X, Clock, MapPin, Facebook, Instagram, Linkedin, FileText } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const navLinks = [
@@ -98,18 +98,13 @@ const Navbar = () => {
                 <Facebook className="w-3 h-3 md:w-4 md:h-4" />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/mufaddal_polyclinic/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-8 h-8 md:w-9 md:h-9 xl:w-10 xl:h-10 rounded-md bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all duration-300 hover:scale-110"
-                aria-label="Twitter"
+                aria-label="Instagram"
               >
-                <Twitter className="w-3 h-3 md:w-4 md:h-4" />
-              </a>
-              <a
-                href="#"
-                className="w-8 h-8 md:w-9 md:h-9 xl:w-10 xl:h-10 rounded-md bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all duration-300 hover:scale-110"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="w-3 h-3 md:w-4 md:h-4" />
+                <Instagram className="w-3 h-3 md:w-4 md:h-4" />
               </a>
             </div>
           </div>

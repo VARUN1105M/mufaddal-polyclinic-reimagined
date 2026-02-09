@@ -89,14 +89,6 @@ export default function OffersSection() {
             </h2>
           </div>
 
-          {/* View All Button */}
-          <Link
-            to="/offers"
-            className="mt-6 md:mt-0 inline-flex items-center gap-2 bg-gradient-to-r from-[#003C43] to-[#245953] hover:from-[#245953] hover:to-[#408E91] text-white px-8 py-4 rounded-full font-semibold text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-          >
-            View All Offers
-            <ArrowRight className="w-5 h-5" />
-          </Link>
         </div>
 
         {/* Offers Grid */}
@@ -122,3 +114,5 @@ export default function OffersSection() {
     </section>
   );
 }
+
+

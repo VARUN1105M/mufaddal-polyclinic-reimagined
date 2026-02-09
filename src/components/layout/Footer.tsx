@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Twitter, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import { Facebook, Instagram, Mail, Phone, MapPin } from 'lucide-react';
 import mufaddalLogo from '../home/mufaddal-logo.png';
 import AnimatedSection from '../ui/AnimatedSection';
 
@@ -28,23 +28,23 @@ export default function Footer() {
       <div className="absolute inset-0 bg-[#003C43]"></div>
 
       {/* Main Content */}
-      <div className="relative z-10 max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 py-10 md:py-12 lg:py-16 xl:py-20">
+      <div className="relative z-10 max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 py-6 md:py-8 lg:py-10">
 
         {/* Main Footer Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-10 xl:gap-12 2xl:gap-16 mb-10 md:mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-10 xl:gap-12 2xl:gap-16 mb-4 md:mb-6">
 
           {/* Logo + About */}
           <AnimatedSection delay={0}>
             <div>
-              <div className="mb-4">
+              <div className="mb-2">
                 <img
                   src={mufaddalLogo}
                   alt="Mufaddal Polyclinic Logo"
-                  className="h-12 md:h-14 xl:h-16 2xl:h-20 w-auto"
+                  className="h-10 md:h-12 xl:h-14 2xl:h-16 w-auto"
                 />
               </div>
 
-              <p className="text-white/80 text-sm md:text-base xl:text-lg leading-relaxed mb-6 text-justify">
+              <p className="text-white/80 text-sm md:text-base xl:text-lg leading-relaxed mb-3 text-justify">
                 Professional, responsive, and soothing design for therapists, counselors, and life coaches.
               </p>
 
@@ -52,11 +52,13 @@ export default function Footer() {
                 <a href="#" className="w-9 h-9 md:w-10 md:h-10 xl:w-12 xl:h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
                   <Facebook className="w-4 h-4 md:w-5 md:h-5 xl:w-6 xl:h-6 text-white" />
                 </a>
-                <a href="#" className="w-9 h-9 md:w-10 md:h-10 xl:w-12 xl:h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
-                  <Twitter className="w-4 h-4 md:w-5 md:h-5 xl:w-6 xl:h-6 text-white" />
-                </a>
-                <a href="#" className="w-9 h-9 md:w-10 md:h-10 xl:w-12 xl:h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
-                  <Linkedin className="w-4 h-4 md:w-5 md:h-5 xl:w-6 xl:h-6 text-white" />
+                <a
+                  href="https://www.instagram.com/mufaddal_polyclinic/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 md:w-10 md:h-10 xl:w-12 xl:h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+                >
+                  <Instagram className="w-4 h-4 md:w-5 md:h-5 xl:w-6 xl:h-6 text-white" />
                 </a>
               </div>
             </div>
@@ -65,8 +67,8 @@ export default function Footer() {
           {/* Contact Info */}
           <AnimatedSection delay={0.1}>
             <div>
-              <h3 className="text-white font-bold text-base md:text-lg xl:text-xl 2xl:text-2xl mb-4 md:mb-6">Contact</h3>
-              <div className="space-y-4">
+              <h3 className="text-white font-bold text-base md:text-lg xl:text-xl 2xl:text-2xl mb-3 md:mb-4">Contact</h3>
+              <div className="space-y-2">
                 <div className="flex items-start gap-3">
                   <MapPin className="w-4 h-4 md:w-5 md:h-5 xl:w-6 xl:h-6 text-white/60 mt-1" />
                   <p className="text-white/80 text-sm md:text-base xl:text-lg">
@@ -81,18 +83,19 @@ export default function Footer() {
                     <a href="tel:+919840418974" className="hover:text-white block">
                       Call us: +91 9840 418 974
                     </a>
+                    <br />
                     <a href="https://wa.me/917305088491" className="hover:text-white block mt-1">
                       WhatsApp: +91 7305 088 491
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-3">
+                {/* <div className="flex items-center gap-3">
                   <Mail className="w-4 h-4 md:w-5 md:h-5 xl:w-6 xl:h-6 text-white/60" />
                   <a href="mailto:info@yourmail.com" className="text-white/80 text-sm md:text-base xl:text-lg hover:text-white">
                     Info@yourmail.com
                   </a>
-                </div>
+                </div> */}
               </div>
             </div>
           </AnimatedSection>
@@ -100,7 +103,7 @@ export default function Footer() {
           {/* Quick Links */}
           <AnimatedSection delay={0.2}>
             <div>
-              <h3 className="text-white font-bold text-base md:text-lg xl:text-xl 2xl:text-2xl mb-4 md:mb-6">Quick Links</h3>
+              <h3 className="text-white font-bold text-base md:text-lg xl:text-xl 2xl:text-2xl mb-3 md:mb-4">Quick Links</h3>
               <ul className="space-y-2 md:space-y-3">
                 {quickLinks.map((link, index) => (
                   <li key={index}>
@@ -119,8 +122,8 @@ export default function Footer() {
           {/* Newsletter */}
           <AnimatedSection delay={0.3}>
             <div>
-              <h3 className="text-white font-bold text-base md:text-lg xl:text-xl 2xl:text-2xl mb-4 md:mb-6">Newsletter</h3>
-              <p className="text-white/80 text-sm md:text-base xl:text-lg mb-4">
+              <h3 className="text-white font-bold text-base md:text-lg xl:text-xl 2xl:text-2xl mb-3 md:mb-4">Newsletter</h3>
+              <p className="text-white/80 text-sm md:text-base xl:text-lg mb-2">
                 Get the latest news other tips.
               </p>
 
@@ -147,7 +150,7 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="w-full h-px bg-white/20 mb-6 md:mb-8"></div>
+        <div className="w-full h-px bg-white/20 mb-3 md:mb-4"></div>
 
         {/* Copyright */}
         <div className="text-center">

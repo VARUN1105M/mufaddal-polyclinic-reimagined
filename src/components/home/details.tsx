@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, User, Facebook, Twitter, Linkedin, ChevronRight } from 'lucide-react';
+import { Calendar, User, Facebook, Instagram, Linkedin, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 
@@ -168,12 +168,14 @@ const BlogPostDetail = () => {
                                                 <button className="social-share-btn w-10 h-10 rounded-full bg-[#245953] hover:bg-[#003C43] flex items-center justify-center text-white">
                                                     <Facebook className="w-5 h-5" />
                                                 </button>
-                                                <button className="social-share-btn w-10 h-10 rounded-full bg-[#408E91] hover:bg-[#245953] flex items-center justify-center text-white">
-                                                    <Twitter className="w-5 h-5" />
-                                                </button>
-                                                <button className="social-share-btn w-10 h-10 rounded-full bg-[#003C43] hover:bg-[#245953] flex items-center justify-center text-white">
-                                                    <Linkedin className="w-5 h-5" />
-                                                </button>
+                                                <a
+                                                    href="https://www.instagram.com/mufaddal_polyclinic/"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="social-share-btn w-10 h-10 rounded-full bg-[#408E91] hover:bg-[#245953] flex items-center justify-center text-white"
+                                                >
+                                                    <Instagram className="w-5 h-5" />
+                                                </a>
                                             </div>
                                         </div>
                                     </div>

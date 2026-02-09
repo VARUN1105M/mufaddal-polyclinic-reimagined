@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Facebook, Twitter, Linkedin } from 'lucide-react';
+import { Facebook, Instagram, Linkedin } from 'lucide-react';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 
 export default function DoctorsPreview() {
@@ -133,11 +133,13 @@ export default function DoctorsPreview() {
                     <a href="#" className="p-2 bg-white/20 hover:bg-white/40 rounded-full text-white backdrop-blur-sm transition-colors">
                       <Facebook className="w-5 h-5" />
                     </a>
-                    <a href="#" className="p-2 bg-white/20 hover:bg-white/40 rounded-full text-white backdrop-blur-sm transition-colors">
-                      <Twitter className="w-5 h-5" />
-                    </a>
-                    <a href="#" className="p-2 bg-white/20 hover:bg-white/40 rounded-full text-white backdrop-blur-sm transition-colors">
-                      <Linkedin className="w-5 h-5" />
+                    <a
+                      href="https://www.instagram.com/mufaddal_polyclinic/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-2 bg-white/20 hover:bg-white/40 rounded-full text-white backdrop-blur-sm transition-colors"
+                    >
+                      <Instagram className="w-5 h-5" />
                     </a>
                   </div>
                 </div>
