@@ -31,12 +31,12 @@ const HeroSection = () => {
           <div
             data-aos="fade-right"
             data-aos-duration="600"
-            className="text-center lg:text-left self-center pb-12 lg:pb-20 xl:pb-24"
+            className="text-center lg:text-left self-center pb-12 lg:pb-0"
           >
             <p
               data-aos="fade"
               data-aos-delay="100"
-              className="text-white font-medium tracking-wider text-xs md:text-sm xl:text-base uppercase mb-3 md:mb-4"
+              className="text-white font-medium tracking-wider text-[10px] sm:text-xs md:text-sm xl:text-base uppercase mb-12"
             >
               <span className="text-[#003C43]">CARE WITH BALANCE, FOR LIFE</span>
             </p>
@@ -44,23 +44,25 @@ const HeroSection = () => {
             <h1
               data-aos="fade-up"
               data-aos-delay="200"
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold text-white leading-tight mb-4 md:mb-6 font-display"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-white leading-[1.4] mb-12 font-display"
             >
-              Caring for Your <br />
-              <span className="text-[#003C43]">Inner</span>{' '}
-              <span className="text-[#ffffff]">Wellbeing</span>
+              <span className="block">Caring for Your</span>
+              <span className="block">
+                <span className="text-[#003C43]">Inner </span>{' '}
+                <span className="text-[#ffffff]">Wellbeing</span>
+              </span>
             </h1>
 
             <div
               data-aos="zoom-in"
               data-aos-delay="300"
-              className="h-1 bg-white/50 mb-6 md:mb-8 mx-auto lg:mx-0 w-[100px]"
+              className="h-1 bg-white/50 mb-12 mx-auto lg:mx-0 w-[100px]"
             />
 
             <p
               data-aos="fade"
               data-aos-delay="400"
-              className="text-white/90 text-base md:text-lg xl:text-xl 2xl:text-2xl leading-relaxed mb-8 md:mb-10 max-w-xl xl:max-w-2xl mx-auto lg:mx-0 text-justify"
+              className="text-white/90 text-sm md:text-base xl:text-lg 2xl:text-xl leading-[2.2] mb-12 max-w-xl xl:max-w-2xl mx-auto lg:mx-0 text-justify"
             >
               Build clarity, confidence, and balance through preventive mental wellbeing care and guided support, focusing on awareness, early attention, and wellbeing to reduce long-term stress, risks, and avoidable costs.
             </p>
@@ -101,13 +103,13 @@ const HeroSection = () => {
                 className="relative w-full h-auto object-contain z-[1]"
               />
 
-              {/* Floating Call Card - No animation */}
-              <div className="absolute top-[1rem] -right-4 sm:top-[1.5rem] sm:-right-2 md:top-[2rem] md:right-0 lg:top-[2.5rem] lg:right-4 xl:top-[3rem] xl:right-8 2xl:top-[-4rem] 2xl:right-[6rem] bg-[#0e4853] text-white p-2 sm:p-3 md:p-4 xl:p-5 rounded-xl md:rounded-2xl shadow-lg flex items-center gap-2 md:gap-3 z-20 w-[160px] sm:w-[180px] md:w-[220px] xl:w-[260px]">
+              {/* Floating Call Card - Adjusted position slightly down */}
+              <div className="absolute -top-6 sm:-top-8 md:-top-10 lg:-top-12 xl:-top-14 2xl:-top-16 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:-right-4 lg:right-0 xl:right-8 bg-[#0e4853] text-white p-2 sm:p-3 md:p-4 xl:p-5 rounded-xl md:rounded-2xl shadow-lg flex items-center gap-2 md:gap-3 z-20 w-[180px] sm:w-[200px] md:w-[240px] xl:w-[280px]">
                 <div className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 xl:w-12 xl:h-12 bg-white rounded-full flex items-center justify-center shrink-0">
                   <Phone className="w-4 h-4 sm:w-4 sm:h-4 md:w-5 md:h-5 xl:w-6 xl:h-6 text-[#0e4853] fill-current" />
                 </div>
                 <div className="min-w-0">
-                  <p className="text-[10px] sm:text-xs xl:text-sm text-white/80 whitespace-nowrap">Call us anytime</p>
+                  <p className="text-[10px] sm:text-xs xl:text-sm text-white/80 whitespace-nowrap uppercase tracking-wider font-semibold">Call us anytime</p>
                   <p className="font-bold text-sm sm:text-base md:text-lg xl:text-xl whitespace-nowrap">
                     +91 9840418974
                   </p>

@@ -127,22 +127,7 @@ export default function DoctorsPreview() {
                   className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
                 />
 
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#003C43]/90 via-[#003C43]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-100">
-                    <a href="#" className="p-2 bg-white/20 hover:bg-white/40 rounded-full text-white backdrop-blur-sm transition-colors">
-                      <Facebook className="w-5 h-5" />
-                    </a>
-                    <a
-                      href="https://www.instagram.com/mufaddal_polyclinic/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-2 bg-white/20 hover:bg-white/40 rounded-full text-white backdrop-blur-sm transition-colors"
-                    >
-                      <Instagram className="w-5 h-5" />
-                    </a>
-                  </div>
-                </div>
+                {/* Overlay removed */}
               </div>
 
               {/* Content */}
