@@ -40,7 +40,7 @@ export default function AppointmentSection({ lightMode = false }: AppointmentSec
             )}
 
             <div className="max-w-7xl mx-auto relative z-10">
-                <div className="grid lg:grid-cols-[4fr_4fr_1fr] gap-2 xl:gap-4 items-stretch">
+                <div className="grid lg:grid-cols-[45%_40%_15%] gap-2 xl:gap-4 items-stretch">
 
                     {/* LEFT CONTENT */}
                     <AnimatedSection direction="left" className="space-y-3 pr-1">
@@ -48,15 +48,14 @@ export default function AppointmentSection({ lightMode = false }: AppointmentSec
                             WHY CHOOSE US?
                         </span>
 
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight">
+                        <h2 className="text-2xl md:text-3xl lg:text-[2.5rem] font-bold leading-tight md:leading-snug lg:leading-normal">
                             <span className={lightMode ? "text-gray-900" : "text-white"}>Every Woman Deserves </span>
-                            <span className="text-[#64CCC5]">Care</span>
-                            <span className={lightMode ? "text-gray-900" : "text-white"}>,</span><br />
-                            <span className={lightMode ? "text-gray-900" : "text-white"}>Understanding, </span>
-                            <span className="text-[#64CCC5]">And Support</span>
+                            <span className="text-[#64CCC5]">Care,</span><br />
+                            <span className={lightMode ? "text-gray-900" : "text-white"}>Understanding, And </span>
+                            <span className="text-[#64CCC5]">Support</span>
                         </h2>
 
-                        <p className={`${lightMode ? "text-gray-600" : "text-white/90"} text-base md:text-lg leading-relaxed`}>
+                        <p className={`${lightMode ? "text-gray-600" : "text-white/90"} text-[1rem] leading-relaxed text-justify`}>
                             We focus on health awareness programs and preventive checkups that help women understand
                             their bodies better and make informed health choices early.
                         </p>
@@ -74,7 +73,7 @@ export default function AppointmentSection({ lightMode = false }: AppointmentSec
                   ">
                                         <Check className="w-4 h-4 text-white" strokeWidth={3} />
                                     </div>
-                                    <span className={`${lightMode ? "text-gray-800" : "text-white"} text-base md:text-lg font-medium`}>
+                                    <span className={`${lightMode ? "text-gray-800" : "text-white"} text-[1rem] font-medium`}>
                                         {feature.text}
                                     </span>
                                 </div>

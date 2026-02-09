@@ -60,7 +60,7 @@ const TestimonialCarousel: React.FC = () => {
                         </h2>
                     </div>
                     <div className="lg:w-1/3">
-                        <p className="text-base md:text-lg leading-relaxed" style={{ color: '#245953' }}>
+                        <p className="text-base md:text-lg leading-relaxed text-justify" style={{ color: '#245953' }}>
                             Care is not rushed it is guided with patience. Our team listens, understands concerns, and
                             offers supportive guidance to help you feel informed, reassured, and cared for at every step.
                         </p>

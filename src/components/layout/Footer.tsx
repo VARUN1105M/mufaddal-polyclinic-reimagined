@@ -42,7 +42,7 @@ export default function Footer() {
               />
             </div>
 
-            <p className="text-white/80 text-sm md:text-base xl:text-lg leading-relaxed mb-6">
+            <p className="text-white/80 text-sm md:text-base xl:text-lg leading-relaxed mb-6 text-justify">
               Professional, responsive, and soothing design for therapists, counselors, and life coaches.
             </p>
 

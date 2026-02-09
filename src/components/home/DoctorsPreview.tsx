@@ -114,7 +114,7 @@ export default function OurServices() {
                 {/* Divider */}
                 <div className="w-16 h-1 bg-gradient-to-r from-[#003C43] to-[#408E91] mb-4 group-hover:w-full transition-all duration-500"></div>
 
-                <p className="text-gray-600 text-base leading-relaxed">
+                <p className="text-gray-600 text-base leading-relaxed text-justify">
                   {service.description}
                 </p>
               </div>

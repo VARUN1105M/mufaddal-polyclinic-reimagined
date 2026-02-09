@@ -103,7 +103,7 @@ const FAQSection = () => {
                 <span className="font-bold text-lg">4.9 /5</span>
               </div>
 
-              <p className="text-gray-700 text-base md:text-lg leading-relaxed max-w-md">
+              <p className="text-gray-700 text-base md:text-lg leading-relaxed max-w-md text-justify">
                 Through awareness, preventive care, and timely guidance, we help women understand health early, reduce risks, and move forward with confidence and clarity.
               </p>
             </div>
@@ -116,15 +116,15 @@ const FAQSection = () => {
                 <div
                   key={index}
                   className={`rounded-2xl overflow-hidden transition-all duration-300 ${openIndex === index
-                      ? "bg-white shadow-xl"
-                      : "bg-white/70 backdrop-blur-md shadow-md hover:shadow-lg"
+                    ? "bg-white shadow-xl"
+                    : "bg-white/70 backdrop-blur-md shadow-md hover:shadow-lg"
                     }`}
                 >
                   <button
                     onClick={() => toggleFAQ(index)}
                     className={`w-full px-6 md:px-8 py-5 md:py-6 flex items-center justify-between gap-4 text-left transition-colors ${openIndex === index
-                        ? "bg-gradient-to-r"
-                        : "hover:bg-white/80"
+                      ? "bg-gradient-to-r"
+                      : "hover:bg-white/80"
                       }`}
                     style={
                       openIndex === index
@@ -143,8 +143,8 @@ const FAQSection = () => {
 
                     <ChevronDown
                       className={`w-5 h-5 flex-shrink-0 transition-transform duration-300 ${openIndex === index
-                          ? "rotate-180"
-                          : "text-gray-400"
+                        ? "rotate-180"
+                        : "text-gray-400"
                         }`}
                       style={{
                         color: openIndex === index ? colors.tertiary : undefined
@@ -154,12 +154,12 @@ const FAQSection = () => {
 
                   <div
                     className={`transition-all duration-300 ease-in-out ${openIndex === index
-                        ? "max-h-96 opacity-100"
-                        : "max-h-0 opacity-0"
+                      ? "max-h-96 opacity-100"
+                      : "max-h-0 opacity-0"
                       }`}
                   >
                     <div className="px-6 md:px-8 pb-5 md:pb-6 pt-2">
-                      <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+                      <p className="text-gray-600 text-sm md:text-base leading-relaxed text-justify">
                         {faq.answer}
                       </p>
                     </div>

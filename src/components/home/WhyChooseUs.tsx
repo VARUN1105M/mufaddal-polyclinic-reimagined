@@ -26,35 +26,35 @@ export default function HowWeWork() {
   ];
 
   return (
-<section className="w-full bg-gradient-to-br from-[#003C43] via-[#245953] to-[#003C43] py-16 md:py-20 xl:py-24 px-4 text-white relative overflow-hidden">
-  {/* Animated Background Decorations */}
-  <div className="absolute top-0 left-0 w-64 h-64 md:w-96 md:h-96 bg-[#408E91]/20 blur-3xl rounded-full animate-pulse"></div>
-  <div className="absolute bottom-0 right-0 w-72 h-72 md:w-[500px] md:h-[500px] bg-white/10 blur-3xl rounded-full animate-pulse delay-1000"></div>
-  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#245953]/10 blur-3xl rounded-full"></div>
+    <section className="w-full bg-gradient-to-br from-[#003C43] via-[#245953] to-[#003C43] py-16 md:py-20 xl:py-24 px-4 text-white relative overflow-hidden">
+      {/* Animated Background Decorations */}
+      <div className="absolute top-0 left-0 w-64 h-64 md:w-96 md:h-96 bg-[#408E91]/20 blur-3xl rounded-full animate-pulse"></div>
+      <div className="absolute bottom-0 right-0 w-72 h-72 md:w-[500px] md:h-[500px] bg-white/10 blur-3xl rounded-full animate-pulse delay-1000"></div>
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#245953]/10 blur-3xl rounded-full"></div>
 
-  <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 max-w-7xl 2xl:max-w-[1600px] relative">
-    {/* Header Section */}
-    <AnimatedSection className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 xl:gap-16 items-center mb-12 md:mb-16 xl:mb-20">
-      {/* Left Content */}
-      <div className="space-y-4 md:space-y-5">
-        <div className="inline-block">
-          <span className="text-xs md:text-sm xl:text-base font-bold text-[#64CCC5] tracking-widest uppercase px-4 py-2 bg-white/10 rounded-full backdrop-blur-sm">
-            How We Work
-          </span>
-        </div>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 max-w-7xl 2xl:max-w-[1600px] relative">
+        {/* Header Section */}
+        <AnimatedSection className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 xl:gap-16 items-center mb-12 md:mb-16 xl:mb-20">
+          {/* Left Content */}
+          <div className="space-y-4 md:space-y-5">
+            <div className="inline-block">
+              <span className="text-xs md:text-sm xl:text-base font-bold text-[#64CCC5] tracking-widest uppercase px-4 py-2 bg-white/10 rounded-full backdrop-blur-sm">
+                How We Work
+              </span>
+            </div>
 
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight md:leading-snug lg:leading-normal">
-          Here For Women's{" "}
-          <span className="text-[#64CCC5] relative inline-block">
-            Health
-            <span className="absolute bottom-0 left-0 w-full h-2 bg-[#64CCC5]/30 -z-10"></span>
-          </span>
-          ,{" "}
-          Here For{" "}
-          <span className="text-[#408E91]">Everyday Care</span>
-        </h2>
-      </div>
-                {/* Right Content */}
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight md:leading-snug lg:leading-normal">
+              Here For Women's{" "}
+              <span className="text-[#64CCC5] relative inline-block">
+                Health
+                <span className="absolute bottom-0 left-0 w-full h-2 bg-[#64CCC5]/30 -z-10"></span>
+              </span>
+              ,{" "}
+              Here For{" "}
+              <span className="text-[#408E91]">Everyday Care</span>
+            </h2>
+          </div>
+          {/* Right Content */}
           <div className="flex flex-col items-start lg:items-end space-y-6">
             <p className="text-base md:text-lg lg:text-xl leading-relaxed text-white/90 max-w-xl lg:text-right">
               We focus on preventive women care, combining health awareness and timely guidance to
@@ -115,7 +115,7 @@ export default function HowWeWork() {
                   {step.title}
                 </h4>
 
-                <p className="text-sm md:text-base leading-relaxed text-white/80 group-hover:text-white transition-colors duration-300">
+                <p className="text-sm md:text-base leading-relaxed text-white/80 group-hover:text-white transition-colors duration-300 text-justify">
                   {step.description}
                 </p>
               </div>

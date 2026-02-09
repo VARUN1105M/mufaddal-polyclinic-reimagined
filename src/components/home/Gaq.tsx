@@ -45,10 +45,10 @@ export default function ContactSection() {
                     </span>
 
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight">
-                        Start with a conversation focused on <span className="text-[#408E91]">awareness</span>,{' '}
-                        <span className="text-[#408E91]">guidance</span>, and
+                        Start with a conversation focused on <span className="text-[#64ccc5]">awareness</span>,{' '}
+                        <span className="text-[#64ccc5]">guidance</span>, and
                         <br />
-                        informed <span className="text-[#408E91]">health decisions</span>.
+                        informed <span className="text-[#64ccc5]">health decisions</span>.
                     </h2>
                 </div>
 

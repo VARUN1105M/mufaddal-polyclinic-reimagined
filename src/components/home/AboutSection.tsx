@@ -60,13 +60,13 @@ const FeaturesSection = () => {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl md:text-2xl font-bold leading-tight">
+                <h3 className="text-[1.5rem] font-bold leading-tight">
                   {feature.title}
                 </h3>
               </div>
 
               {/* Description */}
-              <p className="text-white/90 text-sm md:text-base leading-relaxed mt-4">
+              <p className="text-white/90 text-[1rem] leading-relaxed mt-4 text-justify">
                 {feature.description}
               </p>
             </motion.div>
