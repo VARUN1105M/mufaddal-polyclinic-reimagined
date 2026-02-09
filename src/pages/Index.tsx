@@ -10,6 +10,7 @@ import CTASection from '@/components/home/CTASection';
 import Appointment from '@/components/home/Appointmentsection';
 import Carosel from '@/components/home/Carosel';
 import Gaq from '@/components/home/Gaq';
+import AnimatedSection from '@/components/ui/AnimatedSection';
 
 
 const Index = () => {
@@ -23,9 +24,15 @@ const Index = () => {
         <WhyChooseUs />
         <DoctorsPreview />
         <Appointment />
-        <Carosel />
-        <Gaq />
-        <TestimonialsSection />
+        <AnimatedSection>
+          <Carosel />
+        </AnimatedSection>
+        <AnimatedSection>
+          <Gaq />
+        </AnimatedSection>
+        <AnimatedSection>
+          <TestimonialsSection />
+        </AnimatedSection>
         {/* <CTASection /> */}
       </main>
       <Footer />

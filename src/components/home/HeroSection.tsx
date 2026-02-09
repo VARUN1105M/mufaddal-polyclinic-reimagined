@@ -1,6 +1,5 @@
-import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Phone, Star, ArrowRight } from 'lucide-react';
+import { Phone, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import NumberTicker from '@/components/ui/NumberTicker';
 
@@ -29,67 +28,68 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 max-w-7xl 2xl:max-w-[1600px] relative z-10 pt-12 md:pt-16 lg:pt-24 pb-0">
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 xl:gap-16 items-end">
           {/* Left Content */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center lg:text-left self-center pb-12 lg:pb-20 xl:pb-24">
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.2 }}
-              className="text-white font-medium tracking-wider text-xs md:text-sm xl:text-base uppercase mb-3 md:mb-4">
+          <div
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            className="text-center lg:text-left self-center pb-12 lg:pb-20 xl:pb-24"
+          >
+            <p
+              data-aos="fade"
+              data-aos-delay="200"
+              className="text-white font-medium tracking-wider text-xs md:text-sm xl:text-base uppercase mb-3 md:mb-4"
+            >
               <span className="text-[#003C43]">CARE WITH BALANCE, FOR LIFE</span>
-            </motion.p>
+            </p>
 
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold text-white leading-tight mb-4 md:mb-6 font-display">
+            <h1
+              data-aos="fade-up"
+              data-aos-delay="300"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold text-white leading-tight mb-4 md:mb-6 font-display"
+            >
               Caring for Your <br />
               <span className="text-[#003C43]">Inner</span>{' '}
               <span className="text-[#ffffff]">Wellbeing</span>
-            </motion.h1>
+            </h1>
 
-            <motion.div
-              initial={{ opacity: 0, width: 0 }}
-              animate={{ opacity: 1, width: "100px" }}
-              transition={{ delay: 0.4 }}
-              className="h-1 bg-white/50 mb-6 md:mb-8 mx-auto lg:mx-0"
+            <div
+              data-aos="zoom-in"
+              data-aos-delay="400"
+              className="h-1 bg-white/50 mb-6 md:mb-8 mx-auto lg:mx-0 w-[100px]"
             />
 
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.5 }}
-              className="text-white/90 text-base md:text-lg xl:text-xl 2xl:text-2xl leading-relaxed mb-8 md:mb-10 max-w-xl xl:max-w-2xl mx-auto lg:mx-0 text-justify">
+            <p
+              data-aos="fade"
+              data-aos-delay="500"
+              className="text-white/90 text-base md:text-lg xl:text-xl 2xl:text-2xl leading-relaxed mb-8 md:mb-10 max-w-xl xl:max-w-2xl mx-auto lg:mx-0 text-justify"
+            >
               Build clarity, confidence, and balance through preventive mental wellbeing care and guided support, focusing on awareness, early attention, and wellbeing to reduce long-term stress, risks, and avoidable costs.
-            </motion.p>
+            </p>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 }}
-              className="flex items-center justify-center lg:justify-start gap-4 md:gap-6">
+            <div
+              data-aos="fade-up"
+              data-aos-delay="600"
+              className="flex items-center justify-center lg:justify-start gap-4 md:gap-6"
+            >
               <Button
-                className="bg-[#134e4a] hover:bg-[#115e59] text-white rounded-full px-6 md:px-8 py-5 md:py-6 text-sm md:text-base xl:text-lg">
+                className="bg-[#134e4a] hover:bg-[#115e59] text-white rounded-full px-6 md:px-8 py-5 md:py-6 text-sm md:text-base xl:text-lg"
+              >
                 <Link to="/contact">Start a Checkup</Link>
               </Button>
 
               <button
                 className="w-10 h-10 md:w-12 md:h-12 xl:w-14 xl:h-14 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center backdrop-blur-sm transition-all"
-                aria-label="Play Video">
+                aria-label="Play Video"
+              >
                 <div className="w-0 h-0 border-t-[6px] border-t-transparent border-l-[10px] border-l-white border-b-[6px] border-b-transparent ml-1"></div>
               </button>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
 
           {/* Right Image Area */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+          <div
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            data-aos-delay="200"
             className="relative lg:ml-auto"
           >
             {/* Main Image Container - Now acts as anchor for floating cards */}
@@ -101,7 +101,11 @@ const HeroSection = () => {
               />
 
               {/* Floating Call Card */}
-              <div className="absolute top-[1rem] -right-4 sm:top-[1.5rem] sm:-right-2 md:top-[2rem] md:right-0 lg:top-[2.5rem] lg:right-4 xl:top-[3rem] xl:right-8 2xl:top-[-4rem] 2xl:right-[6rem] bg-[#0e4853] text-white p-2 sm:p-3 md:p-4 xl:p-5 rounded-xl md:rounded-2xl shadow-lg flex items-center gap-2 md:gap-3 z-20 w-[160px] sm:w-[180px] md:w-[220px] xl:w-[260px]">
+              <div
+                data-aos="fade-down"
+                data-aos-delay="800"
+                className="absolute top-[1rem] -right-4 sm:top-[1.5rem] sm:-right-2 md:top-[2rem] md:right-0 lg:top-[2.5rem] lg:right-4 xl:top-[3rem] xl:right-8 2xl:top-[-4rem] 2xl:right-[6rem] bg-[#0e4853] text-white p-2 sm:p-3 md:p-4 xl:p-5 rounded-xl md:rounded-2xl shadow-lg flex items-center gap-2 md:gap-3 z-20 w-[160px] sm:w-[180px] md:w-[220px] xl:w-[260px]"
+              >
                 <div className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 xl:w-12 xl:h-12 bg-white rounded-full flex items-center justify-center shrink-0">
                   <Phone className="w-4 h-4 sm:w-4 sm:h-4 md:w-5 md:h-5 xl:w-6 xl:h-6 text-[#0e4853] fill-current" />
                 </div>
@@ -114,18 +118,18 @@ const HeroSection = () => {
               </div>
 
               {/* Floating Review Card - Positioned at middle left */}
-              <motion.div
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.0 }}
-                className="absolute top-1/2 -translate-y-1/2 left-0 sm:-left-4 md:-left-6 lg:-left-8 bg-[#4a7c7c]/90 backdrop-blur-md text-white p-3 sm:p-4 md:p-5 xl:p-6 rounded-xl shadow-xl z-20 text-center min-w-[110px] sm:min-w-[130px] md:min-w-[150px]">
+              <div
+                data-aos="fade-right"
+                data-aos-delay="1000"
+                className="absolute top-1/2 -translate-y-1/2 left-0 sm:-left-4 md:-left-6 lg:-left-8 bg-[#4a7c7c]/90 backdrop-blur-md text-white p-3 sm:p-4 md:p-5 xl:p-6 rounded-xl shadow-xl z-20 text-center min-w-[110px] sm:min-w-[130px] md:min-w-[150px]"
+              >
                 <div className="text-2xl sm:text-3xl md:text-3xl xl:text-4xl font-bold mb-1">
                   <NumberTicker value={4.9} decimalPlaces={1} /> /5
                 </div>
                 <div className="text-[10px] sm:text-xs md:text-sm xl:text-base text-white/90 whitespace-nowrap">Review on Google</div>
-              </motion.div>
+              </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
