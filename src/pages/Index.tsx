@@ -9,7 +9,6 @@ import TestimonialsSection from '@/components/home/TestimonialsSection';
 import CTASection from '@/components/home/CTASection';
 import Appointment from '@/components/home/Appointmentsection';
 import Carosel from '@/components/home/Carosel';
-import Therapist from '@/components/home/Therapist';
 import Gaq from '@/components/home/Gaq';
 
 
@@ -25,7 +24,6 @@ const Index = () => {
         <DoctorsPreview />
         <Appointment />
         <Carosel />
-        <Therapist />
         <Gaq />
         <TestimonialsSection />
         {/* <CTASection /> */}

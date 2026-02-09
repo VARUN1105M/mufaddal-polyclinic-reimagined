@@ -2,7 +2,7 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 import PageBanner from '@/components/home/Banner';
-import Therapist from '@/components/home/Therapist';
+import DoctorsPreview from '@/components/home/DoctorsPreview';
 
 const Team = () => {
     return (
@@ -10,7 +10,7 @@ const Team = () => {
             <Navbar />
             <main>
                 <PageBanner title="Doctors" />
-                <Therapist showAll />
+                <DoctorsPreview />
             </main>
             <Footer />
         </div>

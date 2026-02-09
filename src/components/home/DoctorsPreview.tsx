@@ -1,63 +1,99 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Heart, Users, Brain, Smile, ShieldCheck, Headphones } from 'lucide-react';
+import { Facebook, Twitter, Linkedin } from 'lucide-react';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 
-export default function OurServices() {
+export default function DoctorsPreview() {
   const location = useLocation();
 
-  const services = [
+  const doctors = [
     {
       id: 1,
-      title: 'Individual Therapy',
-      description: 'Tailored guidance crafted to meet your unique needs and goals effectively.',
-      image: '/Individual Therapy.png',
-      icon: Heart,
-      link: '/services/individual-therapy'
+      name: 'Dr. Sarah Johnson',
+      role: 'Chief Medical Officer',
+      image: '/doctor1.png',
+      description: 'Expert in women\'s health with over 15 years of experience in preventive care and wellness.'
     },
     {
       id: 2,
-      title: 'Group Counseling',
-      description: 'Professional support designed to guide emotional well-being every single day.',
-      image: '/Group Counseling.png',
-      icon: Users,
-      link: '/services/group-counseling'
+      name: 'Dr. Michael Chen',
+      role: 'Senior Gynecologist',
+      image: '/doctor2.png',
+      description: 'Specializing in reproductive health and minimal invasive surgeries for women.'
     },
     {
       id: 3,
-      title: 'Stress Management',
-      description: 'Empowering digital resources to build healthy habits independently.',
-      image: '/Stress Management.png',
-      icon: Brain,
-      link: '/services/stress-management'
+      name: 'Dr. Emily Williams',
+      role: 'Pediatric Specialist',
+      image: '/doctor3.png',
+      description: 'Dedicated to the health and well-being of children from infancy through adolescence.'
     },
     {
       id: 4,
-      title: 'Career & Life Coaching',
-      description: 'Helping you gain clarity, confidence, and direction to build the life you aspire to.',
-      image: '/Blog4.png',
-      icon: Smile,
-      link: '/services/career-life-coaching'
+      name: 'Dr. James Wilson',
+      role: 'Neurologist',
+      image: '/doctor4.png',
+      description: 'Focused on diagnosing and treating disorders of the nervous system with compassionate care.'
     },
     {
       id: 5,
-      title: 'Crisis Intervention Support',
-      description: 'Immediate emotional support to help you stabilize, recover, and regain balance.',
-      image: '/Blog5.png',
-      icon: ShieldCheck,
-      link: '/services/crisis-support'
+      name: 'Dr. Linda Davis',
+      role: 'Dermatologist',
+      image: '/doctor5.png',
+      description: 'Providing advanced skincare treatments and solutions for all dermatological conditions.'
     },
     {
       id: 6,
-      title: 'Mindfulness & Meditation Sessions',
-      description: 'Guided sessions that cultivate inner calm, self-awareness, and daily emotional balance.',
-      image: '/Blog6.png',
-      icon: Headphones,
-      link: '/services/mindfulness-meditation'
+      name: 'Dr. Robert Taylor',
+      role: 'Orthopedic Surgeon',
+      image: '/doctor6.png',
+      description: 'Specializing in musculoskeletal systems, ensuring mobility and pain-free living.'
+    },
+    {
+      id: 7,
+      name: 'Dr. Patricia Moore',
+      role: 'Endocrinologist',
+      image: '/doctor7.png',
+      description: 'Expert in hormonal balances and treating conditions like diabetes and thyroid disorders.'
+    },
+    {
+      id: 8,
+      name: 'Dr. Christopher Anderson',
+      role: 'Cardiologist',
+      image: '/doctor8.png',
+      description: 'Committed to heart health, offering comprehensive cardiac care and preventive strategies.'
+    },
+    {
+      id: 9,
+      name: 'Dr. Jennifer Thomas',
+      role: 'Psychiatrist',
+      image: '/doctor9.png',
+      description: 'Helping patients achieve mental wellness through personalized therapy and medication management.'
+    },
+    {
+      id: 10,
+      name: 'Dr. Daniel Jackson',
+      role: 'General Physician',
+      image: '/doctor10.png',
+      description: 'Your primary partner in health, providing checkups and managing common illnesses.'
+    },
+    {
+      id: 11,
+      name: 'Dr. Elizabeth White',
+      role: 'Nutritionist',
+      image: '/doctor11.png',
+      description: 'Guiding you towards a healthier lifestyle through balanced diet and nutritional planning.'
+    },
+    {
+      id: 12,
+      name: 'Dr. David Harris',
+      role: 'Physical Therapist',
+      image: '/doctor12.png',
+      description: 'Restoring function and mobility through targeted physical rehabilitation programs.'
     }
   ];
 
-  const displayedServices = location.pathname === '/services' ? services : services.slice(0, 3);
+  const displayedDoctors = (location.pathname === '/team' || location.pathname === '/doctors') ? doctors : doctors.slice(0, 4);
 
   return (
     <section className="w-full bg-gradient-to-b from-white to-gray-50 py-16 md:py-24 px-4 sm:px-6 lg:px-8">
@@ -65,66 +101,69 @@ export default function OurServices() {
         {/* Header */}
         <AnimatedSection className="text-center mb-12 md:mb-16">
           <span className="text-[#003C43] text-sm md:text-base font-semibold uppercase tracking-wider">
-            OUR SERVICES
+            OUR DOCTORS
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mt-4">
-            Breaking Stigmas, Building Strength
+            Meet Our Specialist Team
           </h2>
         </AnimatedSection>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {displayedServices.map((service, index) => (
+        {/* Doctors Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+          {displayedDoctors.map((doctor, index) => (
             <AnimatedSection
-              key={service.id}
+              key={doctor.id}
               delay={index * 0.1}
-              className="group relative bg-gradient-to-br from-pink-50 to-purple-50 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+              className="group relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100"
             >
               {/* Image Container */}
-              <div className="relative h-64 md:h-72 overflow-hidden">
+              <div className="relative h-[350px] overflow-hidden bg-gray-100">
                 <img
-                  src={service.image}
-                  alt={service.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  src={doctor.image}
+                  alt={doctor.name}
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
                 />
 
-                {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-                {/* Icon Badge */}
-                <div className="absolute bottom-6 left-6 w-16 h-16 md:w-20 md:h-20 bg-[#003C43] rounded-full flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-500">
-                  <service.icon className="w-8 h-8 md:w-10 md:h-10 text-white" />
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#003C43]/90 via-[#003C43]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-100">
+                    <a href="#" className="p-2 bg-white/20 hover:bg-white/40 rounded-full text-white backdrop-blur-sm transition-colors">
+                      <Facebook className="w-5 h-5" />
+                    </a>
+                    <a href="#" className="p-2 bg-white/20 hover:bg-white/40 rounded-full text-white backdrop-blur-sm transition-colors">
+                      <Twitter className="w-5 h-5" />
+                    </a>
+                    <a href="#" className="p-2 bg-white/20 hover:bg-white/40 rounded-full text-white backdrop-blur-sm transition-colors">
+                      <Linkedin className="w-5 h-5" />
+                    </a>
+                  </div>
                 </div>
-
-                {/* Read More Button */}
-                <Link
-                  to={service.link}
-                  className="absolute bottom-6 right-6 bg-gray-900 hover:bg-[#003C43] text-white px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0"
-                >
-                  Read More
-                </Link>
               </div>
 
               {/* Content */}
-              <div className="p-6 md:p-8">
-                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 group-hover:text-[#003C43] transition-colors duration-300">
-                  {service.title}
+              <div className="p-6 text-center">
+                <h3 className="text-xl font-bold text-[#003C43] mb-1">
+                  {doctor.name}
                 </h3>
-
-                {/* Divider */}
-                <div className="w-16 h-1 bg-gradient-to-r from-[#003C43] to-[#408E91] mb-4 group-hover:w-full transition-all duration-500"></div>
-
-                <p className="text-gray-600 text-base leading-relaxed text-justify">
-                  {service.description}
+                <p className="text-[#408E91] font-medium text-xs uppercase tracking-wide mb-3">
+                  {doctor.role}
+                </p>
+                <div className="w-12 h-0.5 bg-gray-200 mx-auto mb-3"></div>
+                <p className="text-gray-600 text-sm leading-relaxed text-justify line-clamp-3">
+                  {doctor.description}
                 </p>
               </div>
-
-              {/* Decorative Corner */}
-              <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#408E91]/10 to-transparent rounded-bl-full"></div>
             </AnimatedSection>
           ))}
         </div>
 
+        {location.pathname !== '/team' && (
+          <div className="mt-12 text-center">
+            <Link to="/team" className="inline-block px-8 py-3 bg-[#003C43] text-white font-semibold rounded-full hover:bg-[#245953] transition-colors shadow-lg hover:shadow-xl">
+              View All Doctors
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );
