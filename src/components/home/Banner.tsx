@@ -25,6 +25,9 @@ const PageBanner: React.FC<PageBannerProps> = ({
         <img
           src={backgroundImage}
           alt={title}
+          width="1920"
+          height="400"
+          loading="eager"
           className="w-full h-full object-cover"
         />
 

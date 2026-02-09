@@ -114,6 +114,9 @@ export default function AppointmentSection({ lightMode = false }: AppointmentSec
                         <img
                             src="/Appointment.png"
                             alt="Therapy Session"
+                            width="600"
+                            height="800"
+                            loading="lazy"
                             className="w-full h-full object-cover"
                         />
                     </AnimatedSection>

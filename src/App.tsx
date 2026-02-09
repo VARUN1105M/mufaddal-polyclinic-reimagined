@@ -24,6 +24,7 @@ import ServiceTemplate from "./pages/ServiceTemplate";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
+import ImagePrefetch from "@/components/ui/ImagePrefetch";
 
 const queryClient = new QueryClient();
 
@@ -40,6 +41,7 @@ const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
+        <ImagePrefetch />
         <Toaster />
         <Sonner />
         <BrowserRouter>

@@ -97,6 +97,9 @@ const HeroSection = () => {
               <img
                 src="/doctor.png"
                 alt="Smiling Doctor"
+                width="700"
+                height="800"
+                loading="eager"
                 className="relative w-full h-auto object-contain z-[1]"
               />
 

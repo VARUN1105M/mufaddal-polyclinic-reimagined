@@ -23,6 +23,9 @@ const AboutSection = () => {
               <img
                 src="/About Us.png"
                 alt="Therapy session"
+                width="800"
+                height="800"
+                loading="lazy"
                 className="w-full h-[350px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px] 2xl:h-[800px] object-cover"
               />
             </div>
@@ -32,6 +35,9 @@ const AboutSection = () => {
               <img
                 src="/About Us Detail.png"
                 alt="Counseling"
+                width="300"
+                height="300"
+                loading="lazy"
                 className="w-full h-full object-cover"
               />
             </div>

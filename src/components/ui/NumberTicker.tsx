@@ -24,7 +24,7 @@ export default function NumberTicker({
         damping: 60,
         stiffness: 100,
     });
-    const isInView = useInView(ref, { once: true, margin: "-100px" });
+    const isInView = useInView(ref, { once: true, margin: "-50px" });
 
     useEffect(() => {
         if (isInView) {
@@ -47,5 +47,14 @@ export default function NumberTicker({
         });
     }, [springValue, decimalPlaces, minimumIntegerDigits, useGrouping]);
 
-    return <span className={className} ref={ref} />;
+    return (
+        <span className={className} ref={ref}>
+            {Intl.NumberFormat("en-US", {
+                minimumFractionDigits: decimalPlaces,
+                maximumFractionDigits: decimalPlaces,
+                minimumIntegerDigits,
+                useGrouping,
+            }).format(direction === "down" ? value : 0)}
+        </span>
+    );
 }

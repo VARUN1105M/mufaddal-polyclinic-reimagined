@@ -99,7 +99,7 @@ export default function HowWeWork() {
             >
               {/* Number Background */}
               <div className="absolute top-4 right-4 text-8xl md:text-9xl font-black text-white/5 leading-none select-none group-hover:text-[#64CCC5]/10 transition-colors duration-500">
-                <NumberTicker value={step.number} minimumIntegerDigits={2} />
+                {String(step.number).padStart(2, '0')}
               </div>
 
               {/* Content */}
