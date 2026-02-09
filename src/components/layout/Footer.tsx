@@ -40,11 +40,11 @@ export default function Footer() {
                 <img
                   src={mufaddalLogo}
                   alt="Mufaddal Polyclinic Logo"
-                  className="h-10 md:h-12 xl:h-14 2xl:h-16 w-auto"
+                  className="h-8 md:h-10 xl:h-12 2xl:h-14 w-auto"
                 />
               </div>
 
-              <p className="text-white/80 text-sm md:text-base xl:text-lg leading-relaxed mb-3 text-justify">
+              <p className="text-white/80 text-xs md:text-sm xl:text-base leading-loose mb-3 text-justify">
                 Professional, responsive, and soothing design for therapists, counselors, and life coaches.
               </p>
 
@@ -67,11 +67,11 @@ export default function Footer() {
           {/* Contact Info */}
           <AnimatedSection delay={0.1}>
             <div>
-              <h3 className="text-white font-bold text-base md:text-lg xl:text-xl 2xl:text-2xl mb-3 md:mb-4">Contact</h3>
-              <div className="space-y-2">
+              <h3 className="text-white font-bold text-sm md:text-base xl:text-lg 2xl:text-xl mb-4 md:mb-6">Contact</h3>
+              <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <MapPin className="w-4 h-4 md:w-5 md:h-5 xl:w-6 xl:h-6 text-white/60 mt-1" />
-                  <p className="text-white/80 text-sm md:text-base xl:text-lg">
+                  <p className="text-white/80 text-xs md:text-sm xl:text-base">
                     4/7 South Madha Church Street<br />
                     Royapuram, Chennai – 600013
                   </p>
@@ -79,12 +79,11 @@ export default function Footer() {
 
                 <div className="flex items-center gap-3">
                   <Phone className="w-4 h-4 md:w-5 md:h-5 xl:w-6 xl:h-6 text-white/60" />
-                  <div className="text-white/80 text-sm md:text-base xl:text-lg">
+                  <div className="text-white/80 text-xs md:text-sm xl:text-base">
                     <a href="tel:+919840418974" className="hover:text-white block">
                       Call us: +91 9840 418 974
                     </a>
-                    <br />
-                    <a href="https://wa.me/917305088491" className="hover:text-white block mt-1">
+                    <a href="https://wa.me/917305088491" className="hover:text-white block">
                       WhatsApp: +91 7305 088 491
                     </a>
                   </div>
@@ -103,13 +102,13 @@ export default function Footer() {
           {/* Quick Links */}
           <AnimatedSection delay={0.2}>
             <div>
-              <h3 className="text-white font-bold text-base md:text-lg xl:text-xl 2xl:text-2xl mb-3 md:mb-4">Quick Links</h3>
-              <ul className="space-y-2 md:space-y-3">
+              <h3 className="text-white font-bold text-sm md:text-base xl:text-lg 2xl:text-xl mb-3 md:mb-4">Quick Links</h3>
+              <ul className="space-y-3 md:space-y-4">
                 {quickLinks.map((link, index) => (
                   <li key={index}>
                     <Link
                       to={link.path}
-                      className="text-white/80 text-sm md:text-base xl:text-lg hover:text-white transition-all duration-300 inline-block hover:translate-x-1"
+                      className="text-white/80 text-xs md:text-sm xl:text-base hover:text-white transition-all duration-300 inline-block hover:translate-x-1"
                     >
                       {link.name}
                     </Link>
@@ -122,8 +121,8 @@ export default function Footer() {
           {/* Newsletter */}
           <AnimatedSection delay={0.3}>
             <div>
-              <h3 className="text-white font-bold text-base md:text-lg xl:text-xl 2xl:text-2xl mb-3 md:mb-4">Newsletter</h3>
-              <p className="text-white/80 text-sm md:text-base xl:text-lg mb-2">
+              <h3 className="text-white font-bold text-sm md:text-base xl:text-lg 2xl:text-xl mb-3 md:mb-4">Newsletter</h3>
+              <p className="text-white/80 text-xs md:text-sm xl:text-base mb-2">
                 Get the latest news other tips.
               </p>
 
@@ -133,13 +132,13 @@ export default function Footer() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Your email here"
-                  className="w-full px-4 py-2.5 md:py-3 xl:py-4 text-sm md:text-base xl:text-lg rounded-full bg-white text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#408E91]"
+                  className="w-full px-4 py-2.5 md:py-3 xl:py-4 text-xs md:text-sm xl:text-base rounded-full bg-white text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#408E91]"
                   required
                 />
 
                 <button
                   type="submit"
-                  className="w-full bg-[#003C43] hover:bg-[#245953] text-white font-semibold py-2.5 md:py-3 xl:py-4 px-6 text-sm md:text-base xl:text-lg rounded-full transition-all duration-300 hover:shadow-lg border-2 border-white/20"
+                  className="w-full bg-[#003C43] hover:bg-[#245953] text-white font-semibold py-2.5 md:py-3 xl:py-4 px-6 text-xs md:text-sm xl:text-base rounded-full transition-all duration-300 hover:shadow-lg border-2 border-white/20"
                 >
                   Subscribe now
                 </button>
@@ -154,7 +153,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="text-center">
-          <p className="text-white/70 text-xs md:text-sm xl:text-base">
+          <p className="text-white/70 text-[10px] md:text-xs xl:text-sm">
             Copyright © 2025 Mufaddal Polyclinic. All Rights Reserved.
           </p>
         </div>
