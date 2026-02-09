@@ -101,21 +101,17 @@ const HeroSection = () => {
               />
 
               {/* Floating Call Card */}
-              <motion.div
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.8 }}
-                className="absolute top-[1rem] -right-4 sm:top-[1.5rem] sm:-right-2 md:top-[2rem] md:right-0 lg:top-[2.5rem] lg:right-4 xl:top-[3rem] xl:right-8 2xl:top-[-4rem] 2xl:right-[6rem] bg-[#0e4853] text-white p-2 sm:p-3 md:p-4 xl:p-5 rounded-xl md:rounded-2xl shadow-lg flex items-center gap-2 md:gap-3 z-20 w-[160px] sm:w-[180px] md:w-[220px] xl:w-[260px]">
+              <div className="absolute top-[1rem] -right-4 sm:top-[1.5rem] sm:-right-2 md:top-[2rem] md:right-0 lg:top-[2.5rem] lg:right-4 xl:top-[3rem] xl:right-8 2xl:top-[-4rem] 2xl:right-[6rem] bg-[#0e4853] text-white p-2 sm:p-3 md:p-4 xl:p-5 rounded-xl md:rounded-2xl shadow-lg flex items-center gap-2 md:gap-3 z-20 w-[160px] sm:w-[180px] md:w-[220px] xl:w-[260px]">
                 <div className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 xl:w-12 xl:h-12 bg-white rounded-full flex items-center justify-center shrink-0">
                   <Phone className="w-4 h-4 sm:w-4 sm:h-4 md:w-5 md:h-5 xl:w-6 xl:h-6 text-[#0e4853] fill-current" />
                 </div>
                 <div className="min-w-0">
                   <p className="text-[10px] sm:text-xs xl:text-sm text-white/80 whitespace-nowrap">Call us anytime</p>
                   <p className="font-bold text-sm sm:text-base md:text-lg xl:text-xl whitespace-nowrap">
-                    +91 <NumberTicker value={9840418974} useGrouping={false} />
+                    +91 9840418974
                   </p>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Floating Review Card - Positioned at middle left */}
               <motion.div

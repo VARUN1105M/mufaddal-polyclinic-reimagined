@@ -16,45 +16,45 @@ export default function DoctorsPreview() {
     },
     {
       id: 2,
-      name: 'Dr. Michael Chen',
-      role: 'Senior Gynecologist',
+      name: 'Dr. Dharun',
+      role: 'Pulmonologist',
       image: '/doctor2.png',
-      description: 'Specializing in reproductive health and minimal invasive surgeries for women.'
+      description: 'Available: Appointment Basis | OPD Timing: 5:00 PM – 9:00 PM'
     },
     {
       id: 3,
-      name: 'Dr. Emily Williams',
-      role: 'Pediatric Specialist',
+      name: 'Dr. Mahalakshmi',
+      role: 'Dental Practitioner',
       image: '/doctor3.png',
-      description: 'Dedicated to the health and well-being of children from infancy through adolescence.'
+      description: 'Available: Mon – Sat | OPD Timing: 5:00 PM – 9:00 PM'
     },
     {
       id: 4,
-      name: 'Dr. James Wilson',
-      role: 'Neurologist',
+      name: 'Dr. Arva Lamak',
+      role: 'Physiotherapist',
       image: '/doctor4.png',
-      description: 'Focused on diagnosing and treating disorders of the nervous system with compassionate care.'
+      description: 'Available: Mon – Sat | OPD Timing: 9:30 AM – 2:00 PM & 4:30 PM – 8:00 PM'
     },
     {
       id: 5,
-      name: 'Dr. Linda Davis',
-      role: 'Dermatologist',
+      name: 'Dr. Pavithra Sivakumar',
+      role: 'General Practitioner',
       image: '/doctor5.png',
-      description: 'Providing advanced skincare treatments and solutions for all dermatological conditions.'
+      description: 'Available: Mon – Sat | OPD Timing: 6:00 PM – 9:30 PM'
     },
     {
       id: 6,
-      name: 'Dr. Robert Taylor',
-      role: 'Orthopedic Surgeon',
+      name: 'Dr. Mubarak J',
+      role: 'Diabetologist',
       image: '/doctor6.png',
-      description: 'Specializing in musculoskeletal systems, ensuring mobility and pain-free living.'
+      description: 'Available: Tuesdays Only | OPD Timing: 11:00 AM – 1:00 PM'
     },
     {
       id: 7,
-      name: 'Dr. Patricia Moore',
-      role: 'Endocrinologist',
+      name: 'Dr. V. J. Vikram',
+      role: 'E.N.T',
       image: '/doctor7.png',
-      description: 'Expert in hormonal balances and treating conditions like diabetes and thyroid disorders.'
+      description: 'Available: Appointment Basis | OPD Timing: 7:00 PM – 8:00 PM'
     },
     {
       id: 8,
@@ -72,17 +72,17 @@ export default function DoctorsPreview() {
     },
     {
       id: 10,
-      name: 'Dr. Daniel Jackson',
-      role: 'General Physician',
+      name: 'Dr. SARA',
+      role: 'General Practitioner',
       image: '/doctor10.png',
-      description: 'Your primary partner in health, providing checkups and managing common illnesses.'
+      description: 'Available: Mon – Sat | OPD Timing: 10:30 AM – 2:00 PM'
     },
     {
       id: 11,
-      name: 'Dr. Elizabeth White',
-      role: 'Nutritionist',
+      name: 'Dr. Mohamed Mubarak',
+      role: 'Dermatologist',
       image: '/doctor11.png',
-      description: 'Guiding you towards a healthier lifestyle through balanced diet and nutritional planning.'
+      description: 'Available: Mon & Wed | OPD Timing: 5:00 PM – 6:00 PM'
     },
     {
       id: 12,
@@ -93,7 +93,7 @@ export default function DoctorsPreview() {
     }
   ];
 
-  const displayedDoctors = (location.pathname === '/team' || location.pathname === '/doctors') ? doctors : doctors.slice(0, 4);
+  const displayedDoctors = doctors;
 
   return (
     <section className="w-full bg-gradient-to-b from-white to-gray-50 py-16 md:py-24 px-4 sm:px-6 lg:px-8">
@@ -156,14 +156,6 @@ export default function DoctorsPreview() {
             </AnimatedSection>
           ))}
         </div>
-
-        {location.pathname !== '/team' && (
-          <div className="mt-12 text-center">
-            <Link to="/team" className="inline-block px-8 py-3 bg-[#003C43] text-white font-semibold rounded-full hover:bg-[#245953] transition-colors shadow-lg hover:shadow-xl">
-              View All Doctors
-            </Link>
-          </div>
-        )}
       </div>
     </section>
   );

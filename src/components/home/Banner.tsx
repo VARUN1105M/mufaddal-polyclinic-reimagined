@@ -19,7 +19,7 @@ const PageBanner: React.FC<PageBannerProps> = ({
 }) => {
   return (
     <section className="relative h-[300px] md:h-[350px] lg:h-[400px] flex items-center justify-center overflow-hidden">
-      
+
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
@@ -38,28 +38,23 @@ const PageBanner: React.FC<PageBannerProps> = ({
 
       {/* Content */}
       <div className="relative z-10 text-center px-4">
-        
+
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6 drop-shadow-lg">
           {title}
         </h1>
-        
-        {/* Breadcrumbs */}
-        <nav className="flex items-center justify-center gap-2 text-white">
-          {breadcrumbs.map((crumb, index) => (
-            <div key={index} className="flex items-center gap-2">
-              <Link
-                to={crumb.path}
-                className="text-base md:text-lg font-medium hover:text-white/80 transition-colors"
-              >
-                {crumb.label}
-              </Link>
 
-              {/* Only show slash if NOT last breadcrumb */}
-              {index < breadcrumbs.length - 1 && (
-                <span className="text-white/50">/</span>
-              )}
-            </div>
-          ))}
+        {/* Breadcrumbs */}
+        <nav className="flex items-center justify-center text-white/90">
+          <Link
+            to="/"
+            className="text-base md:text-lg font-medium hover:text-white transition-colors"
+          >
+            Homepage
+          </Link>
+          <span className="mx-2 text-white/50 text-xl">/</span>
+          <span className="text-base md:text-lg font-semibold text-white">
+            {title}
+          </span>
         </nav>
       </div>
 

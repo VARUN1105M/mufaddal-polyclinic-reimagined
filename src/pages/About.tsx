@@ -3,7 +3,6 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 import WhyChooseUs from '@/components/home/WhyChooseUs';
-import Therapist from '@/components/home/Therapist';
 import Carosel from '@/components/home/Carosel';
 import FAQSection from '@/components/home/Faq';
 import AboutSection from '@/components/home/Aboutpage';
@@ -15,11 +14,10 @@ const About = () => {
       <Navbar />
       <main>
         <PageBanner title="About Us" />
-        <AboutSection/>
-        <WhyChooseUs/>
-        <Therapist/>
-        <FAQSection/>
-        <Carosel/>
+        <AboutSection />
+        <WhyChooseUs />
+        <FAQSection />
+        <Carosel />
       </main>
       <Footer />
     </div>
