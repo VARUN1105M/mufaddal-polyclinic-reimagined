@@ -53,18 +53,18 @@ const AboutSection = () => {
           <AnimatedSection delay={0.2} className="space-y-4 md:space-y-5">
             {/* Section Label */}
             <div className="inline-block">
-              <span className="text-[#003C43] font-semibold text-xs md:text-sm uppercase tracking-wider">
+              <span className="text-[#003C43] font-semibold text-base md:text-xl lg:text-[2rem] xl:text-[2.25rem] uppercase tracking-wider leading-relaxed">
                 ABOUT US
               </span>
             </div>
 
             {/* Main Heading */}
-            <h2 className="heading-3 md:text-4xl lg:text-5xl text-gray-900 leading-tight">
-              Your Journey To Women-Centered Preventive Care Starts Here
+            <h2 className="heading-3 md:text-4xl lg:text-5xl text-gray-900 leading-tight md:leading-snug lg:leading-relaxed">
+              Start Your Women's Health Care Journey With Us Now
             </h2>
 
             {/* Description */}
-            <p className="text-gray-600 text-sm md:text-base lg:text-lg leading-relaxed">
+            <p className="text-gray-600 text-sm md:text-base lg:text-lg leading-[2.5] text-justify">
               Every small step toward better health awareness is a meaningful milestone in women's lives. With the right guidance, individuals can understand concerns early, manage daily stress, and build practical health habits. We believe everyone deserves accessible, affordable, and respectful care throughout life stages. Through a preventive, professional approach, we focus on yearly monitoring, timely support, and informed decisions for long-term physical and emotional wellbeing.
             </p>
 
@@ -75,7 +75,7 @@ const AboutSection = () => {
                   <div className={`${feature.color} w-6 h-6 md:w-7 md:h-7 xl:w-9 xl:h-9 rounded-full flex items-center justify-center flex-shrink-0`}>
                     <Check className="w-3.5 h-3.5 md:w-4 md:h-4 xl:w-5 xl:h-5 text-white" strokeWidth={3} />
                   </div>
-                  <span className="text-gray-900 font-semibold text-sm md:text-base">
+                  <span className="text-gray-900 font-semibold text-base md:text-xl lg:text-[1rem] xl:text-[1.5rem]">
                     {feature.text}
                   </span>
                 </div>
@@ -84,7 +84,7 @@ const AboutSection = () => {
 
             {/* Quote */}
             <div className="bg-gray-50 border-l-4 border-[#408E91] pl-4 md:pl-6 py-3 md:py-4 my-3 md:my-5">
-              <p className="text-gray-700 italic text-sm md:text-base lg:text-lg leading-relaxed">
+              <p className="text-gray-700 italic text-sm md:text-base lg:text-lg leading-[2.5]">
                 Prevention doesn't mean illness never appears; it means early awareness and timely care reduce impact and suffering costs
               </p>
             </div>

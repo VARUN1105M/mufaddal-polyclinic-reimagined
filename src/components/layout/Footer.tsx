@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import mufaddalLogo from '../home/mufaddal-logo.png';
 
 export default function Footer() {
   const [email, setEmail] = useState('');
@@ -35,7 +36,7 @@ export default function Footer() {
           <div>
             <div className="mb-4">
               <img
-                src="/mufaddal-logo.png"
+                src={mufaddalLogo}
                 alt="Mufaddal Polyclinic Logo"
                 className="h-12 md:h-14 xl:h-16 2xl:h-20 w-auto"
               />
@@ -65,21 +66,27 @@ export default function Footer() {
               <div className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 md:w-5 md:h-5 xl:w-6 xl:h-6 text-white/60 mt-1" />
                 <p className="text-white/80 text-sm md:text-base xl:text-lg">
-                  123 Serenity Lane, Blissfield, CA 90210, United States
+                  4/7 South Madha Church Street<br />
+                  Royapuram, Chennai – 600013
                 </p>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <Phone className="w-4 h-4 md:w-5 md:h-5 xl:w-6 xl:h-6 text-white/60" />
+                <div className="text-white/80 text-sm md:text-base xl:text-lg">
+                  <a href="tel:+919840418974" className="hover:text-white block">
+                    Call us: +91 9840 418 974
+                  </a>
+                  <a href="https://wa.me/917305088491" className="hover:text-white block mt-1">
+                    WhatsApp: +91 7305 088 491
+                  </a>
+                </div>
               </div>
 
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4 md:w-5 md:h-5 xl:w-6 xl:h-6 text-white/60" />
                 <a href="mailto:info@yourmail.com" className="text-white/80 text-sm md:text-base xl:text-lg hover:text-white">
                   Info@yourmail.com
-                </a>
-              </div>
-
-              <div className="flex items-center gap-3">
-                <Phone className="w-4 h-4 md:w-5 md:h-5 xl:w-6 xl:h-6 text-white/60" />
-                <a href="tel:+15551234567" className="text-white/80 text-sm md:text-base xl:text-lg hover:text-white">
-                  (555) 123-4567
                 </a>
               </div>
             </div>

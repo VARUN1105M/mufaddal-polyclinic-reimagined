@@ -130,7 +130,7 @@ const Navbar = () => {
             {/* Logo */}
             <Link to="/" className="flex items-center gap-2 group">
               <img
-                src="/mufaddal-logo.png"
+                src="/Visiting Card (3).png"
                 alt="Mufaddal Polyclinic"
                 className="h-12 md:h-16 xl:h-20 2xl:h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
               />

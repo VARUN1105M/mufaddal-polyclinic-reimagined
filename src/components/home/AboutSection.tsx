@@ -1,30 +1,30 @@
-import { FileText, Users, Headphones, Wrench } from 'lucide-react';
+import { Calendar, UserCheck, FlaskConical, UsersRound } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const features = [
   {
-    icon: FileText,
+    icon: Calendar,
     title: 'Yearly Women Care',
     description: 'Preventive yearly care focused on awareness, early attention, and long-term wellbeing.',
     bgColor: 'bg-[#408E91]',
     iconBg: 'bg-white/30'
   },
   {
-    icon: Users,
+    icon: UserCheck,
     title: 'Guided Women Support',
     description: 'Care and guidance delivered by trained women doctors and healthcare professionals.',
     bgColor: 'bg-[#245953]',
     iconBg: 'bg-white/30'
   },
   {
-    icon: Headphones,
+    icon: FlaskConical,
     title: 'Integrated Lab Support',
     description: 'In-house lab support for timely tests, early detection, and preventive monitoring.',
     bgColor: 'bg-[#003C43]',
     iconBg: 'bg-white/20'
   },
   {
-    icon: Wrench,
+    icon: UsersRound,
     title: 'Women-Led Care Team',
     description: 'Care environment fully supported by women staff, doctors, and care coordinators.',
     bgColor: 'bg-[#245953]',

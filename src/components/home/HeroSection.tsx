@@ -48,8 +48,8 @@ const HeroSection = () => {
               transition={{ delay: 0.3 }}
               className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold text-white leading-tight mb-4 md:mb-6 font-display">
               Caring for Your <br />
-              <span className="text-[#003C43]">Inner </span>
-              <span>Wellbeing</span>
+              <span className="text-[#003C43]">Inner</span>{' '}
+              <span className="text-[#ffffff]">Wellbeing</span>
             </motion.h1>
 
             <motion.div
@@ -63,7 +63,7 @@ const HeroSection = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
-              className="text-white/90 text-base md:text-lg xl:text-xl 2xl:text-2xl leading-relaxed mb-8 md:mb-10 max-w-xl xl:max-w-2xl mx-auto lg:mx-0">
+              className="text-white/90 text-base md:text-lg xl:text-xl 2xl:text-2xl leading-relaxed mb-8 md:mb-10 max-w-xl xl:max-w-2xl mx-auto lg:mx-0 text-justify">
               Build clarity, confidence, and balance through preventive mental wellbeing care and guided support, focusing on awareness, early attention, and wellbeing to reduce long-term stress, risks, and avoidable costs.
             </motion.p>
 
@@ -105,29 +105,28 @@ const HeroSection = () => {
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8 }}
-                className="absolute top-[2rem] right-0 sm:top-[2.5rem] sm:right-4 md:top-[3rem] md:right-8 lg:top-[4rem] lg:right-12 xl:top-[5rem] xl:right-16 2xl:top-[6.5rem] 2xl:right-20 bg-[#0e4853] text-white p-2 sm:p-3 md:p-4 xl:p-5 rounded-xl md:rounded-2xl shadow-lg flex items-center gap-2 md:gap-3 z-[-1] w-[160px] sm:w-[180px] md:w-[220px] xl:w-[260px]">
+                className="absolute top-[1rem] -right-4 sm:top-[1.5rem] sm:-right-2 md:top-[2rem] md:right-0 lg:top-[2.5rem] lg:right-4 xl:top-[3rem] xl:right-8 2xl:top-[-4rem] 2xl:right-[6rem] bg-[#0e4853] text-white p-2 sm:p-3 md:p-4 xl:p-5 rounded-xl md:rounded-2xl shadow-lg flex items-center gap-2 md:gap-3 z-20 w-[160px] sm:w-[180px] md:w-[220px] xl:w-[260px]">
                 <div className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 xl:w-12 xl:h-12 bg-white rounded-full flex items-center justify-center shrink-0">
                   <Phone className="w-4 h-4 sm:w-4 sm:h-4 md:w-5 md:h-5 xl:w-6 xl:h-6 text-[#0e4853] fill-current" />
                 </div>
                 <div className="min-w-0">
                   <p className="text-[10px] sm:text-xs xl:text-sm text-white/80 whitespace-nowrap">Call us anytime</p>
                   <p className="font-bold text-sm sm:text-base md:text-lg xl:text-xl whitespace-nowrap">
-                    +91 9840 418 974
+                    +91 <NumberTicker value={9840418974} useGrouping={false} />
                   </p>
                 </div>
               </motion.div>
 
-              {/* Floating Review Card */}
+              {/* Floating Review Card - Positioned at middle left */}
               <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.0 }}
-                style={{ left: '2rem' }}
-                className="absolute bottom-12 sm:bottom-14 md:bottom-20 bg-[#4a7c7c]/90 backdrop-blur-md text-white p-2 sm:p-3 md:p-4 xl:p-5 rounded-lg md:rounded-xl shadow-lg z-10 text-center min-w-[100px] sm:min-w-[120px] md:min-w-[140px]">
-                <div className="text-lg sm:text-xl md:text-2xl xl:text-3xl font-bold">
+                className="absolute top-1/2 -translate-y-1/2 left-0 sm:-left-4 md:-left-6 lg:-left-8 bg-[#4a7c7c]/90 backdrop-blur-md text-white p-3 sm:p-4 md:p-5 xl:p-6 rounded-xl shadow-xl z-20 text-center min-w-[110px] sm:min-w-[130px] md:min-w-[150px]">
+                <div className="text-2xl sm:text-3xl md:text-3xl xl:text-4xl font-bold mb-1">
                   <NumberTicker value={4.9} decimalPlaces={1} /> /5
                 </div>
-                <div className="text-[10px] sm:text-xs md:text-sm xl:text-base text-white/80 whitespace-nowrap">Review on Google</div>
+                <div className="text-[10px] sm:text-xs md:text-sm xl:text-base text-white/90 whitespace-nowrap">Review on Google</div>
               </motion.div>
             </div>
           </motion.div>

@@ -8,6 +8,7 @@ export default function NumberTicker({
     className,
     decimalPlaces = 0,
     minimumIntegerDigits = 1,
+    useGrouping = true,
 }: {
     value: number;
     direction?: "up" | "down";
@@ -15,6 +16,7 @@ export default function NumberTicker({
     delay?: number; // delay in seconds
     decimalPlaces?: number;
     minimumIntegerDigits?: number;
+    useGrouping?: boolean;
 }) {
     const ref = useRef<HTMLSpanElement>(null);
     const motionValue = useMotionValue(direction === "down" ? value : 0);
@@ -39,10 +41,11 @@ export default function NumberTicker({
                     minimumFractionDigits: decimalPlaces,
                     maximumFractionDigits: decimalPlaces,
                     minimumIntegerDigits,
+                    useGrouping,
                 }).format(Number(latest));
             }
         });
-    }, [springValue, decimalPlaces, minimumIntegerDigits]);
+    }, [springValue, decimalPlaces, minimumIntegerDigits, useGrouping]);
 
     return <span className={className} ref={ref} />;
 }
