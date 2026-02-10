@@ -3,7 +3,7 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import PageBanner from '@/components/home/Banner';
 import { serviceData } from '@/data/serviceData';
-import { Navigate } from 'react-router-dom';
+import { Navigate, Link } from 'react-router-dom';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 interface ServiceTemplateProps {
     serviceId: string;
@@ -77,9 +77,9 @@ const ServiceTemplate: React.FC<ServiceTemplateProps> = ({ serviceId }) => {
                                         </div>
                                         <p className="text-center text-sm mb-2 opacity-90 uppercase tracking-widest">Need Any Help?</p>
                                         <p className="text-center text-3xl font-black mb-8">+91 9840418974</p>
-                                        <button className="w-full bg-white text-[#003C43] py-4 rounded-full font-bold hover:bg-teal-50 transition-all duration-300 shadow-lg hover:shadow-white/20 active:scale-95 uppercase tracking-wider text-sm">
+                                        <Link to="/contact" className="w-full bg-white text-[#003C43] py-4 rounded-full font-bold hover:bg-teal-50 transition-all duration-300 shadow-lg hover:shadow-white/20 active:scale-95 uppercase tracking-wider text-sm flex items-center justify-center">
                                             Book Appointment
-                                        </button>
+                                        </Link>
                                     </div>
                                     <div className="absolute top-0 right-0 -mr-16 -mt-16 w-48 h-48 bg-white/5 rounded-full blur-3xl"></div>
                                     <div className="absolute bottom-0 left-0 -ml-16 -mb-16 w-48 h-48 bg-white/5 rounded-full blur-3xl"></div>
