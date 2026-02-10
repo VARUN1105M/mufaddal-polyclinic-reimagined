@@ -51,7 +51,7 @@ export default function HowWeWork() {
               </span>
               ,{" "}
               Here For{" "}
-              <span className="text-[#408E91]">Everyday Care</span>
+              <span className="text-[#64CCC5]">Everyday Care</span>
             </h2>
           </div>
           {/* Right Content */}

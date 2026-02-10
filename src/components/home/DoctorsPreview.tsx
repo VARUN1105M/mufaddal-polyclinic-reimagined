@@ -9,87 +9,70 @@ export default function DoctorsPreview() {
   const doctors = [
     {
       id: 1,
-      name: 'Dr. Sarah Johnson',
-      role: 'Chief Medical Officer',
-      image: '/doctors/doctor1.png',
-      description: 'Expert in women\'s health with over 15 years of experience in preventive care and wellness.'
+      name: 'Dr. Mubarak J',
+      role: 'Diabetologist',
+      image: '/doctors/doctor1.png'
     },
     {
       id: 2,
       name: 'Dr. Dharun',
       role: 'Pulmonologist',
-      image: '/doctors/doctor2.png',
-      description: 'Available: Appointment Basis | OPD Timing: 5:00 PM – 9:00 PM'
+      image: '/doctors/doctor2.png'
     },
     {
       id: 3,
       name: 'Dr. Mahalakshmi',
       role: 'Dental Practitioner',
-      image: '/doctors/doctor3.png',
-      description: 'Available: Mon – Sat | OPD Timing: 5:00 PM – 9:00 PM'
+      image: '/doctors/doctor3.png'
     },
     {
       id: 4,
       name: 'Dr. Arva Lamak',
       role: 'Physiotherapist',
-      image: '/doctors/doctor4.png',
-      description: 'Available: Mon – Sat | OPD Timing: 9:30 AM – 2:00 PM & 4:30 PM – 8:00 PM'
+      image: '/doctors/doctor4.png'
     },
     {
       id: 5,
       name: 'Dr. Pavithra Sivakumar',
       role: 'General Practitioner',
-      image: '/doctors/doctor5.png',
-      description: 'Available: Mon – Sat | OPD Timing: 6:00 PM – 9:30 PM'
+      image: '/doctors/doctor5.png'
     },
-    {
-      id: 6,
-      name: 'Dr. Mubarak J',
-      role: 'Diabetologist',
-      image: '/doctors/doctor6.png',
-      description: 'Available: Tuesdays Only | OPD Timing: 11:00 AM – 1:00 PM'
-    },
+
     {
       id: 7,
       name: 'Dr. V. J. Vikram',
       role: 'E.N.T',
-      image: '/doctors/doctor7.png',
-      description: 'Available: Appointment Basis | OPD Timing: 7:00 PM – 8:00 PM'
+      image: '/doctors/doctor7.png'
     },
     {
       id: 8,
       name: 'Dr. Christopher Anderson',
       role: 'Cardiologist',
-      image: '/doctors/doctor8.png',
-      description: 'Committed to heart health, offering comprehensive cardiac care and preventive strategies.'
+      image: '/doctors/doctor8.png'
     },
     {
       id: 9,
       name: 'Dr. Jennifer Thomas',
       role: 'Psychiatrist',
-      image: '/doctors/doctor9.png',
-      description: 'Helping patients achieve mental wellness through personalized therapy and medication management.'
+      image: '/doctors/doctor9.png'
     },
     {
       id: 10,
       name: 'Dr. SARA',
       role: 'General Practitioner',
-      image: '/doctors/doctor10.png',
-      description: 'Available: Mon – Sat | OPD Timing: 10:30 AM – 2:00 PM'
+      image: '/doctors/doctor10.png'
     },
     {
       id: 11,
       name: 'Dr. Mohamed Mubarak',
       role: 'Dermatologist',
-      image: '/doctors/doctor11.png',
-      description: 'Available: Mon & Wed | OPD Timing: 5:00 PM – 6:00 PM'
+      image: '/doctors/doctor11.png'
     },
     {
       id: 12,
       name: 'Dr. David Harris',
       role: 'Physical Therapist',
-      image: '/doctors/doctor12.png',
-      description: 'Restoring function and mobility through targeted physical rehabilitation programs.'
+      image: '/doctors/doctor12.png'
     }
   ];
 
@@ -138,10 +121,7 @@ export default function DoctorsPreview() {
                 <p className="text-[#408E91] font-medium text-xs uppercase tracking-wide mb-3">
                   {doctor.role}
                 </p>
-                <div className="w-12 h-0.5 bg-gray-200 mx-auto mb-3"></div>
-                <p className="text-gray-600 text-sm leading-relaxed text-justify line-clamp-3">
-                  {doctor.description}
-                </p>
+                <div className="w-12 h-0.5 bg-gray-200 mx-auto"></div>
               </div>
             </AnimatedSection>
           ))}

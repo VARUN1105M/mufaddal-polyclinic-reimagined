@@ -11,10 +11,10 @@ interface Testimonial {
 }
 
 const testimonials: Testimonial[] = [
-    { id: 1, quote: "From the first session, I knew I was in the right place. The personalized care and constant support made a huge difference.", name: "Michael S.", role: "Producer", rating: 5, image: "/Client 1.png" },
-    { id: 2, quote: "Thanks to the team, I've learned how to manage my anxiety and feel more in control of my life. I'm truly grateful.", name: "Jessica M.", role: "Digital Agency", rating: 5, image: "/Client 2.png" },
-    { id: 3, quote: "The counseling sessions were a game-changer. The therapist was understanding, and I finally felt heard.", name: "David L.", role: "Product Manager", rating: 5, image: "/Client 3.png" },
-    { id: 4, quote: "I joined one of their mindfulness workshops, and it helped me find a sense of calm I didn't know I could achieve.", name: "Emily R.", role: "Content Creator", rating: 5, image: "/Client 4.jpg" },
+    { id: 1, quote: "The personalized care and constant support here made a huge difference from my very first session.", name: "Michael S.", role: "Producer", rating: 5, image: "/Client 1.png" },
+    { id: 2, quote: "Thanks to the team, I feel more in control of my life. I'm truly grateful for their support.", name: "Jessica M.", role: "Digital Agency", rating: 5, image: "/Client 2.png" },
+    { id: 3, quote: "The sessions were a game-changer. I finally felt heard and understood by the team.", name: "David L.", role: "Product Manager", rating: 5, image: "/Client 3.png" },
+    { id: 4, quote: "The mindfulness workshop helped me find a sense of calm I didn't know I could achieve.", name: "Emily R.", role: "Content Creator", rating: 5, image: "/Client 4.jpg" },
 ];
 
 const TestimonialCarousel: React.FC = () => {

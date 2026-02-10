@@ -14,7 +14,7 @@ export default function OffersSection() {
       price: '₹499',
       originalPrice: '₹1,999',
       discount: '75% OFF',
-      image: '/section1.jpg',
+      image: '/spo/We Are Hiring VIDEOGRAPHER INTERNS (14).png',
       gradient: 'from-emerald-500 to-teal-600',
       link: '/offers/health-package'
     },
@@ -26,7 +26,7 @@ export default function OffersSection() {
       price: 'Starting ₹25,000',
       originalPrice: '₹45,000',
       discount: 'UP TO 45% OFF',
-      image: '/section2.jpg',
+      image: '/spo/We Are Hiring VIDEOGRAPHER INTERNS (15).png',
       gradient: 'from-blue-500 to-cyan-600',
       link: '/offers/laparoscopy'
     },
@@ -38,7 +38,7 @@ export default function OffersSection() {
       price: 'Save up to 40%',
       originalPrice: '',
       discount: 'BEST PRICES',
-      image: '/section3.jpg',
+      image: '/spo/We Are Hiring VIDEOGRAPHER INTERNS (16).png',
       gradient: 'from-purple-500 to-pink-600',
       link: '/offers/medicines'
     },
@@ -50,7 +50,7 @@ export default function OffersSection() {
       price: 'From ₹999',
       originalPrice: '₹2,499',
       discount: '60% OFF',
-      image: '/section4.jpg',
+      image: '/spo/We Are Hiring VIDEOGRAPHER INTERNS (17).png',
       gradient: 'from-orange-500 to-red-600',
       link: '/offers/preventive-checkup'
     }
@@ -96,15 +96,29 @@ export default function OffersSection() {
           {offers.map((offer) => (
             <div
               key={offer.id}
-              className="group rounded-3xl overflow-hidden border-2 border-[#408E91]/20 hover:border-[#408E91] shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+              className="group rounded-3xl overflow-hidden border-2 border-[#408E91]/20 hover:border-[#408E91] shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 bg-white flex flex-col"
             >
-              {/* Image Only */}
-              <div className="relative overflow-hidden">
+              {/* Image with Aspect Ratio */}
+              <div className="relative aspect-[3/4] overflow-hidden bg-gray-100">
                 <img
                   src={offer.image}
                   alt={offer.title}
-                  className="w-full h-auto object-contain group-hover:scale-110 transition-transform duration-700"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
+
+                {/* Subtle Gradient Overlay for consistency */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              </div>
+
+              {/* CTA Button Area */}
+              <div className="p-4 mt-auto">
+                <Link
+                  to="/contact"
+                  className="flex items-center justify-center gap-2 w-full py-3 bg-[#003C41] hover:bg-[#408E91] text-white rounded-xl font-bold transition-all duration-300 group-hover:shadow-md"
+                >
+                  <span>Get Offer</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
               </div>
             </div>
           ))}

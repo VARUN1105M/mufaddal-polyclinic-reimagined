@@ -36,7 +36,7 @@ const HeroSection = () => {
             <p
               data-aos="fade"
               data-aos-delay="100"
-              className="text-white font-medium tracking-wider text-[10px] sm:text-xs md:text-sm xl:text-base uppercase mb-12"
+              className="text-white font-medium tracking-wider text-[9px] sm:text-[10px] md:text-xs xl:text-sm uppercase mb-12"
             >
               <span className="text-[#003C43]">CARE WITH BALANCE, FOR LIFE</span>
             </p>
@@ -44,45 +44,44 @@ const HeroSection = () => {
             <h1
               data-aos="fade-up"
               data-aos-delay="200"
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-white leading-[1.4] mb-12 font-display"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold text-white leading-[8 rem] mb-12 font-display"
             >
-              <span className="block">Caring for Your</span>
+              <span className="block">CARE WITH AWARENESS, FOR LIFE</span>
               <span className="block">
-                <span className="text-[#003C43]">Inner </span>{' '}
-                <span className="text-[#ffffff]">Wellbeing</span>
+                <span className="text-[#003C43]">Caring</span>{' '}
+                <span className="text-[#ffffff]"> for Your Everyday Health </span>
               </span>
             </h1>
 
             <div
               data-aos="zoom-in"
               data-aos-delay="300"
-              className="h-1 bg-white/50 mb-12 mx-auto lg:mx-0 w-[100px]"
+              className="h-1 bg-white/50 mb-12 mx-auto lg:mx-0 w-[80px]"
             />
 
             <p
               data-aos="fade"
               data-aos-delay="400"
-              className="text-white/90 text-sm md:text-base xl:text-lg 2xl:text-xl leading-[2.2] mb-12 max-w-xl xl:max-w-2xl mx-auto lg:mx-0 text-justify"
+              className="text-white/90 text-xs sm:text-sm md:text-base xl:text-base 2xl:text-lg leading-[2.2] mb-12 max-w-xl xl:max-w-2xl mx-auto lg:mx-0 text-justify"
             >
-              Build clarity, confidence, and balance through preventive mental wellbeing care and guided support, focusing on awareness, early attention, and wellbeing to reduce long-term stress, risks, and avoidable costs.
-            </p>
+              Build better health through preliminary checkups, early screening, and preventive care—focusing on awareness, timely guidance, and regular monitoring to reduce future risks and avoidable medical costs.            </p>
 
             <div
               data-aos="fade-up"
               data-aos-delay="500"
-              className="flex items-center justify-center lg:justify-start gap-4 md:gap-6"
+              className="flex items-center justify-center lg:justify-start gap-4 md:gap-5"
             >
               <Button
-                className="bg-[#134e4a] hover:bg-[#115e59] text-white rounded-full px-6 md:px-8 py-5 md:py-6 text-sm md:text-base xl:text-lg"
+                className="bg-[#134e4a] hover:bg-[#115e59] text-white rounded-full px-5 md:px-7 py-4 md:py-5 text-xs sm:text-sm xl:text-base"
               >
                 <Link to="/contact">Start a Checkup</Link>
               </Button>
 
               <button
-                className="w-10 h-10 md:w-12 md:h-12 xl:w-14 xl:h-14 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center backdrop-blur-sm transition-all"
+                className="w-9 h-9 md:w-11 md:h-11 xl:w-12 xl:h-12 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center backdrop-blur-sm transition-all"
                 aria-label="Play Video"
               >
-                <div className="w-0 h-0 border-t-[6px] border-t-transparent border-l-[10px] border-l-white border-b-[6px] border-b-transparent ml-1"></div>
+                <div className="w-0 h-0 border-t-[5px] border-t-transparent border-l-[8px] border-l-white border-b-[5px] border-b-transparent ml-1"></div>
               </button>
             </div>
           </div>
@@ -104,24 +103,24 @@ const HeroSection = () => {
               />
 
               {/* Floating Call Card - Adjusted position slightly down */}
-              <div className="absolute -top-6 sm:-top-8 md:-top-10 lg:-top-12 xl:-top-14 2xl:-top-16 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:-right-4 lg:right-0 xl:right-8 bg-[#0e4853] text-white p-2 sm:p-3 md:p-4 xl:p-5 rounded-xl md:rounded-2xl shadow-lg flex items-center gap-2 md:gap-3 z-20 w-[180px] sm:w-[200px] md:w-[240px] xl:w-[280px]">
-                <div className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 xl:w-12 xl:h-12 bg-white rounded-full flex items-center justify-center shrink-0">
-                  <Phone className="w-4 h-4 sm:w-4 sm:h-4 md:w-5 md:h-5 xl:w-6 xl:h-6 text-[#0e4853] fill-current" />
+              <div className="absolute -top-6 sm:-top-8 md:-top-10 lg:-top-12 xl:-top-14 2xl:-top-16 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:-right-4 lg:right-0 xl:right-8 bg-[#0e4853] text-white p-2 sm:p-3 md:p-3 xl:p-4 rounded-xl md:rounded-2xl shadow-lg flex items-center gap-2 md:gap-3 z-20 w-[160px] sm:w-[180px] md:w-[220px] xl:w-[260px]">
+                <div className="w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 xl:w-10 xl:h-10 bg-white rounded-full flex items-center justify-center shrink-0">
+                  <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-4.5 md:h-4.5 xl:w-5 xl:h-5 text-[#0e4853] fill-current" />
                 </div>
                 <div className="min-w-0">
-                  <p className="text-[10px] sm:text-xs xl:text-sm text-white/80 whitespace-nowrap uppercase tracking-wider font-semibold">Call us anytime</p>
-                  <p className="font-bold text-sm sm:text-base md:text-lg xl:text-xl whitespace-nowrap">
+                  <p className="text-[9px] sm:text-[10px] xl:text-xs text-white/80 whitespace-nowrap uppercase tracking-wider font-semibold">Call us anytime</p>
+                  <p className="font-bold text-xs sm:text-sm md:text-base xl:text-lg whitespace-nowrap">
                     +91 9840418974
                   </p>
                 </div>
               </div>
 
               {/* Floating Review Card - No animation */}
-              <div className="absolute top-1/2 -translate-y-1/2 left-0 sm:-left-4 md:-left-6 lg:-left-8 bg-[#4a7c7c]/90 backdrop-blur-md text-white p-3 sm:p-4 md:p-5 xl:p-6 rounded-xl shadow-xl z-20 text-center min-w-[120px] sm:min-w-[150px] md:min-w-[180px]">
-                <div className="text-2xl sm:text-3xl md:text-3xl xl:text-4xl font-bold mb-1">
-                  <NumberTicker value={4.9} decimalPlaces={1} /> /5
+              <div className="absolute top-1/2 -translate-y-1/2 left-0 sm:-left-4 md:-left-6 lg:-left-8 bg-[#4a7c7c]/90 backdrop-blur-md text-white p-2 sm:p-3 md:p-4 xl:p-5 rounded-xl shadow-xl z-20 text-center min-w-[110px] sm:min-w-[130px] md:min-w-[160px]">
+                <div className="text-xl sm:text-2xl md:text-2xl xl:text-3xl font-bold mb-1">
+                  <NumberTicker value={4.4} decimalPlaces={1} /> /5
                 </div>
-                <div className="text-[10px] sm:text-xs md:text-sm xl:text-base text-white/90 whitespace-nowrap">
+                <div className="text-[9px] sm:text-[10px] md:text-xs xl:text-sm text-white/90 whitespace-nowrap">
                   <NumberTicker value={1200} />+ Google Reviews
                 </div>
               </div>
