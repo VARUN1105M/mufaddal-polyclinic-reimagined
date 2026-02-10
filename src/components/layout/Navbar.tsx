@@ -75,41 +75,43 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="bg-[#003C43] text-white py-2.5 md:py-3.5 px-0">
-        <div className="px-[5%]">
-          <div className="flex items-center justify-between md:justify-evenly text-xs md:text-sm xl:text-base">
-            <div className="flex items-center gap-3 md:gap-4 xl:gap-6">
+      {location.pathname === '/' && (
+        <div className="bg-[#003C43] text-white py-2.5 md:py-3.5 px-0">
+          <div className="px-[5%]">
+            <div className="flex items-center justify-between md:justify-evenly text-xs md:text-sm xl:text-base">
+              <div className="flex items-center gap-3 md:gap-4 xl:gap-6">
+                <div className="flex items-center gap-2">
+                  <Clock className="w-3 h-3 md:w-4 md:h-4" />
+                  <span className="font-medium">Working Hours: Mon - Saturday 7:00 - 11:00</span>
+                </div>
+                <div className="h-4 w-px bg-white/30 hidden lg:block"></div>
+                <div className="hidden lg:flex items-center gap-2">
+                  <MapPin className="w-3 h-3 md:w-4 md:h-4" />
+                  <span className="font-medium">4/7 South Madha Church Street Royapuram, Chennai – 600013</span>
+                </div>
+              </div>
               <div className="flex items-center gap-2">
-                <Clock className="w-3 h-3 md:w-4 md:h-4" />
-                <span className="font-medium">Working Hours: Mon - Saturday 7:00 - 11:00</span>
+                <a
+                  href="#"
+                  className="w-8 h-8 md:w-9 md:h-9 xl:w-10 xl:h-10 rounded-md bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all duration-300 hover:scale-110"
+                  aria-label="Facebook"
+                >
+                  <Facebook className="w-3 h-3 md:w-4 md:h-4" />
+                </a>
+                <a
+                  href="https://www.instagram.com/mufaddal_polyclinic/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-8 h-8 md:w-9 md:h-9 xl:w-10 xl:h-10 rounded-md bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all duration-300 hover:scale-110"
+                  aria-label="Instagram"
+                >
+                  <Instagram className="w-3 h-3 md:w-4 md:h-4" />
+                </a>
               </div>
-              <div className="h-4 w-px bg-white/30 hidden lg:block"></div>
-              <div className="hidden lg:flex items-center gap-2">
-                <MapPin className="w-3 h-3 md:w-4 md:h-4" />
-                <span className="font-medium">4/7 South Madha Church Street Royapuram, Chennai – 600013</span>
-              </div>
-            </div>
-            <div className="flex items-center gap-2">
-              <a
-                href="#"
-                className="w-8 h-8 md:w-9 md:h-9 xl:w-10 xl:h-10 rounded-md bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all duration-300 hover:scale-110"
-                aria-label="Facebook"
-              >
-                <Facebook className="w-3 h-3 md:w-4 md:h-4" />
-              </a>
-              <a
-                href="https://www.instagram.com/mufaddal_polyclinic/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-8 h-8 md:w-9 md:h-9 xl:w-10 xl:h-10 rounded-md bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all duration-300 hover:scale-110"
-                aria-label="Instagram"
-              >
-                <Instagram className="w-3 h-3 md:w-4 md:h-4" />
-              </a>
             </div>
           </div>
         </div>
-      </div>
+      )}
 
       {/* Main Navbar */}
       <motion.header

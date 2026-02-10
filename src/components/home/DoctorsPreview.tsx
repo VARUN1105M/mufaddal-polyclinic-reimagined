@@ -8,18 +8,6 @@ export default function DoctorsPreview() {
 
   const doctors = [
     {
-      id: 1,
-      name: 'Dr. Mubarak J',
-      role: 'Diabetologist',
-      image: '/doctors/doctor1.png'
-    },
-    {
-      id: 2,
-      name: 'Dr. Dharun',
-      role: 'Pulmonologist',
-      image: '/doctors/doctor2.png'
-    },
-    {
       id: 3,
       name: 'Dr. Mahalakshmi',
       role: 'Dental Practitioner',
@@ -37,24 +25,17 @@ export default function DoctorsPreview() {
       role: 'General Practitioner',
       image: '/doctors/doctor5.png'
     },
-
-    {
-      id: 7,
-      name: 'Dr. V. J. Vikram',
-      role: 'E.N.T',
-      image: '/doctors/doctor7.png'
-    },
-    {
-      id: 8,
-      name: 'Dr. Christopher Anderson',
-      role: 'Cardiologist',
-      image: '/doctors/doctor8.png'
-    },
     {
       id: 9,
       name: 'Dr. Jennifer Thomas',
       role: 'Psychiatrist',
       image: '/doctors/doctor9.png'
+    },
+    {
+      id: 12,
+      name: 'Dr. Nasreen',
+      role: 'Gynaecologist',
+      image: '/doctors/doctor12.png'
     },
     {
       id: 10,
@@ -63,20 +44,39 @@ export default function DoctorsPreview() {
       image: '/doctors/doctor10.png'
     },
     {
+      id: 8,
+      name: 'Dr. Ajaysinh V Devda',
+      role: 'Orthopedic surgeon',
+      image: '/doctors/doctor8.png'
+    },
+    {
+      id: 1,
+      name: 'Dr. Mubarak J',
+      role: 'Diabetologist',
+      image: '/doctors/doctor1.png'
+    },
+    {
+      id: 2,
+      name: 'Dr. Dharun',
+      role: 'Pulmonologist',
+      image: '/doctors/doctor2.png'
+    },
+    {
+      id: 7,
+      name: 'Dr. V. J. Vikram',
+      role: 'E.N.T',
+      image: '/doctors/doctor7.png'
+    },
+    {
       id: 11,
       name: 'Dr. Mohamed Mubarak',
       role: 'Dermatologist',
       image: '/doctors/doctor11.png'
-    },
-    {
-      id: 12,
-      name: 'Dr. David Harris',
-      role: 'Physical Therapist',
-      image: '/doctors/doctor12.png'
     }
   ];
 
-  const displayedDoctors = doctors;
+  const isHomePage = location.pathname === '/';
+  const displayedDoctors = isHomePage ? doctors.slice(0, 8) : doctors;
 
   return (
     <section className="w-full bg-gradient-to-b from-white to-gray-50 py-16 md:py-24 px-4 sm:px-6 lg:px-8">
@@ -109,8 +109,6 @@ export default function DoctorsPreview() {
                   height="350"
                   className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
                 />
-
-                {/* Overlay removed */}
               </div>
 
               {/* Content */}
@@ -126,6 +124,18 @@ export default function DoctorsPreview() {
             </AnimatedSection>
           ))}
         </div>
+
+        {/* Explore More Button */}
+        {isHomePage && (
+          <div className="text-center mt-12 md:mt-16">
+            <Link
+              to="/team"
+              className="inline-flex items-center justify-center px-8 py-4 bg-[#003C41] hover:bg-[#408E91] text-white rounded-full font-bold transition-all duration-300 shadow-lg hover:shadow-xl active:scale-95 uppercase tracking-wider text-sm"
+            >
+              Explore More
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );

@@ -17,46 +17,47 @@ const AboutSection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 max-w-7xl 2xl:max-w-[1600px]">
         <div className="grid lg:grid-cols-2 gap-10 md:gap-14 xl:gap-16 2xl:gap-20 items-center">
           {/* Left Side - Images */}
-          <div className="relative ml-8 mt-8 mb-8 mr-8">
-            {/* Main Image */}
-            <AnimatedSection direction="left" className="relative rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl z-10">
-              <img
-                src="/About Us.png"
-                alt="Therapy session"
-                width="800"
-                height="800"
-                loading="lazy"
-                className="w-full h-[350px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px] 2xl:h-[800px] object-cover"
-              />
-            </AnimatedSection>
+          <div className="relative py-12 md:py-16">
+            <div className="relative mx-auto max-w-[90%] md:max-w-none">
+              {/* Main Image */}
+              <AnimatedSection direction="left" className="relative rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl z-10">
+                <img
+                  src="/About Us.png"
+                  alt="Therapy session"
+                  width="800"
+                  height="800"
+                  loading="lazy"
+                  className="w-full h-[350px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px] 2xl:h-[800px] object-cover"
+                />
+              </AnimatedSection>
 
-            {/* Circular Overlay Image - Top Left */}
-            <AnimatedSection
-              direction="left"
-              delay={0.3}
-              className="absolute -top-10 -left-10 md:-top-14 md:-left-14 lg:-top-20 lg:-left-20 w-36 h-36 sm:w-40 sm:h-40 md:w-52 md:h-52 lg:w-60 lg:h-60 xl:w-72 xl:h-72 rounded-full overflow-hidden border-4 md:border-6 lg:border-8 border-white shadow-xl z-20"
-            >
-              <img
-                src="/About Us Detail.png"
-                alt="Counseling"
-                width="300"
-                height="300"
-                loading="lazy"
-                className="w-full h-full object-cover"
-              />
-            </AnimatedSection>
+              {/* Circular Overlay Image - Top Left */}
+              <AnimatedSection
+                direction="left"
+                delay={0.3}
+                className="absolute -top-6 -left-6 md:-top-8 md:-left-8 lg:-top-12 lg:-left-12 w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 xl:w-64 xl:h-64 rounded-full overflow-hidden border-4 md:border-6 lg:border-8 border-white shadow-xl z-20"
+              >
+                <img
+                  src="/About Us Detail.png"
+                  alt="Counseling"
+                  width="300"
+                  height="300"
+                  loading="lazy"
+                  className="w-full h-full object-cover"
+                />
+              </AnimatedSection>
 
-            {/* Experience Badge - Bottom Right */}
-            <div className="absolute -bottom-6 -right-6 md:-bottom-8 md:-right-8 lg:-bottom-10 lg:-right-10 bg-gradient-to-br from-[#408E91] to-[#245953] rounded-2xl md:rounded-3xl px-6 py-5 md:px-8 md:py-6 lg:px-10 lg:py-8 xl:px-12 xl:py-9 text-white shadow-xl z-20 flex flex-col justify-center items-center">
-              <div className="text-center">
-                <div className="text-2xl md:text-3xl lg:text-4xl font-bold mb-1">
-                  <NumberTicker value={6} />+
+              {/* Experience Badge - Bottom Right */}
+              <div className="absolute -bottom-6 -right-6 md:-bottom-8 md:-right-8 bg-gradient-to-br from-[#408E91] to-[#245953] rounded-2xl md:rounded-3xl px-6 py-5 md:px-8 md:py-6 lg:px-10 lg:py-8 text-white shadow-xl z-30 flex flex-col justify-center items-center">
+                <div className="text-center">
+                  <div className="text-2xl md:text-3xl lg:text-4xl font-bold mb-1">
+                    <NumberTicker value={6} />+
+                  </div>
+                  <div className="text-base md:text-lg font-semibold">Years</div>
+                  <div className="text-xs md:text-sm opacity-90">Of Experience</div>
                 </div>
-                <div className="text-base md:text-lg font-semibold">Years</div>
-                <div className="text-xs md:text-sm opacity-90">Of Experience</div>
               </div>
             </div>
-
           </div>
 
           {/* Right Side - Content */}

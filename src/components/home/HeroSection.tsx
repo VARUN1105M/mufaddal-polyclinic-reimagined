@@ -5,7 +5,7 @@ import NumberTicker from '@/components/ui/NumberTicker';
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[600px] md:min-h-[700px] lg:min-h-[85vh] xl:min-h-[90vh] overflow-hidden bg-gradient-to-br from-[#88E8DD] to-[#408E91] flex items-end">
+    <section className="relative min-h-[600px] md:min-h-[700px] lg:min-h-[85vh] xl:min-h-[90vh] w-full max-w-full overflow-x-hidden bg-gradient-to-br from-[#88E8DD] to-[#408E91] flex items-end">
       {/* Floating Shapes/Lines Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <svg className="absolute w-full h-full opacity-30" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -25,7 +25,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 max-w-7xl 2xl:max-w-[1600px] relative z-10 pt-12 md:pt-16 lg:pt-24 pb-0">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 max-w-7xl 2xl:max-w-[1600px] relative z-10 pt-28 md:pt-36 lg:pt-44 xl:pt-48 pb-0">
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 xl:gap-16 items-end">
           {/* Left Content */}
           <div
@@ -44,13 +44,15 @@ const HeroSection = () => {
             <h1
               data-aos="fade-up"
               data-aos-delay="200"
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold text-white leading-[8 rem] mb-12 font-display"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-white leading-[1.3] mb-12 font-display tracking-wider max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto lg:mx-0"
             >
-              <span className="block">CARE WITH AWARENESS, FOR LIFE</span>
-              <span className="block">
-                <span className="text-[#003C43]">Caring</span>{' '}
-                <span className="text-[#ffffff]"> for Your Everyday Health </span>
-              </span>
+              <div className="flex flex-col gap-6">
+                <span className="block">Caring for your</span>
+                <span className="block">
+                  <span className="text-[#003C43]">Everyday</span>{' '}
+                  <span className="text-[#ffffff]">Health</span>
+                </span>
+              </div>
             </h1>
 
             <div
@@ -62,7 +64,7 @@ const HeroSection = () => {
             <p
               data-aos="fade"
               data-aos-delay="400"
-              className="text-white/90 text-xs sm:text-sm md:text-base xl:text-base 2xl:text-lg leading-[2.2] mb-12 max-w-xl xl:max-w-2xl mx-auto lg:mx-0 text-justify"
+              className="text-white/90 text-sm sm:text-base md:text-lg xl:text-lg 2xl:text-xl leading-[2.4] tracking-wide mb-12 max-w-xl xl:max-w-2xl mx-auto lg:mx-0 text-justify"
             >
               Build better health through preliminary checkups, early screening, and preventive care—focusing on awareness, timely guidance, and regular monitoring to reduce future risks and avoidable medical costs.            </p>
 
@@ -103,7 +105,7 @@ const HeroSection = () => {
               />
 
               {/* Floating Call Card - Adjusted position slightly down */}
-              <div className="absolute -top-6 sm:-top-8 md:-top-10 lg:-top-12 xl:-top-14 2xl:-top-16 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:-right-4 lg:right-0 xl:right-8 bg-[#0e4853] text-white p-2 sm:p-3 md:p-3 xl:p-4 rounded-xl md:rounded-2xl shadow-lg flex items-center gap-2 md:gap-3 z-20 w-[160px] sm:w-[180px] md:w-[220px] xl:w-[260px]">
+              <div className="absolute -top-8 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:right-0 lg:right-8 xl:right-16 bg-[#0e4853] text-white p-2 sm:p-3 md:p-3 xl:p-4 rounded-xl md:rounded-2xl shadow-lg flex items-center gap-2 md:gap-3 z-20 w-[160px] sm:w-[180px] md:w-[220px] xl:w-[260px]">
                 <div className="w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 xl:w-10 xl:h-10 bg-white rounded-full flex items-center justify-center shrink-0">
                   <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-4.5 md:h-4.5 xl:w-5 xl:h-5 text-[#0e4853] fill-current" />
                 </div>
@@ -116,12 +118,12 @@ const HeroSection = () => {
               </div>
 
               {/* Floating Review Card - No animation */}
-              <div className="absolute top-1/2 -translate-y-1/2 left-0 sm:-left-4 md:-left-6 lg:-left-8 bg-[#4a7c7c]/90 backdrop-blur-md text-white p-2 sm:p-3 md:p-4 xl:p-5 rounded-xl shadow-xl z-20 text-center min-w-[110px] sm:min-w-[130px] md:min-w-[160px]">
+              <div className="absolute top-1/2 -translate-y-1/2 left-0 lg:left-4 xl:left-8 bg-[#4a7c7c]/90 backdrop-blur-md text-white p-2 sm:p-3 md:p-4 xl:p-5 rounded-xl shadow-xl z-20 text-center min-w-[110px] sm:min-w-[130px] md:min-w-[160px]">
                 <div className="text-xl sm:text-2xl md:text-2xl xl:text-3xl font-bold mb-1">
                   <NumberTicker value={4.4} decimalPlaces={1} /> /5
                 </div>
                 <div className="text-[9px] sm:text-[10px] md:text-xs xl:text-sm text-white/90 whitespace-nowrap">
-                  <NumberTicker value={1200} />+ Google Reviews
+                  Reviews on Google
                 </div>
               </div>
             </div>

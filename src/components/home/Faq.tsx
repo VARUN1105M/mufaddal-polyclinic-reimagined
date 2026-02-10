@@ -100,7 +100,7 @@ const FAQSection = () => {
                     }}
                   />
                 </div>
-                <span className="font-bold text-lg">4.9 /5</span>
+                <span className="font-bold text-lg">4.4 /5</span>
               </div>
 
               <p className="text-gray-700 text-base md:text-lg leading-relaxed max-w-md text-justify">

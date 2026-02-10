@@ -15,25 +15,44 @@ import AnimatedSection from '@/components/ui/AnimatedSection';
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen w-full max-w-full overflow-hidden">
       <Navbar />
-      <main>
-        <HeroSection />
-        <AboutSection />
-        <ServicesSection />
-        <WhyChooseUs />
-        <DoctorsPreview />
-        <Appointment />
-        <AnimatedSection>
+      <main className="relative w-full max-w-full overflow-x-hidden overflow-y-visible">
+        <div className="relative z-10">
+          <HeroSection />
+        </div>
+
+        <div className="relative z-20 bg-white">
+          <AboutSection />
+        </div>
+
+        <div className="relative z-10">
+          <ServicesSection />
+        </div>
+
+        <div className="relative z-20">
+          <WhyChooseUs />
+        </div>
+
+        <div className="relative z-10 bg-white">
+          <DoctorsPreview />
+        </div>
+
+        <div className="relative z-20">
+          <Appointment />
+        </div>
+
+        <AnimatedSection className="relative z-10">
           <Carosel />
         </AnimatedSection>
-        <AnimatedSection>
+
+        <AnimatedSection className="relative z-20">
           <Gaq />
         </AnimatedSection>
-        <AnimatedSection>
+
+        <AnimatedSection className="relative z-10 bg-white">
           <TestimonialsSection />
         </AnimatedSection>
-        {/* <CTASection /> */}
       </main>
       <Footer />
     </div>
