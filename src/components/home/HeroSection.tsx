@@ -6,6 +6,12 @@ import NumberTicker from '@/components/ui/NumberTicker';
 const HeroSection = () => {
   return (
     <section className="relative min-h-[600px] md:min-h-[700px] lg:min-h-[85vh] xl:min-h-[90vh] w-full max-w-full overflow-x-hidden bg-gradient-to-br from-[#88E8DD] to-[#408E91] flex items-end">
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap');
+        .hero-title {
+          font-family: 'Outfit', sans-serif;
+        }
+      `}</style>
       {/* Floating Shapes/Lines Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <svg className="absolute w-full h-full opacity-30" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -44,7 +50,7 @@ const HeroSection = () => {
             <h1
               data-aos="fade-up"
               data-aos-delay="200"
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-white leading-[1.3] mb-12 font-display tracking-wider max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto lg:mx-0"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-white leading-[1.3] mb-12 hero-title tracking-wider max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto lg:mx-0"
             >
               <div className="flex flex-col gap-6">
                 <span className="block">Caring for your</span>

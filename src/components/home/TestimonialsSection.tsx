@@ -1,9 +1,19 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ChevronLeft, ChevronRight, Sparkles } from 'lucide-react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function OffersSection() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: 'ease-out-cubic',
+    });
+  }, []);
 
   const offers = [
     {
@@ -16,7 +26,8 @@ export default function OffersSection() {
       discount: '75% OFF',
       image: '/spo/We Are Hiring VIDEOGRAPHER INTERNS (14).png',
       gradient: 'from-emerald-500 to-teal-600',
-      link: '/offers/health-package'
+      link: '/offers/health-package',
+      animation: 'fade-left'
     },
     {
       id: 2,
@@ -28,7 +39,8 @@ export default function OffersSection() {
       discount: 'UP TO 45% OFF',
       image: '/spo/We Are Hiring VIDEOGRAPHER INTERNS (15).png',
       gradient: 'from-blue-500 to-cyan-600',
-      link: '/offers/laparoscopy'
+      link: '/offers/laparoscopy',
+      animation: 'fade-down'
     },
     {
       id: 3,
@@ -40,7 +52,8 @@ export default function OffersSection() {
       discount: 'BEST PRICES',
       image: '/spo/We Are Hiring VIDEOGRAPHER INTERNS (16).png',
       gradient: 'from-purple-500 to-pink-600',
-      link: '/offers/medicines'
+      link: '/offers/medicines',
+      animation: 'fade-up'
     },
     {
       id: 4,
@@ -52,7 +65,8 @@ export default function OffersSection() {
       discount: '60% OFF',
       image: '/spo/We Are Hiring VIDEOGRAPHER INTERNS (17).png',
       gradient: 'from-orange-500 to-red-600',
-      link: '/offers/preventive-checkup'
+      link: '/offers/preventive-checkup',
+      animation: 'fade-right'
     }
   ];
 
@@ -74,7 +88,11 @@ export default function OffersSection() {
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-12 md:mb-16">
+        <div 
+          className="flex flex-col md:flex-row md:items-center md:justify-between mb-12 md:mb-16"
+          data-aos="fade-down"
+          data-aos-delay="100"
+        >
           <div>
             <span className="text-[#003C43] text-sm md:text-base font-semibold uppercase tracking-wider mb-4 block flex items-center gap-2">
               <Sparkles className="w-5 h-5 text-[#408E91]" />
@@ -88,14 +106,15 @@ export default function OffersSection() {
               </span>
             </h2>
           </div>
-
         </div>
 
         {/* Offers Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {offers.map((offer) => (
+          {offers.map((offer, index) => (
             <div
               key={offer.id}
+              data-aos={offer.animation}
+              data-aos-delay={index * 100}
               className="group rounded-3xl overflow-hidden border-2 border-[#408E91]/20 hover:border-[#408E91] shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 bg-white flex flex-col"
             >
               {/* Image with Aspect Ratio */}
@@ -128,5 +147,3 @@ export default function OffersSection() {
     </section>
   );
 }
-
-

@@ -16,13 +16,10 @@ export default {
         xl: "3rem",
         "2xl": "4rem",
       },
-      screens: {
-        "2xl": "1400px",
-        "3xl": "1920px",
-      },
     },
     extend: {
       screens: {
+        "2xl": "1400px",
         "3xl": "1920px",
       },
       fontFamily: {

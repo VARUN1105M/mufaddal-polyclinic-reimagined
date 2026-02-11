@@ -9,6 +9,7 @@ import Footer from '@/components/layout/Footer';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 import PageBanner from '@/components/home/Banner';
 import Contactsection from '@/components/home/Contactsection';
+import Mapsection from '@/components/home/Mapsection';
 
 const contactInfo = [
   {
@@ -59,6 +60,7 @@ const Contact = () => {
       <main>
         <PageBanner title="Contact" />
         <Contactsection />
+        <Mapsection />
       </main>
       <Footer />
     </div>

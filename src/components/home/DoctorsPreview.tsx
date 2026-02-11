@@ -8,68 +8,82 @@ export default function DoctorsPreview() {
 
   const doctors = [
     {
-      id: 3,
+      id: 1,
       name: 'Dr. Mahalakshmi',
+      sex: 'Female',
       role: 'Dental Practitioner',
       image: '/doctors/doctor3.png'
     },
     {
-      id: 4,
+      id: 2,
       name: 'Dr. Arva Lamak',
+      sex: 'Female',
       role: 'Physiotherapist',
       image: '/doctors/doctor4.png'
     },
     {
-      id: 5,
+      id: 3,
       name: 'Dr. Pavithra Sivakumar',
+      sex: 'Female',
       role: 'General Practitioner',
       image: '/doctors/doctor5.png'
     },
     {
-      id: 9,
-      name: 'Dr. Jennifer Thomas',
-      role: 'Psychiatrist',
-      image: '/doctors/doctor9.png'
-    },
-    {
-      id: 12,
+      id: 4,
       name: 'Dr. Nasreen',
+      sex: 'Female',
       role: 'Gynaecologist',
       image: '/doctors/doctor12.png'
     },
     {
-      id: 10,
-      name: 'Dr. SARA',
+      id: 5,
+      name: 'Dr. Sara',
+      sex: 'Female',
       role: 'General Practitioner',
       image: '/doctors/doctor10.png'
     },
+
+    // -------------------- Male Doctors --------------------
+
     {
-      id: 8,
-      name: 'Dr. Ajaysinh V Devda',
-      role: 'Orthopedic surgeon',
+      id: 6,
+      name: 'Dr. Jennifer Thomas',
+      sex: 'Male',
+      role: 'Psychiatrist',
+      image: '/doctors/doctor9.png'
+    },
+    {
+      id: 7,
+      name: 'Dr. Arvind Raj',
+      sex: 'Male',
+      role: 'Surgical Oncologist',
       image: '/doctors/doctor8.png'
     },
     {
-      id: 1,
+      id: 8,
       name: 'Dr. Mubarak J',
+      sex: 'Male',
       role: 'Diabetologist',
       image: '/doctors/doctor1.png'
     },
     {
-      id: 2,
+      id: 9,
       name: 'Dr. Dharun',
+      sex: 'Male',
       role: 'Pulmonologist',
       image: '/doctors/doctor2.png'
     },
     {
-      id: 7,
+      id: 10,
       name: 'Dr. V. J. Vikram',
+      sex: 'Male',
       role: 'E.N.T',
       image: '/doctors/doctor7.png'
     },
     {
       id: 11,
       name: 'Dr. Mohamed Mubarak',
+      sex: 'Male',
       role: 'Dermatologist',
       image: '/doctors/doctor11.png'
     }

@@ -40,15 +40,15 @@
 
     --radius: 0.75rem;
 
-    /* Custom tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(174 40% 24%), hsl(185 68% 24%));
-    --gradient-hero: linear-gradient(135deg, hsl(174 40% 24% / 0.95), hsl(185 68% 30% / 0.9));
-    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%), hsl(160 20% 98%));
-    --gradient-accent: linear-gradient(135deg, hsl(176 50% 60%), hsl(176 60% 50%));
+    /* Custom tokens - using compatible comma syntax for hardcoded colors */
+    --gradient-primary: linear-gradient(135deg, hsl(174, 40%, 24%), hsl(185, 68%, 24%));
+    --gradient-hero: linear-gradient(135deg, hsla(174, 40%, 24%, 0.95), hsla(185, 68%, 30%, 0.9));
+    --gradient-card: linear-gradient(180deg, hsl(0, 0%, 100%), hsl(160, 20%, 98%));
+    --gradient-accent: linear-gradient(135deg, hsl(176, 50%, 60%), hsl(176, 60%, 50%));
 
-    --shadow-soft: 0 4px 20px -4px hsl(174 40% 24% / 0.15);
-    --shadow-card: 0 10px 40px -10px hsl(174 40% 24% / 0.12);
-    --shadow-elevated: 0 20px 60px -15px hsl(174 40% 24% / 0.2);
+    --shadow-soft: 0 4px 20px -4px hsla(174, 40%, 24%, 0.15);
+    --shadow-card: 0 10px 40px -10px hsla(174, 40%, 24%, 0.12);
+    --shadow-elevated: 0 20px 60px -15px hsla(174, 40%, 24%, 0.2);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -98,9 +98,7 @@
     --sidebar-border: 174 30% 20%;
     --sidebar-ring: 176 50% 60%;
   }
-}
 
-@layer base {
   * {
     @apply border-border;
   }
@@ -108,14 +106,17 @@
   html {
     scroll-behavior: smooth;
     overflow-x: hidden;
-    max-width: 100vw;
+    width: 100%;
+    max-width: 100%;
   }
 
   body {
     @apply bg-background text-foreground antialiased;
     font-family: 'Inter', sans-serif;
     overflow-x: hidden;
-    max-width: 100vw;
+    width: 100%;
+    max-width: 100%;
+    position: relative;
   }
 
   h1,
@@ -138,6 +139,15 @@
   /* Enhanced container with responsive max-width */
   .container-custom {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 2xl:max-w-[1600px];
+  }
+
+  /* Responsive spacing utilities */
+  .gap-responsive {
+    @apply gap-4 md:gap-6 lg:gap-8 xl:gap-10 2xl:gap-12;
+  }
+
+  .padding-responsive {
+    @apply p-4 md:p-6 lg:p-8 xl:p-10 2xl:p-12;
   }
 
   /* Responsive text utilities */
@@ -172,15 +182,6 @@
 
   .heading-4 {
     @apply text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold;
-  }
-
-  /* Responsive spacing utilities */
-  .gap-responsive {
-    @apply gap-4 md:gap-6 lg:gap-8 xl:gap-10 2xl:gap-12;
-  }
-
-  .padding-responsive {
-    @apply p-4 md:p-6 lg:p-8 xl:p-10 2xl:p-12;
   }
 
   /* Responsive grid utilities */
@@ -220,7 +221,7 @@
 
   .btn-primary-gradient:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 30px -10px hsl(176 50% 50% / 0.5);
+    box-shadow: 0 10px 30px -10px hsla(176, 50%, 50%, 0.5);
   }
 
   .floating-shape {
