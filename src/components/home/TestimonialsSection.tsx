@@ -27,7 +27,7 @@ export default function OffersSection() {
       image: '/spo/We Are Hiring VIDEOGRAPHER INTERNS (14).png',
       gradient: 'from-emerald-500 to-teal-600',
       link: '/offers/health-package',
-      animation: 'fade-left'
+      animation: 'fade-right'
     },
     {
       id: 2,
@@ -66,7 +66,7 @@ export default function OffersSection() {
       image: '/spo/We Are Hiring VIDEOGRAPHER INTERNS (17).png',
       gradient: 'from-orange-500 to-red-600',
       link: '/offers/preventive-checkup',
-      animation: 'fade-right'
+      animation: 'fade-left'
     }
   ];
 
@@ -88,7 +88,7 @@ export default function OffersSection() {
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
-        <div 
+        <div
           className="flex flex-col md:flex-row md:items-center md:justify-between mb-12 md:mb-16"
           data-aos="fade-down"
           data-aos-delay="100"
