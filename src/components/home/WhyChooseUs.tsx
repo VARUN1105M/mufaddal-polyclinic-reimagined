@@ -57,7 +57,7 @@ export default function HowWeWork() {
           {/* Right Content */}
           <div className="flex flex-col items-start lg:items-end space-y-6">
             <p className="text-base md:text-lg lg:text-xl leading-relaxed text-white/90 max-w-xl lg:text-right">
-              We focus on preventive women care, combining health awareness and timely guidance to
+              We focus on preventive <span className="whitespace-nowrap">women care,</span> combining health awareness and timely guidance to
               support better decisions across every stage of life.
             </p>
 

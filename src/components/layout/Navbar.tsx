@@ -8,7 +8,7 @@ const navLinks = [
   { name: 'Home', path: '/' },
   { name: 'About', path: '/about' },
   {
-    name: 'Women Care Services',
+    name: 'Women Care',
     path: '/women-care',
     dropdown: [
       { name: 'Women Wellness', path: '/women-care/wellness' },
@@ -24,7 +24,7 @@ const navLinks = [
     ]
   },
   {
-    name: 'Supportive Care Services',
+    name: 'Supportive Care',
     path: '/supportive-care',
     dropdown: [
       { name: 'General Physician', path: '/supportive-care/physician' },
@@ -37,6 +37,7 @@ const navLinks = [
       { name: 'Preventive Care', path: '/supportive-care/preventive' },
     ]
   },
+  { name: 'Services', path: '/services' },
   { name: 'Doctors', path: '/team' },
   // disabled pages
   // {

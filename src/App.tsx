@@ -7,7 +7,7 @@ import ScrollToTop from "@/components/ui/ScrollToTop";
 import Index from "./pages/Index";
 import About from "./pages/About";
 
-import SupportiveCare from "./pages/Service";
+import Service from "./pages/Service";
 import Doctors from "./pages/Doctors.tsx";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
@@ -50,7 +50,10 @@ const App = () => {
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
 
-            <Route path="/services" element={<SupportiveCare />} />
+            <Route path="/services" element={<Service />} />
+            <Route path="/women-care" element={<Service />} />
+            <Route path="/supportive-care" element={<Service />} />
+
             <Route path="/doctors" element={<Doctors />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/services/detail" element={<Servicedetail />} />
