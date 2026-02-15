@@ -49,7 +49,7 @@ export default function HowWeWork() {
                 Health
                 <span className="absolute bottom-0 left-0 w-full h-2 bg-[#64CCC5]/30 -z-10"></span>
               </span>
-              ,{" "}
+              {" "}
               Here For{" "}
               <span className="text-[#64CCC5]">Everyday Care</span>
             </h2>

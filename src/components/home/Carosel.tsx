@@ -11,10 +11,46 @@ interface Testimonial {
 }
 
 const testimonials: Testimonial[] = [
-    { id: 1, quote: "The personalized care and constant support here made a huge difference from my very first session.", name: "Michael S.", role: "Producer", rating: 5, image: "/Client 1.png" },
-    { id: 2, quote: "Thanks to the team, I feel more in control of my life. I'm truly grateful for their support.", name: "Jessica M.", role: "Digital Agency", rating: 5, image: "/Client 2.png" },
-    { id: 3, quote: "The sessions were a game-changer. I finally felt heard and understood by the team.", name: "David L.", role: "Product Manager", rating: 5, image: "/Client 3.png" },
-    { id: 4, quote: "The mindfulness workshop helped me find a sense of calm I didn't know I could achieve.", name: "Emily R.", role: "Content Creator", rating: 5, image: "/Client 4.jpg" },
+    {
+        id: 1,
+        quote: "I had a great experience at Mufaddal Polyclinic—clean, well-organized, affordable, and offering almost all vaccinations. The doctors are experienced, polite, and explain everything clearly. Highly recommended for safe and professional vaccination care in North Chennai.",
+        name: "Abdul Latif",
+        role: "Perambur, Chennai",
+        rating: 5,
+        image: "/Client 1.png"
+    },
+    {
+        id: 2,
+        quote: "We are part of a cancer care support system and urgently needed cancer medicines for a patient. The response was quick, reliable, and reassuring. Medicines were arranged without delay, and the guidance helped us manage the situation smoothly. A truly dependable service in critical cancer care moments.",
+        name: "My Onko",
+        role: "Cancer Care Support",
+        rating: 5,
+        image: "/Client 2.png"
+    },
+    {
+        id: 3,
+        quote: "This clinic provides excellent medical care. The doctor was kind, knowledgeable, and attentive, and the staff were polite and supportive. Waiting time was minimal, the clinic was clean and well maintained, and the overall service was very satisfactory. Highly recommended.",
+        name: "Thavila Fathima",
+        role: "Patient",
+        rating: 5,
+        image: "/Client 3.png"
+    },
+    {
+        id: 4,
+        quote: "This clinic offers basic medical facilities, tests, and on-call consultations with minimal waiting time. The doctors are experienced and provide good guidance, and multiple payment options are available. It is a suitable option if you need quick medical attention.",
+        name: "Suddhanshu Singh Rajput",
+        role: "Patient",
+        rating: 5,
+        image: "/Client 4.jpg"
+    },
+    {
+        id: 5,
+        quote: "Dr Zeenath Begum is one of the finest doctors in Chennai, known for her compassionate care. The clinic has friendly staff and a calm, peaceful atmosphere, making the overall experience very comforting.",
+        name: "Murtaza Sunel",
+        role: "Patient",
+        rating: 5,
+        image: "/Client 1.png"
+    },
 ];
 
 const TestimonialCarousel: React.FC = () => {
@@ -78,7 +114,7 @@ const TestimonialCarousel: React.FC = () => {
                                 key={t.id}
                                 className="min-w-[90%] md:min-w-[45%] lg:min-w-[31%] snap-center"
                             >
-                                <div className="h-full p-8 rounded-3xl border-2 transition-all duration-300 hover:shadow-xl"
+                                <div className="h-full p-8 rounded-3xl border-2 transition-all duration-300 hover:shadow-xl flex flex-col"
                                     style={{ borderColor: '#E8F3F2', backgroundColor: '#FFFFFF' }}>
 
                                     {/* Star Rating */}
@@ -91,12 +127,12 @@ const TestimonialCarousel: React.FC = () => {
                                     </div>
 
                                     {/* Quote */}
-                                    <p className="text-lg italic leading-relaxed mb-8" style={{ color: '#245953' }}>
+                                    <p className="text-lg italic leading-relaxed mb-8 flex-grow" style={{ color: '#245953' }}>
                                         "{t.quote}"
                                     </p>
 
                                     {/* User Info */}
-                                    <div className="flex items-center border-t pt-6" style={{ borderColor: '#E8F3F2' }}>
+                                    <div className="flex items-center border-t pt-6 mt-auto" style={{ borderColor: '#E8F3F2' }}>
                                         <div className="w-12 h-12 rounded-full mr-4 flex-shrink-0 overflow-hidden"
                                             style={{ backgroundColor: '#003C43' }}>
                                             <img src={t.image} alt={t.name} className="w-full h-full object-cover" />
