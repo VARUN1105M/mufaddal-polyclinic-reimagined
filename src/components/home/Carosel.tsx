@@ -13,7 +13,7 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
     {
         id: 1,
-        quote: "I had a great experience at Mufaddal Polyclinic—clean, well-organized, affordable, and offering almost all vaccinations. The doctors are experienced, polite, and explain everything clearly. Highly recommended for safe and professional vaccination care in North Chennai.",
+        quote: "Clean, well-organized, and affordable. The doctors are experienced, polite, and explain everything clearly. Highly recommended for vaccination care in North Chennai.",
         name: "Abdul Latif",
         role: "Perambur, Chennai",
         rating: 5,
@@ -21,7 +21,7 @@ const testimonials: Testimonial[] = [
     },
     {
         id: 2,
-        quote: "We are part of a cancer care support system and urgently needed cancer medicines for a patient. The response was quick, reliable, and reassuring. Medicines were arranged without delay, and the guidance helped us manage the situation smoothly. A truly dependable service in critical cancer care moments.",
+        quote: "We urgently needed cancer medicines for a patient. The response was quick and reliable. Medicines were arranged without delay. A truly dependable service in critical moments.",
         name: "My Onko",
         role: "Cancer Care Support",
         rating: 5,
@@ -29,7 +29,7 @@ const testimonials: Testimonial[] = [
     },
     {
         id: 3,
-        quote: "This clinic provides excellent medical care. The doctor was kind, knowledgeable, and attentive, and the staff were polite and supportive. Waiting time was minimal, the clinic was clean and well maintained, and the overall service was very satisfactory. Highly recommended.",
+        quote: "Excellent medical care. The doctor was kind and attentive, staff were supportive. Minimal waiting time, clean facility, and very satisfactory service. Highly recommended.",
         name: "Thavila Fathima",
         role: "Patient",
         rating: 5,
@@ -37,7 +37,7 @@ const testimonials: Testimonial[] = [
     },
     {
         id: 4,
-        quote: "This clinic offers basic medical facilities, tests, and on-call consultations with minimal waiting time. The doctors are experienced and provide good guidance, and multiple payment options are available. It is a suitable option if you need quick medical attention.",
+        quote: "Good medical facilities with minimal waiting time. Experienced doctors provide solid guidance, and multiple payment options are available. Suitable for quick medical attention.",
         name: "Suddhanshu Singh Rajput",
         role: "Patient",
         rating: 5,
@@ -45,7 +45,7 @@ const testimonials: Testimonial[] = [
     },
     {
         id: 5,
-        quote: "Dr Zeenath Begum is one of the finest doctors in Chennai, known for her compassionate care. The clinic has friendly staff and a calm, peaceful atmosphere, making the overall experience very comforting.",
+        quote: "Dr Zeenath Begum is one of the finest doctors in Chennai. Compassionate care, friendly staff, and a calm, peaceful atmosphere make the experience very comforting.",
         name: "Murtaza Sunel",
         role: "Patient",
         rating: 5,
