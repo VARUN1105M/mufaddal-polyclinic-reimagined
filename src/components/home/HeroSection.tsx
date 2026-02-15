@@ -70,7 +70,7 @@ const HeroSection = () => {
             <p
               data-aos="fade"
               data-aos-delay="400"
-              className="text-white/90 text-sm sm:text-base md:text-lg xl:text-lg 2xl:text-xl leading-[2.4] tracking-wide mb-12 max-w-xl xl:max-w-2xl mx-auto lg:mx-0 text-justify"
+              className="text-white/90 text-sm sm:text-base md:text-lg xl:text-lg 2xl:text-xl leading-[2.4] tracking-wide mb-12 max-w-xl xl:max-w-2xl mx-auto lg:mx-0 text-left"
             >
               Build better health through preliminary checkups, early screening, and preventive care—focusing on awareness, timely guidance, and regular monitoring to reduce future risks and avoidable medical costs.            </p>
 

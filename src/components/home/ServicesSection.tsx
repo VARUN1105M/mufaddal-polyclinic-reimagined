@@ -75,7 +75,7 @@ const AboutSection = () => {
             </h2>
 
             {/* Description */}
-            <p className="text-gray-600 text-sm md:text-base lg:text-lg leading-[2.5] text-justify">
+            <p className="text-gray-600 text-sm md:text-base lg:text-lg leading-[2.5] text-left">
               Every small step toward better health awareness is a meaningful milestone in women's lives. With the right guidance, individuals can understand concerns early, manage daily stress, and build practical health habits. We believe everyone deserves accessible, affordable, and respectful care throughout life stages. Through a preventive, professional approach, we focus on yearly monitoring, timely support, and informed decisions for long-term physical and emotional wellbeing.
             </p>
 

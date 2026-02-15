@@ -95,7 +95,7 @@ const ServiceTemplate: React.FC<ServiceTemplateProps> = ({ serviceId }) => {
                                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#003C43] leading-tight">
                                         {data.title}
                                     </h1>
-                                    <p className="text-gray-600 leading-[1.8] text-lg lg:text-xl text-justify">
+                                    <p className="text-gray-600 leading-[1.8] text-lg lg:text-xl text-left">
                                         {data.description}
                                     </p>
                                 </div>
@@ -134,7 +134,7 @@ const ServiceTemplate: React.FC<ServiceTemplateProps> = ({ serviceId }) => {
                                             <span className="w-8 h-1 bg-[#408E91] rounded-full"></span>
                                             Why Choose Our {data.title}?
                                         </h2>
-                                        <p className="text-gray-600 leading-relaxed text-lg text-justify">
+                                        <p className="text-gray-600 leading-relaxed text-lg text-left">
                                             Our {data.title} service is committed to providing top-tier medical care with a patient-centric approach.
                                             We understand that every individual is unique, which is why we offer personalized treatment plans designed
                                             to meet your specific health goals. Our team of experienced professionals uses the latest technology and
@@ -163,7 +163,7 @@ const ServiceTemplate: React.FC<ServiceTemplateProps> = ({ serviceId }) => {
                                         </ul>
                                     </div>
 
-                                    <p className="text-gray-600 leading-relaxed text-lg text-justify border-l-4 border-[#003C43] pl-6 py-2 italic font-medium">
+                                    <p className="text-gray-600 leading-relaxed text-lg text-left border-l-4 border-[#003C43] pl-6 py-2 italic font-medium">
                                         We believe in empowering our patients through education and support. Whether you are seeking preventive care,
                                         management of a chronic condition, or specialized treatment, we are here to guide you every step of the way.
                                     </p>

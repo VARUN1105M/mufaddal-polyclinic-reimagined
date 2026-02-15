@@ -55,7 +55,7 @@ export default function AppointmentSection({ lightMode = false }: AppointmentSec
                             <span className="text-[#64CCC5]">Support</span>
                         </h2>
 
-                        <p className={`${lightMode ? "text-gray-600" : "text-white/90"} text-[1rem] leading-relaxed text-justify`}>
+                        <p className={`${lightMode ? "text-gray-600" : "text-white/90"} text-[1rem] leading-relaxed text-left`}>
                             We focus on health awareness programs and preventive checkups that help women understand
                             their bodies better and make informed health choices early.
                         </p>

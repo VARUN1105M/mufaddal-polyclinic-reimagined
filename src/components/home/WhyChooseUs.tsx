@@ -115,7 +115,7 @@ export default function HowWeWork() {
                   {step.title}
                 </h4>
 
-                <p className="text-sm md:text-base leading-relaxed text-white/80 group-hover:text-white transition-colors duration-300 text-justify">
+                <p className="text-sm md:text-base leading-relaxed text-white/80 group-hover:text-white transition-colors duration-300 text-left">
                   {step.description}
                 </p>
               </div>

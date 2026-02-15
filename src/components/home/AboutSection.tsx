@@ -68,7 +68,7 @@ const FeaturesSection = () => {
                   </div>
 
                   {/* Description */}
-                  <p className="text-white/90 text-[1rem] leading-relaxed mt-4 text-justify">
+                  <p className="text-white/90 text-[1rem] leading-relaxed mt-4 text-left">
                     {feature.description}
                   </p>
                 </motion.div>

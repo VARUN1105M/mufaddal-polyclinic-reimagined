@@ -103,7 +103,7 @@ const FAQSection = () => {
                 <span className="font-bold text-lg">4.4 /5</span>
               </div>
 
-              <p className="text-gray-700 text-base md:text-lg leading-relaxed max-w-md text-justify">
+              <p className="text-gray-700 text-base md:text-lg leading-relaxed max-w-md text-left">
                 Through awareness, preventive care, and timely guidance, we help women understand health early, reduce risks, and move forward with confidence and clarity.
               </p>
             </div>
@@ -159,7 +159,7 @@ const FAQSection = () => {
                       }`}
                   >
                     <div className="px-6 md:px-8 pb-5 md:pb-6 pt-2">
-                      <p className="text-gray-600 text-sm md:text-base leading-relaxed text-justify">
+                      <p className="text-gray-600 text-sm md:text-base leading-relaxed text-left">
                         {faq.answer}
                       </p>
                     </div>

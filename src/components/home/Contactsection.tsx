@@ -188,7 +188,7 @@ const ContactSection = () => {
             <div>
               <p className="text-[#003C43] font-bold text-sm tracking-wider mb-2">GET IN TOUCH</p>
               <h2 className="text-5xl font-bold text-[#003C43]">Contact Details</h2>
-              <p className="text-gray-600 text-base md:text-lg leading-relaxed mt-4 mb-8 text-justify">
+              <p className="text-gray-600 text-base md:text-lg leading-relaxed mt-4 mb-8 text-left">
                 Questions or concerns matter. Reach out for clear information, calm guidance, and a
                 respectful care experience.
               </p>
