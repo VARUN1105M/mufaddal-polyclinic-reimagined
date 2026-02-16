@@ -11,46 +11,10 @@ interface Testimonial {
 }
 
 const testimonials: Testimonial[] = [
-    {
-        id: 1,
-        quote: "Clean, well-organized, and affordable. The doctors are experienced, polite, and explain everything clearly. Highly recommended for vaccination care in North Chennai.",
-        name: "Abdul Latif",
-        role: "Perambur, Chennai",
-        rating: 5,
-        image: "/Client 1.png"
-    },
-    {
-        id: 2,
-        quote: "We urgently needed cancer medicines for a patient. The response was quick and reliable. Medicines were arranged without delay. A truly dependable service in critical moments.",
-        name: "My Onko",
-        role: "Cancer Care Support",
-        rating: 5,
-        image: "/Client 2.png"
-    },
-    {
-        id: 3,
-        quote: "Excellent medical care. The doctor was kind and attentive, staff were supportive. Minimal waiting time, clean facility, and very satisfactory service. Highly recommended.",
-        name: "Thavila Fathima",
-        role: "Patient",
-        rating: 5,
-        image: "/Client 3.png"
-    },
-    {
-        id: 4,
-        quote: "Good medical facilities with minimal waiting time. Experienced doctors provide solid guidance, and multiple payment options are available. Suitable for quick medical attention.",
-        name: "Suddhanshu Singh Rajput",
-        role: "Patient",
-        rating: 5,
-        image: "/Client 4.jpg"
-    },
-    {
-        id: 5,
-        quote: "Dr Zeenath Begum is one of the finest doctors in Chennai. Compassionate care, friendly staff, and a calm, peaceful atmosphere make the experience very comforting.",
-        name: "Murtaza Sunel",
-        role: "Patient",
-        rating: 5,
-        image: "/Client 1.png"
-    },
+    { id: 1, quote: "The personalized care and constant support here made a huge difference from my very first session.", name: "Michael S.", role: "Producer", rating: 5, image: "/Client 1.png" },
+    { id: 2, quote: "Thanks to the team, I feel more in control of my life. I'm truly grateful for their support.", name: "Jessica M.", role: "Digital Agency", rating: 5, image: "/Client 2.png" },
+    { id: 3, quote: "The sessions were a game-changer. I finally felt heard and understood by the team.", name: "David L.", role: "Product Manager", rating: 5, image: "/Client 3.png" },
+    { id: 4, quote: "The mindfulness workshop helped me find a sense of calm I didn't know I could achieve.", name: "Emily R.", role: "Content Creator", rating: 5, image: "/Client 4.jpg" },
 ];
 
 const TestimonialCarousel: React.FC = () => {
